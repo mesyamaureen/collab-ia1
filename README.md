@@ -1,5 +1,5 @@
 # collab
-Verwaltung von Kampfsportverein DBS2
+Das zu entwickelnde System dient als Plattform für die Vermittlung von Influencern zu den passenden Unternehmen.
 
 ## How to setup git repo in local computer:
 ### Prepare repository folder
