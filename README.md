@@ -1,9 +1,9 @@
-# kampfsportverein
+# collab
 Verwaltung von Kampfsportverein DBS2
 
 ## How to setup git repo in local computer:
 ### Prepare repository folder
-1) Erstell einen Ordner auf deinem Rechner unter `name_datenbanksystem02`(z.B. meins auf dem Desktop unter 'mesya_datenbanksystem02')
+1) Erstell einen Ordner auf deinem Rechner unter `name_infoanwendung01`(z.B. meins auf dem Desktop unter 'mesya_infoanwendung01')
 2) Doppelklick auf dem Ordner
 ### Configure Email and Username for Github
 3) Rechtsklick irgendwo innerhalb des Ordners
@@ -38,7 +38,7 @@ Verwaltung von Kampfsportverein DBS2
 30) Das Git Repository sollte erfolgreich geklont werden. Zu überprüfen: Öffne mal den Ordner (Schritt 1) auf dem Windows Explorer. Da sollte es einen neuen Ordner unter dem Namen deines Repository innerhalb des Verzeichnis (Schritt 1) geben.
 ### Check whether or not the repository on your computer is up-to-date
 31) Danach müssen wir zu dem `master` des Repository umziehen. Es gibt zwei Wege (Schritt 32 & 33).
-32) The cooler CLI way: Tip auf der neuen Zeile (nach dem $ Zeichen) im Gitbash `cd kampfsportverein/` ein und ENTER. Danach solltest du der Wort `(master)`oder `(main)` direkt nach deinem directory line (MINGW64).
+32) The cooler CLI way: Tip auf der neuen Zeile (nach dem $ Zeichen) im Gitbash `cd collab-ia1/` ein und ENTER. Danach solltest du der Wort `(master)`oder `(main)` direkt nach deinem directory line (MINGW64).
 33) The simpler GUI way: double click the folder of the cloned repo in Windows Explorer and redo step 3 and 4
 34) Tip im Gitbash `git status` ein, um deine Dateien zu überprüfen.
 35) Whatever response you get from step 34, it is always a good practice to update your local folder with the one on Github, even though nothing might have changed (Do this before you do anything else) in which you type `git pull` 
