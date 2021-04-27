@@ -94,6 +94,7 @@
   <ItemGroup>
     <Content Include="collab.css" />
     <Content Include="Einloggen.html" />
+    <Content Include="Impressum.html" />
     <Content Include="Influencer suchen.html" />
     <Content Include="Jobanzeigen.html" />
     <Content Include="Registrieren.html" />
