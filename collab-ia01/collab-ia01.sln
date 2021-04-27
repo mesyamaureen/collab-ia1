@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1145
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "collab-ia01", "collab-ia01\collab-ia01.vbproj", "{532D1862-485F-4E18-9638-47151F7C86BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532D1862-485F-4E18-9638-47151F7C86BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532D1862-485F-4E18-9638-47151F7C86BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532D1862-485F-4E18-9638-47151F7C86BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532D1862-485F-4E18-9638-47151F7C86BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB87C545-86C6-440C-A0FB-CDA9919BBC10}
+	EndGlobalSection
+EndGlobal
