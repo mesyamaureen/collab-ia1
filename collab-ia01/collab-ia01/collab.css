@@ -175,3 +175,30 @@ p {
     background: #d98282;
 }
 
+.buttonInfluencer {
+    background-color: #d98282;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    width: 25%;
+}
+.buttonUnternehmen {
+    background-color: #d98282;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    width: 25%;
+}
+
