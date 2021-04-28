@@ -92,11 +92,14 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Bewerbung.html" />
     <Content Include="collab.css" />
     <Content Include="Einloggen.html" />
     <Content Include="Impressum.html" />
     <Content Include="Influencer suchen.html" />
     <Content Include="Jobanzeigen.html" />
+    <Content Include="meinProfil.html" />
+    <Content Include="Profil.html" />
     <Content Include="Registrieren.html" />
     <Content Include="Startseite.html" />
     <Content Include="Unternehmen suchen.html" />
