@@ -202,3 +202,33 @@ p {
     width: 25%;
 }
 
+/* Team Columns*/
+.column {
+    float: left;
+    width: 30%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+/* Columns werden vertikal bei kleinerer Anwendung angezeigt*/
+@media screen and (max-width: 650px) {
+    .column{
+        width: 100%;
+        display: block;
+    }
+}
+
+/*Schatten als Effekt*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*Links und Rechts padding innerhalb Container*/
+.container {
+    padding: 0 16px;
+}
+
+.title {
+    color: grey;
+    text-align: center;
+}
