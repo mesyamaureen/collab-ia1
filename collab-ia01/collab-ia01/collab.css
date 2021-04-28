@@ -5,7 +5,7 @@
 
 h1 {
     color: #80805E;
-    font-size: 30px;
+    font-size: xx-large;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -15,7 +15,7 @@ h1 {
 }
 
 h2 {
-    font-size: 28px;
+    font-size: x-large;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-    font-size: 26px;
+    font-size: large;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -35,7 +35,7 @@ h3 {
 }
 
 h4 {
-    font-size: 24px;
+    font-size: medium;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -45,7 +45,7 @@ h4 {
 }
 
 h5 {
-    font-size: 22px;
+    font-size: small;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -55,7 +55,7 @@ h5 {
 }
 
 h6 {
-    font-size: 20px;
+    font-size: x-small;
     margin-left: 5px;
     margin-top: 10px;
     margin: 10px 0 0 5px;
@@ -65,7 +65,7 @@ h6 {
 }
 
 p {
-    font-size: 18px;
+    font-size: xx-small;
     text-align: justify;
     margin-left: 5px;
     margin-top: 5px;
