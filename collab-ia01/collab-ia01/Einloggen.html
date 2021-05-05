@@ -45,20 +45,20 @@
     <!-- middle Column -->
     <div id="primaryContentContainer">
         <div id="primaryContent">
-            <h1 class:"center">Loggen Sie sich jetzt ein!</h1>
-            <form method="get" action="Einloggen.html">
+            <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
+            <form method="get" action="meinProfil.html" class="center"> <!-- FRAGEN: "ist class benötigt? oder gibt's anderen Trick dafür?" Stand: 05.05.2021 -->
                 <p>
-                    Benutzername:
-                    <input type="text" name="txtBenutzername" />
+                    <label for="txtBenutzername" id="lblBenutzername">Benutzername:</label>
+                    <input id="txtBenutzername" type="text" name="txtBenutzername" />
                 </p>
                 <p>
-                    Passwort:
-                    <input type="text" name="txtPasswort" />
+                    <label for="txtPasswort" id="lblPasswort">Passwort:</label>
+                    <input id="txtPasswort" type="text" name="txtPasswort" />
                 </p>
+                <br />
+                    <input type="submit" name="btnMeinProfil" value="Mein Profil" />
+                    <a href="Einloggen.html">Passwort vergessen?</a>
             </form>
-            <br />
-            <input type="submit" name="btnMeinProfil" value="Mein Profil" />
-            <a href="Einloggen.html">Passwort vergessen?</a>
         </div>
     </div>
     <!-- left Column -->
