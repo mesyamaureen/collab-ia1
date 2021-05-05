@@ -7,82 +7,91 @@
 </head>
 <body>
     <!-- Header -->
-    <div id="header">
-        <a title="zur Startseite" href="Startseite.html">
-            <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
-        </a>
-        <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-    </div>
-    <div id="menu">
-        <ul style="list-style-type: none;">
-            <li class="first">
-                <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
-            </li>
-            <li>
-                <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
-            </li>
-        </ul>
-    </div>
-    <!-- Content fängt hier an -->
-    <!-- right Column-->
-    <div id="tertiaryContent">
-        <p>Brauchen Sie Hilfe?</p>
-        <p>Tel.: 030 38 99 00</p>
-        <p>E-Mail: collab@info.de</p>
-    </div>
-    <!-- middle Column -->
-    <div id="primaryContentContainer">
-        <div id="primaryContent">
-            <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
-            <form method="get" action="meinProfil.html" class="center"> <!-- FRAGEN: "ist class benötigt? oder gibt's anderen Trick dafür?" Stand: 05.05.2021 -->
-                <p>
-                    <label for="txtBenutzername" id="lblBenutzername">Benutzername:</label>
-                    <input id="txtBenutzername" type="text" name="txtBenutzername" />
-                </p>
-                <p>
-                    <label for="txtPasswort" id="lblPasswort">Passwort:</label>
-                    <input id="txtPasswort" type="password" name="txtPasswort" />
-                </p>
-                <br />
-                    <input type="submit" name="btnMeinProfil" value="Mein Profil" />
-                    <a href="Einloggen.html">Passwort vergessen?</a>
-            </form>
+    <div>
+        <div id="header">
+            <a title="zur Startseite" href="Startseite.html">
+                <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
+            </a>
+            <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
+        </div>
+        <div id="menu">
+            <ul style="list-style-type: none;">
+                <li class="first">
+                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
+                </li>
+                <li>
+                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
+                </li>
+                <li>
+                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
+                </li>
+                <li>
+                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
+                </li>
+                <li>
+                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
+                </li>
+                <li>
+                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- left Column -->
-    <div id="secondaryContent">
-        <ul>
-            <li id="current">
-                <a href="Startseite.html">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html">Einloggen</a>
-            </li>
-            <li>
-                <a href="Impressum.html">Impressum</a>
-            </li>
-        </ul>
+
+    <!-- Content fängt hier an -->
+    <div class="body">
+        <!-- left Column -->
+        <div id="secondaryContentContainer">
+            <div id="secondaryContent">
+                <ul>
+                    <li id="current">
+                        <a href="Startseite.html">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="Influencer suchen.html">Influencer suchen</a>
+                    </li>
+                    <li>
+                        <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                    </li>
+                    <li>
+                        <a href="Jobanzeigen.html">Jobanzeigen</a>
+                    </li>
+                    <li>
+                        <a href="Einloggen.html">Einloggen</a>
+                    </li>
+                    <li>
+                        <a href="Impressum.html">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- middle Column -->
+        <div id="primaryContentContainer">
+            <div id="primaryContent">
+                <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
+                <form method="get" action="meinProfil.html" class="center">
+                    <!-- FRAGEN: "ist class benötigt? oder gibt's anderen Trick dafür?" Stand: 05.05.2021 -->
+                    <p>
+                        <label for="txtBenutzername" id="lblBenutzername">Benutzername:</label>
+                        <input id="txtBenutzername" type="text" name="txtBenutzername" />
+                    </p>
+                    <p>
+                        <label for="txtPasswort" id="lblPasswort">Passwort:</label>
+                        <input id="txtPasswort" type="password" name="txtPasswort" />
+                    </p>
+                    <br />
+                    <input type="submit" name="btnMeinProfil" value="Mein Profil" />
+                    <a href="Einloggen.html">Passwort vergessen?</a>
+                </form>
+            </div>
+        </div>
+        <!-- right Column-->
+        <div id="tertiaryContent">
+            <p>Brauchen Sie Hilfe?</p>
+            <p>Tel.: 030 38 99 00</p>
+            <p>E-Mail: collab@info.de</p>
+        </div>
     </div>
 </body>
 </html>

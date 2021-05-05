@@ -7,125 +7,133 @@
 </head>
 <body>
     <!-- Header -->
-    <div id="header">
-        <a title="zur Startseite" href="Startseite.html">
-            <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
-        </a>
-        <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-    </div>
-    <div id="menu">
-        <ul style="list-style-type: none;">
-            <li class="first">
-                <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
-            </li>
-            <li>
-                <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
-            </li>
-        </ul>
-    </div>
-    <!-- Content fängt hier an -->
-    <!-- right Column-->
-    <div id="tertiaryContent">
-        <p>Brauchen Sie Hilfe?</p>
-        <p>Tel.: 030 38 99 00</p>
-        <p>E-Mail: collab@info.de</p>
-    </div>
-    <!-- middle Column -->
-    <div id="primaryContentContainer">
-        <div id="primaryContent">
-            <h1 class="center">Registrieren</h1>
-            <h2 class="center">Erstellen Sie ein Konto!</h2>
-            <form method="get" action="Einloggen.html">
-                <p>
-                    Ich bin:
-                <fieldset>
-                    <input type="radio" id="inf" name="Influencer" value="Influencer">
-                    <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
-                    <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
-                    <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
-                </fieldset>
-                    </p>
-                <p>
-                    Vorname:
-                    <input type="text" name="txtVorname" />
-                </p>
-                <p>
-                    Name:
-                    <input type="text" name="txtName" />
-                </p>
-                <p>
-                    Unternehmensname:
-                    <input type="text" name="txtUnternehmensname" />
-                </p>
-                <p>
-                    Branche:<br /> <!-- als Dropdown -->
-                    <select name="lstBranche"
-                            multiple="multiple" size="5">
-                        <option value="1">Anime</option>
-                        <option value="2">Autos & Fahrzeuge</option>
-                        <option value="3">Beauty & Fashion</option>
-                        <option value="4">Bildung</option>
-                        <option value="5">DIY</option>
-                        <option value="6">Essen</option>
-                        <option value="7">Lifestyle</option>
-                        <option value="8">Gesundheit</option>
-                        <option value="9">Menschen & Blogs</option>
-                        <option value="10">Reisen & Events</option>
-                        <option value="11">Kunst & Design</option>
-                    </select>
-                </p>
-                <p>
-                    E-Mail:
-                    <input type="text" name="txtEMail" />
-                </p>
-                <p>
-                    Benutzername:
-                    <input type="text" name="txtBenutzername" />
-                </p>
-                <p>
-                    Passwort:
-                    <input type="text" name="txtPasswort" />
-                </p>
-            </form>
-            <br />
-            <input type="submit" name="btnSpeichern" value="Speichern" />
-            <input type="reset" name="btnAbbrechen" value="Abbrechen" />
+    <div>
+        <div id="header">
+            <a title="zur Startseite" href="Startseite.html">
+                <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
+            </a>
+            <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
+        </div>
+        <div id="menu">
+            <ul style="list-style-type: none;">
+                <li class="first">
+                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
+                </li>
+                <li>
+                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
+                </li>
+                <li>
+                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
+                </li>
+                <li>
+                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
+                </li>
+                <li>
+                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
+                </li>
+                <li>
+                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- left Column -->
-    <div id="secondaryContent">
-        <ul>
-            <li id="current">
-                <a href="Startseite.html">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html">Einloggen</a>
-            </li>
-            <li>
-                <a href="Impressum.html">Impressum</a>
-            </li>
-        </ul>
+
+    <div class="body">
+        <!-- Content fängt hier an -->
+        <!-- left Column -->
+        <div id="secondaryContentContainer">
+            <div id="secondaryContent">
+                <ul>
+                    <li id="current">
+                        <a href="Startseite.html">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="Influencer suchen.html">Influencer suchen</a>
+                    </li>
+                    <li>
+                        <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                    </li>
+                    <li>
+                        <a href="Jobanzeigen.html">Jobanzeigen</a>
+                    </li>
+                    <li>
+                        <a href="Einloggen.html">Einloggen</a>
+                    </li>
+                    <li>
+                        <a href="Impressum.html">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- middle Column -->
+        <div id="primaryContentContainer">
+            <div id="primaryContent">
+                <h1 class="center">Registrieren</h1>
+                <h2 class="center">Erstellen Sie ein Konto!</h2>
+                <form method="get" action="Einloggen.html">
+                    <p>
+                        Ich bin:
+                        <fieldset>
+                            <input type="radio" id="inf" name="Influencer" value="Influencer">
+                            <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
+                            <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
+                            <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
+                        </fieldset>
+                    </p>
+                    <p>
+                        Vorname:
+                        <input type="text" name="txtVorname" />
+                    </p>
+                    <p>
+                        Name:
+                        <input type="text" name="txtName" />
+                    </p>
+                    <p>
+                        Unternehmensname:
+                        <input type="text" name="txtUnternehmensname" />
+                    </p>
+                    <p>
+                        Branche:<br /> <!-- als Dropdown -->
+                        <select name="lstBranche"
+                                multiple="multiple" size="5">
+                            <option value="1">Anime</option>
+                            <option value="2">Autos & Fahrzeuge</option>
+                            <option value="3">Beauty & Fashion</option>
+                            <option value="4">Bildung</option>
+                            <option value="5">DIY</option>
+                            <option value="6">Essen</option>
+                            <option value="7">Lifestyle</option>
+                            <option value="8">Gesundheit</option>
+                            <option value="9">Menschen & Blogs</option>
+                            <option value="10">Reisen & Events</option>
+                            <option value="11">Kunst & Design</option>
+                        </select>
+                    </p>
+                    <p>
+                        E-Mail:
+                        <input type="text" name="txtEMail" />
+                    </p>
+                    <p>
+                        Benutzername:
+                        <input type="text" name="txtBenutzername" />
+                    </p>
+                    <p>
+                        Passwort:
+                        <input type="text" name="txtPasswort" />
+                    </p>
+                </form>
+                <br />
+                <input type="submit" name="btnSpeichern" value="Speichern" />
+                <input type="reset" name="btnAbbrechen" value="Abbrechen" />
+            </div>
+        </div>
+        <!-- right Column-->
+        <div id="tertiaryContent">
+            <p>Brauchen Sie Hilfe?</p>
+            <p>Tel.: 030 38 99 00</p>
+            <p>E-Mail: collab@info.de</p>
+        </div>
     </div>
 </body>
 </html>
