@@ -9,117 +9,130 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="collab.css" />
 </head>
-<body>
-    <!-- Header -->
-    <div>
-        <div id="header">
-            <a title="zur Startseite" href="Startseite.html">
-                <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
-            </a>
-            <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-        </div>
-        <div id="menu">
-            <ul style="list-style-type: none;">
-                <li class="first">
-                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
-                </li>
-                <li>
-                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
-                </li>
-                <li>
-                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
-                </li>
-                <li>
-                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
-                </li>
-                <li>
-                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
-                </li>
-                <li>
-                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="body">
-        <!-- Content fängt hier an -->
-        <!-- left Column -->
-        <!-- Hier bitte nichts ändern! -->
-        <div id="secondaryContentContainer">
-            <div id="secondaryContent">
-                <ul style="font-size: 16px;">
-                    <li id="current">
-                        <a href="Startseite.html" style="color: black">Startseite</a>
+    <body>
+        <!-- Header -->
+        <div>
+            <div id="header">
+                <a title="zur Startseite" href="Startseite.html">
+                    <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
+                </a>
+                <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
+            </div>
+            <div id="menu">
+                <ul style="list-style-type: none;">
+                    <li class="first">
+                        <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
                     </li>
                     <li>
-                        <a href="Influencer suchen.html" style="color: black">Influencer suchen</a>
+                        <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
                     </li>
                     <li>
-                        <a href="Unternehmen suchen.html" style="color: black">Unternehmen suchen</a>
+                        <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
                     </li>
                     <li>
-                        <a href="Jobanzeigen.html" style="color: black">Jobanzeigen</a>
+                        <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
                     </li>
                     <li>
-                        <a href="Einloggen.html" style="color: black">Einloggen</a>
+                        <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
                     </li>
                     <li>
-                        <a href="Impressum.html" style="color: black">Impressum</a>
+                        <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
                     </li>
                 </ul>
             </div>
         </div>
-
-        <!-- middle Column -->
-        <div id="primaryContentContainer">
+        <div id="body">
+            <!-- Content fängt hier an -->
+            <!-- left Column -->
+            <div id="secondaryContentContainer">
+                <div id="secondaryContent">
+                    <ul style="font-size:16px;">
+                        <li id="current">
+                            <a href="Startseite.html">Startseite</a>
+                        </li>
+                        <li>
+                            <a href="Influencer suchen.html">Influencer suchen</a>
+                        </li>
+                        <li>
+                            <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                        </li>
+                        <li>
+                            <a href="Jobanzeigen.html">Jobanzeigen</a>
+                        </li>
+                        <li>
+                            <a href="Einloggen.html">Einloggen</a>
+                        </li>
+                        <li>
+                            <a href="Impressum.html">Impressum</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- middle Column -->
+            <!--<div id="primaryContentContainer">-->
             <div id="primaryContent">
-                <h1 class:"center">Bewerbung</h1>
-                <form method="get" action="Bewerbung.html">
-                    <p>
-                        Jobtitel:
-
-                    </p>
-                    <p>
-                        Jobbeschreibung:
-
-                    </p>
-                </form>
-
+                <!-- passt ihr bitte nur diesen Teil an -->
+                <h1 class="center">Meine Jobanzeigen</h1><br />
+                <h2 class="center">Hier können Sie Ihre Jobanzeigen verwalten</h2>
+                <div id="primaryContentBlock">
+                    <table id="Tabelle">
+                        <tr class="header">
+                            <th>Nr</th>
+                            <th>Jobtitel</th>
+                            <th>Verwalten</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Kassierer/in bei Lidl</td>
+                            <td><a href="Bewerbung.html">Bearbeiten</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Wir suchen dich: Praktikum bei Lidl</td>
+                            <td><a href="Bewerbung.html">Bearbeiten</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Werkstudentin/Werkstudent Strategischer Einkauf</td>
+                            <td><a href="Bewerbung.html">Bearbeiten</a></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Duales Studium bei Lidl #WirSuchenDich</td>
+                            <td><a href="Bewerbung.html">Bearbeiten</a></td>
+                        </tr>
+                    </table>
+                    <div class="center">
+                        <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
+                        <button class="button">Löschen</button>
+                        <button class="button">Hinzufügen</button>
+                    </div>
+                </div>
+            </div>
+            <!--</div>-->
+            <!-- right Column-->
+            <div id="tertiaryContent">
+                <fieldset id="fldKontakt">
+                    <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                    <p>Tel.: 030 38 99 00</p>
+                    <p>E-Mail: collab@info.de</p>
+                </fieldset>
+                <fieldset id="fldSocMed" style="margin-top:5em;">
+                    <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
+                    <div id="socmed">
+                        <!-- Add icon library -->
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <!-- Add font awesome icons -->
+                        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                        <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                        <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                    </div>
+                </fieldset>
             </div>
         </div>
-
-
-        <!-- right Column-->
-        <!-- Hier bitte nichts ändern! -->
-        <div id="tertiaryContent">
-            <fieldset id="fldKontakt">
-                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                <p>Tel.: 030 38 99 00</p>
-                <div class="email">
-                    <p>E-Mail:</p>
-                    <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
-                </div>
-            </fieldset>
-            <fieldset id="fldSocMed" style="margin-top:5em;">
-                <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
-                <div id="socmed">
-                    <!-- Add icon library -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-                    <!-- Add font awesome icons -->
-                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-                </div>
-            </fieldset>
+        <!-- FOOTER -->
+        <div id="footer">
+            <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
         </div>
-    </div>
-
-
-    <!-- FOOTER -->
-    <div id="footer">
-        <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
-    </div>
-</body>
+    </body>
 </html>
