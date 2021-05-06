@@ -71,61 +71,65 @@
             <div id="primaryContent">
                 <h1 class="center">Registrieren</h1>
                 <h2 class="center">Erstellen Sie ein Konto!</h2>
-                <form method="get" action="Einloggen.html">
-                    <p>
-                        Ich bin:
-                        <fieldset>
-                            <input type="radio" id="inf" name="Influencer" value="Influencer">
-                            <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
-                            <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
-                            <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
-                        </fieldset>
-                    </p>
-                    <p>
-                        Vorname:
-                        <input type="text" name="txtVorname" />
-                    </p>
-                    <p>
-                        Name:
-                        <input type="text" name="txtName" />
-                    </p>
-                    <p>
-                        Unternehmensname:
-                        <input type="text" name="txtUnternehmensname" />
-                    </p>
-                    <p>
-                        Branche:<br /> <!-- als Dropdown -->
-                        <select name="lstBranche"
-                                multiple="multiple" size="5">
-                            <option value="1">Anime</option>
-                            <option value="2">Autos & Fahrzeuge</option>
-                            <option value="3">Beauty & Fashion</option>
-                            <option value="4">Bildung</option>
-                            <option value="5">DIY</option>
-                            <option value="6">Essen</option>
-                            <option value="7">Lifestyle</option>
-                            <option value="8">Gesundheit</option>
-                            <option value="9">Menschen & Blogs</option>
-                            <option value="10">Reisen & Events</option>
-                            <option value="11">Kunst & Design</option>
-                        </select>
-                    </p>
-                    <p>
-                        E-Mail:
-                        <input type="text" name="txtEMail" />
-                    </p>
-                    <p>
-                        Benutzername:
-                        <input type="text" name="txtBenutzername" />
-                    </p>
-                    <p>
-                        Passwort:
-                        <input type="text" name="txtPasswort" />
-                    </p>
-                </form>
-                <br />
-                <input type="submit" name="btnSpeichern" value="Speichern" />
-                <input type="reset" name="btnAbbrechen" value="Abbrechen" />
+                <div id="formular">
+                    <form method="get" action="Einloggen.html">
+                        <p>
+                            Ich bin:
+                            <fieldset>
+                                <input type="radio" id="inf" name="Influencer" value="Influencer">
+                                <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
+                                <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
+                                <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
+                            </fieldset>
+                        </p>
+                        <p>
+                            Vorname:
+                            <input type="text" name="txtVorname" id="InputLeiste"/>
+                        </p>
+                        <p>
+                            Name:
+                            <input type="text" name="txtName" id="InputLeiste"/>
+                        </p>
+                        <p>
+                            Unternehmensname:
+                            <input type="text" name="txtUnternehmensname" id="InputLeiste"/>
+                        </p>
+                        <p>
+                            Branche:<br /> <!-- als Dropdown -->
+                            <select name="lstBranche"
+                                    multiple="multiple" size="5" id="InputLeiste">
+                                <option value="1">Anime</option>
+                                <option value="2">Autos & Fahrzeuge</option>
+                                <option value="3">Beauty & Fashion</option>
+                                <option value="4">Bildung</option>
+                                <option value="5">DIY</option>
+                                <option value="6">Essen</option>
+                                <option value="7">Lifestyle</option>
+                                <option value="8">Gesundheit</option>
+                                <option value="9">Menschen & Blogs</option>
+                                <option value="10">Reisen & Events</option>
+                                <option value="11">Kunst & Design</option>
+                            </select>
+                        </p>
+                        <p>
+                            E-Mail:
+                            <input type="text" name="txtEMail" id="InputLeiste"/>
+                        </p>
+                        <p>
+                            Benutzername:
+                            <input type="text" name="txtBenutzername" id="InputLeiste"/>
+                        </p>
+                        <p>
+                            Passwort:
+                            <input type="text" name="txtPasswort" id="InputLeiste"/>
+                        </p>
+                    </form>
+                    <br />
+                    <div class="center">
+                        <input type="submit" name="btnSpeichern" value="Speichern" class="button" />
+                        <input type="reset" name="btnAbbrechen" value="Abbrechen" class="button" />
+                    </div>
+                </div>
             </div>
         <!--</div>-->
         <!-- right Column-->

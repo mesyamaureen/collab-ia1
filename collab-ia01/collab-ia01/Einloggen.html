@@ -70,20 +70,24 @@
         <!--<div id="primaryContentContainer">-->
             <div id="primaryContent">
                 <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
-                <form method="get" action="meinProfil.html" class="center">
-                    <!-- FRAGEN: "ist class benötigt? oder gibt's anderen Trick dafür?" Stand: 05.05.2021 -->
-                    <p>
-                        <label for="txtBenutzername" id="lblBenutzername">Benutzername:</label>
-                        <input id="txtBenutzername" type="text" name="txtBenutzername" />
-                    </p>
-                    <p>
-                        <label for="txtPasswort" id="lblPasswort">Passwort:</label>
-                        <input id="txtPasswort" type="password" name="txtPasswort" />
-                    </p>
-                    <br />
-                    <input type="submit" name="btnMeinProfil" value="Mein Profil" />
-                    <a href="Einloggen.html">Passwort vergessen?</a>
-                </form>
+                <div id="formular">
+                    <form method="get" action="meinProfil.html" class="center">
+                        <!-- FRAGEN: "ist class benötigt? oder gibt's anderen Trick dafür?" Stand: 05.05.2021 -->
+                        <p>
+                            <label for="txtBenutzername" id="lblBenutzername">Benutzername:</label>
+                            <input id="InputLeiste" type="text" name="txtBenutzername" />
+                        </p>
+                        <p>
+                            <label for="txtPasswort" id="lblPasswort">Passwort:</label>
+                            <input id="InputLeiste" type="password" name="txtPasswort" />
+                        </p>
+                        <br />
+                        <div class="center">
+                            <input type="submit" name="btnMeinProfil" value="Mein Profil" class="button" />
+                            <a href="Einloggen.html">Passwort vergessen?</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         <!--</div>-->
         <!-- right Column-->

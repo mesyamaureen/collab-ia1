@@ -287,5 +287,12 @@ p {
             background-color: #f1f1f1;
         }
 
+#formular {
+    width: 50%;
+    margin-top: 5em;
+}
 
+#InputLeiste {
+    width: 100%;
+}
    
