@@ -3,126 +3,153 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>collab - Influencer Marketing Tool</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="collab.css" />
 </head>
 <body>
     <!-- Header -->
-    <div id="header">
-        <a title="zur Startseite" href="Startseite.html">
-            <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
-        </a>
-        <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-    </div>
-    <div id="menu">
-        <ul style="list-style-type: none;">
-            <li class="first">
-                <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
-            </li>
-            <li>
-                <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Content fängt hier an -->
-    <!-- right Column-->
-    <div id="tertiaryContent">
-        <p>Brauchen Sie Hilfe?</p>
-        <p>Tel.: 030 38 99 00</p>
-        <p>E-Mail: collab@info.de</p>
+    <div>
+        <div id="header">
+            <a title="zur Startseite" href="Startseite.html">
+                <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
+            </a>
+            <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
+        </div>
+        <div id="menu">
+            <ul style="list-style-type: none;">
+                <li class="first">
+                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
+                </li>
+                <li>
+                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
+                </li>
+                <li>
+                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
+                </li>
+                <li>
+                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
+                </li>
+                <li>
+                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
+                </li>
+                <li>
+                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
+    <div id="body">
+        <!-- Content fängt hier an -->
+        <!-- left Column -->
+        <div id="secondaryContentContainer">
+            <div id="secondaryContent">
+                <ul style="font-size: 16px;">
+                    <li id="current">
+                        <a href="Startseite.html">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="Influencer suchen.html">Influencer suchen</a>
+                    </li>
+                    <li>
+                        <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                    </li>
+                    <li>
+                        <a href="Jobanzeigen.html">Jobanzeigen</a>
+                    </li>
+                    <li>
+                        <a href="Einloggen.html">Einloggen</a>
+                    </li>
+                    <li>
+                        <a href="Impressum.html">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <!-- middle Column -->
-    <div id="primaryContentContainer">
+        <!-- middle Column -->
+        <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
-            <img src="Startseite.jpg" class="center" width="800" height="400" alt="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" />
-            <h2 class="center">Nr. 1 Influencer Marketing Tool in Deutschland</h2>
-            <br />
+            <img src="Startseite.jpg" id="image" class="center" height="400" alt="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" /> <!--width="800" height="400"-->
+            <div style="margin:2em 0 1em 0;">
+                <h1 class="center">#1 Influencer Marketing Tool in Deutschland</h1>
+            </div>
             <div class="center">
                 <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
-                <!--https://stackoverflow.com/questions/2906582/how-to-create-an-html-button-that-acts-like-a-link-->
-                <button class="buttonInfluencer">Influencer suchen</button>
-                <button class="buttonUnternehmen">Unternehmen suchen</button>
+                <button class="button">Influencer suchen</button>
+                <button class="button">Unternehmen suchen</button>
             </div>
             <br />
-            <div>
+            <div style="margin: 2em 0 2em 0;">
                 <h2 class="center">Was bieten wir an?</h2>
                 <p class="center">Wir bieten ein Plattform zur Vermittlung von Influencern zu den passenden Unternehmen an. Wir helfen Ihnen, Ihre Planungsphase beim Influencer-Kampagne zu verkürzen.</p>
             </div>
 
             <!-- Meet The Team -->
             <h2 class="center">Lernen Sie unser Team kennen!</h2>
-            <br />
-            <!-- Clara Scherf -->
-            <div class="column">
-                <div class="card">
-                    <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
-                    <div class="container">
-                        <h3 class="center">Clara Scherf</h3>
-                        <p class="title">IT</p>
+            <div class="team">
+                <!-- Clara Scherf -->
+                <div class="column">
+                    <div class="card">
+                        <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
+                        <div class="container">
+                            <h3 class="center">Clara Scherf</h3>
+                            <p class="title">IT</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Mesya Jeynie -->
-            <div class="column">
-                <div class="card">
-                    <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
-                    <div class="container">
-                        <h3 class="center">Mesya Jeynie</h3>
-                        <p class="title">IT</p>
+                <!-- Mesya Jeynie -->
+                <div class="column">
+                    <div class="card">
+                        <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
+                        <div class="container">
+                            <h3 class="center">Mesya Jeynie</h3>
+                            <p class="title">IT</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Nina Hochtritt -->
-            <div class="column">
-                <div class="card">
-                    <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
-                    <div class="container">
-                        <h3 class="center">Nina Hochtritt</h3>
-                        <p class="title">IT</p>
+                <!-- Nina Hochtritt -->
+                <div class="column">
+                    <div class="card">
+                        <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
+                        <div class="container">
+                            <h3 class="center">Nina Hochtritt</h3>
+                            <p class="title">IT</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--</div>-->
+        <!-- right Column-->
+        <div id="tertiaryContent">
+            <fieldset id="fldKontakt">
+                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                <p>Tel.: 030 38 99 00</p>
+                <p>E-Mail: collab@info.de</p>
+            </fieldset>
+            <fieldset id="fldSocMed" style="margin-top:5em;">
+                <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
+                <div id="socmed">
+                    <!-- Add icon library -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                </div>
+            </fieldset>
+        </div>
     </div>
 
-
-    <!-- left Column -->
-    <div id="secondaryContent">
-        <ul>
-            <li id="current">
-                <a href="Startseite.html">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html">Einloggen</a>
-            </li>
-            <li>
-                <a href="Impressum.html">Impressum</a>
-            </li>
-        </ul>
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 </body>
 </html>

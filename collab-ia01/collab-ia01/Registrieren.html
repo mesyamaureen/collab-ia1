@@ -2,129 +2,164 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>collab - Influencer Marketing Tool</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="collab.css" />
 </head>
 <body>
     <!-- Header -->
-    <div id="header">
-        <a title="zur Startseite" href="Startseite.html">
-            <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
-        </a>
-        <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-    </div>
-    <div id="menu">
-        <ul style="list-style-type: none;">
-            <li class="first">
-                <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
-            </li>
-            <li>
-                <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
-            </li>
-        </ul>
-    </div>
-    <!-- Content fängt hier an -->
-    <!-- right Column-->
-    <div id="tertiaryContent">
-        <p>Brauchen Sie Hilfe?</p>
-        <p>Tel.: 030 38 99 00</p>
-        <p>E-Mail: collab@info.de</p>
-    </div>
-    <!-- middle Column -->
-    <div id="primaryContentContainer">
-        <div id="primaryContent">
-            <h1 class:"center">Melden Sie sich an!</h1>
-            <form method="get" action="Einloggen.html">
-                <p>
-                    Ich bin:
-                <fieldset>
-                    <input type="radio" id="inf" name="Influencer" value="Influencer">
-                    <label for="inf"> Influencer</label>
-                    <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
-                    <label for="unt"> Unternehmer</label>
-                </fieldset>
-                    </p>
-                <p>
-                    Vorname:
-                    <input type="text" name="txtVorname" />
-                </p>
-                <p>
-                    Name:
-                    <input type="text" name="txtName" />
-                </p>
-                <p>
-                    Unternehmensname:
-                    <input type="text" name="txtUnternehmensname" />
-                </p>
-                <p>
-                    Branche:<br /> <!-- als Dropdown -->
-                    <select name="lstBranche"
-                            multiple="multiple" size="5">
-                        <option value="1">Anime</option>
-                        <option value="2">Autos & Fahrzeuge</option>
-                        <option value="3">Beauty & Fashion</option>
-                        <option value="4">Bildung</option>
-                        <option value="5">DIY</option>
-                        <option value="6">Essen</option>
-                        <option value="7">Lifestyle</option>
-                        <option value="8">Gesundheit</option>
-                        <option value="9">Menschen & Blogs</option>
-                        <option value="10">Reisen & Events</option>
-                        <option value="11">Kunst & Design</option>
-                    </select>
-                </p>
-                <p>
-                    E-Mail:
-                    <input type="text" name="txtEMail" />
-                </p>
-                <p>
-                    Benutzername:
-                    <input type="text" name="txtBenutzername" />
-                </p>
-                <p>
-                    Passwort:
-                    <input type="text" name="txtPasswort" />
-                </p>
-            </form>
-            <br />
-            <input type="submit" name="btnSpeichern" value="Speichern" />
-            <input type="reset" name="btnAbbrechen" value="Abbrechen" />
+    <div>
+        <div id="header">
+            <a title="zur Startseite" href="Startseite.html">
+                <img src="COLLAB-BILD.png" width="300" alt="Collab-Logo" />
+            </a>
+            <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
+        </div>
+        <div id="menu">
+            <ul style="list-style-type: none;">
+                <li class="first">
+                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
+                </li>
+                <li>
+                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
+                </li>
+                <li>
+                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
+                </li>
+                <li>
+                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
+                </li>
+                <li>
+                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
+                </li>
+                <li>
+                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- left Column -->
-    <div id="secondaryContent">
-        <ul>
-            <li id="current">
-                <a href="Startseite.html">Startseite</a>
-            </li>
-            <li>
-                <a href="Influencer suchen.html">Influencer suchen</a>
-            </li>
-            <li>
-                <a href="Unternehmen suchen.html">Unternehmen suchen</a>
-            </li>
-            <li>
-                <a href="Jobanzeigen.html">Jobanzeigen</a>
-            </li>
-            <li>
-                <a href="Einloggen.html">Einloggen</a>
-            </li>
-            <li>
-                <a href="Impressum.html">Impressum</a>
-            </li>
-        </ul>
+
+    <div id="body">
+        <!-- Content fängt hier an -->
+        <!-- left Column -->
+        <div id="secondaryContentContainer">
+            <div id="secondaryContent">
+                <ul style="font-size:16px;">
+                    <li id="current">
+                        <a href="Startseite.html">Startseite</a>
+                    </li>
+                    <li>
+                        <a href="Influencer suchen.html">Influencer suchen</a>
+                    </li>
+                    <li>
+                        <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                    </li>
+                    <li>
+                        <a href="Jobanzeigen.html">Jobanzeigen</a>
+                    </li>
+                    <li>
+                        <a href="Einloggen.html">Einloggen</a>
+                    </li>
+                    <li>
+                        <a href="Impressum.html">Impressum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- middle Column -->
+        <!--<div id="primaryContentContainer">-->
+        <div id="primaryContent">
+            <h1 class="center">Registrieren</h1>
+            <h2 class="center">Erstellen Sie ein Konto!</h2>
+            <div id="formular">
+                <form method="get" action="Einloggen.html">
+                    <p>
+                        Ich bin:
+                        <fieldset>
+                            <input type="radio" id="inf" name="Influencer" value="Influencer">
+                            <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
+                            <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
+                            <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
+                        </fieldset>
+                    </p>
+                    <p>
+                        Vorname:
+                        <input type="text" name="txtVorname" id="InputLeiste" placeholder="Ihr Vorname" />
+                    </p>
+                    <p>
+                        Name:
+                        <input type="text" name="txtName" id="InputLeiste" placeholder="Ihr Name" />
+                    </p>
+                    <p>
+                        Unternehmensname:
+                        <input type="text" name="txtUnternehmensname" id="InputLeiste" placeholder="Ihr Unternehmensname" />
+                    </p>
+                    <p>
+                        Branche:<br /> <!-- als Dropdown -->
+                        <select name="lstBranche"
+                                multiple="multiple" size="5" id="InputLeiste">
+                            <option value="1">Anime</option>
+                            <option value="2">Autos & Fahrzeuge</option>
+                            <option value="3">Beauty & Fashion</option>
+                            <option value="4">Bildung</option>
+                            <option value="5">DIY</option>
+                            <option value="6">Essen</option>
+                            <option value="7">Lifestyle</option>
+                            <option value="8">Gesundheit</option>
+                            <option value="9">Menschen & Blogs</option>
+                            <option value="10">Reisen & Events</option>
+                            <option value="11">Kunst & Design</option>
+                        </select>
+                    </p>
+                    <p>
+                        E-Mail:
+                        <input type="text" name="txtEMail" id="InputLeiste" placeholder="Ihre E-Mail" required />
+                    </p>
+                    <p>
+                        Benutzername:
+                        <input type="text" name="txtBenutzername" id="InputLeiste" placeholder="Ihr Benutzername" required />
+                    </p>
+                    <p>
+                        Passwort:
+                        <input type="password" name="txtPasswort" id="InputLeiste" placeholder="Ihr Passwort" required />
+                    </p>
+                </form>
+
+                <div class="center" style="margin-top: 4em;">
+                    <input type="submit" name="btnSpeichern" value="Speichern" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                    <input type="reset" name="btnAbbrechen" value="Abbrechen" class="button" />
+                </div>
+            </div>
+        </div>
+        <!--</div>-->
+        <!-- right Column-->
+        <div id="tertiaryContent">
+            <fieldset id="fldKontakt">
+                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                <p>Tel.: 030 38 99 00</p>
+                <p>E-Mail: collab@info.de</p>
+            </fieldset>
+            <fieldset id="fldSocMed" style="margin-top:5em;">
+                <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
+                <div id="socmed">
+                    <!-- Add icon library -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                    <!-- Add font awesome icons -->
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 </body>
 </html>
