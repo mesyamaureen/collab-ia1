@@ -173,6 +173,11 @@ p {
     width: 100%;
 }
 
+#primaryContentBlock {
+    width: 95%;
+    margin-top: 3em;
+}
+
 #secondaryContentContainer {
     position: absolute;
     float: left;
@@ -270,6 +275,7 @@ p {
     width: 100%; /* Full-width */
     border: 1px solid #ddd; /* Add a grey border */
     font-size: medium; /* Increase font-size */
+    margin-top: 2em;
 }
 
     #Tabelle th, #Tabelle td {
@@ -289,10 +295,12 @@ p {
 
 #formular {
     width: 50%;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 #InputLeiste {
     width: 100%;
+    font-size: 18px;
+    padding: 6px 9px 4px 6px;
 }
    
