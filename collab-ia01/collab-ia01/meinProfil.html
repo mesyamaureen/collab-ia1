@@ -72,46 +72,47 @@
 
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
-        <div id="primaryContent">
+        <div id="primaryContentContainer">
             <!--bild-->
-            <div class="column">
-                <!--<div class="card">-->
+            <!--<div class="card">-->
+            <div id="primaryContent">
+                <h1 class="center">Mein Profil</h1>
+                <div id="image">
                 <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
-                <!--hier muss noch seite "Meine Jobanzeigen erstellt werden-->
-                <form method="get" action="/Jobanzeigen.html">
-                    <button type="submit">Meine Jobanzeigen</button>
-                </form>
-                <p>
-                    Vorname:
-                    <input type="text" name="txtVorname" />
-                </p>
-                <p>
-                    Name:
-                    <input type="text" name="txtName" />
-                </p>
-                <p>
-                    Benutzername:
-                    <input type="text" name="txtBenutzername" />
-                </p>
-                <p>
-                    Passwort:
-                    <input type="text" name="txtPasswort" />
-                </p>
-                <p>
-                    Branche:
-                    <input type="text" name="txtBranche" />
-                </p>
-                <!--Profil bearbeiten Seite fehlt noch-->
-                <div style="float:right;">
-                    <form method="get" action="/meinProfil.html">
-                        <button type="submit">Profil bearbeiten</button>
-                    </form>
-                </div>
-                <div style="clear:right;"></div>
-                
+                  </div>
+                <div class="center">
+                        <button class="button">Meine Jobanzeigen</button>
+                    </div>
+                    <div id="formular">
+                        <p>
+                            Vorname:
+                            <input type="text" name="txtVorname" id="InputLeiste" placeholder="Vorname" required />
+                        </p>
+                        <p>
+                            Name:
+                            <input type="text" name="txtName" id="InputLeiste" placeholder="Name" required />
+                        </p>
+                        <p>
+                            Benutzername:
+                            <input type="text" name="txtBenutzername" id="InputLeiste" placeholder="Benutzername" required />
+                        </p>
+                        <p>
+                            Passwort:
+                            <input type="text" name="txtPasswort" id="InputLeiste" placeholder="Passwort" required />
+                        </p>
+                        <p>
+                            Branche:
+                            <input type="text" name="txtBranche" id="InputLeiste" placeholder="Branche" required />
+                        </p>
 
+                        <div class="center">
+                            <button class="button">Bearbeiten</button>
+
+                        </div>
+
+                    </div>
+                </div>
             </div>
-        </div>
         <!--</div>-->
         <!-- right Column-->
         <div id="tertiaryContent">
