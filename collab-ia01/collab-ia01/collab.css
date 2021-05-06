@@ -191,7 +191,7 @@ p {
     float: left;
     width: 12.5em;
     padding: 3.5em 2em 1.5em 2em;
-    background: #F78888;
+    background: #FFCCBC;
 }
 
 #secondaryContent {
@@ -206,7 +206,7 @@ p {
     position: relative;
     width: 10%;
     padding: 3em 2em 1.5em 2em;
-    background: #F78888;
+    background: #FFCCBC;
 }
 
 .button {
@@ -363,7 +363,7 @@ p {
 
 .parallax {
     /*Bild auf Startseite*/
-    background-image: url("Network.jpg");
+    background-image: url("BgParallax.jpg");
     /*Set a specific height*/
     min-height: 100px;
     width: 100%;
