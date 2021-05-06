@@ -146,11 +146,19 @@ p {
     border-left: solid 1px;
 }
 
-.body {
+#body {
     display: flex;
     flex-direction: row;
 }
 
+#footer {
+    position: relative;
+    z-index: 1;
+    border-top: solid 1px #000000;
+    padding: 1em 0 2em 0;
+    margin: 1em 2em 0 2em;
+    text-align: center;
+}
 /*#primaryContentContainer {
     background: #ffffff top left repeat-y;
     float: right;
