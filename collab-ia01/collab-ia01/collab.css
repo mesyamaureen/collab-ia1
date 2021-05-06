@@ -5,7 +5,7 @@
 }
 
 h1 {
-    color: #80805E;
+    color:#000000; /*#80805E*/
     font-size: xx-large;
     margin-left: 5px;
     margin-top: 10px;
@@ -361,11 +361,22 @@ p {
     color: #ECECEC;
 }
 
-
-/*#link_bar a:link {
-    color: #000000;
+.parallax {
+    /*Bild auf Startseite*/
+    background-image: url("Network.jpg");
+    /*Set a specific height*/
+    min-height: 100px;
+    width: 100%;
+    /*Create the parallax scrolling effect*/
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed*/
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: unset;
+    }
 }
 
-#link_bar a:hover {
-    color: #808080
-}*/
