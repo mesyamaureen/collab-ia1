@@ -238,7 +238,7 @@ p {
 .team {
     display: flex;
     flex-direction: row;
-    margin-top: 2em;
+    margin: 2em 0 5em 0;
     justify-content:center;
 }
 
