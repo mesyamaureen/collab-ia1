@@ -223,8 +223,8 @@ p {
 
 /* Team Columns*/
 .column {
-    float: left;
-    width: 30%;
+    /*float: left;*/
+    width: 10%;
     margin-bottom: 16px;
     padding: 0 8px;
 }
@@ -232,6 +232,8 @@ p {
 .team {
     display: flex;
     flex-direction: row;
+    margin-top: 2em;
+    justify-content:center;
 }
 
 /* Columns werden vertikal bei kleinerer Anwendung angezeigt*/
