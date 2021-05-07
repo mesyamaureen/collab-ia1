@@ -73,19 +73,21 @@
         <!-- middle Column -->
             <div id="primaryContent">
                 <h1 class="center">Mein Profil</h1>
-                <div id="primaryContentBlock">
+                <div id="primaryContentBlock" class="parallax">
                     <div id="meinProfilBild">
                         <div class="container" style="width:250px; height: 250px; margin: 0 8em 0 1em;">
                             <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" class="imgMeinProfil" />
                             <div class="overlay">
                                 <a href="#" style="color: white">Ändern</a></div>
                         </div>
+
                         <div class="buttonHalterMP">
                             <input class="button" type="button" onclick="location.href='http://localhost:50935/MeineJobanzeigen.html';" value="Meine Jobanzeigen" />
                             <p style="font-size:20px; font-weight:800; margin-top: 20px;">Kunden ID: 12345</p>
                             <!--<button class="button">Meine Jobanzeigen</button>-->
                         </div>
                     </div>
+
                     <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; margin: 2em 0 2em 0;"> <!--style="width: 100%; margin: 4em 0 2em 0;"-->
                         <form method="get" action="Registrieren.html" style="width:70%;">
                             <p>
@@ -108,6 +110,11 @@
                                 <label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
                                 <input id="InputLeiste" type="text" name="txtBranche" placeholder="Branche" required /> <!--soll disabled sein-->
                             </p>
+
+                            <div class="center" style="margin-top: 2em;">
+                                <input type="submit" name="btnSpeichern" value="Speichern" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                                <input type="reset" name="btnAbbrechen" value="Abbrechen" class="button" />
+                            </div>
                         </form>
                     </div>
                 </div>
