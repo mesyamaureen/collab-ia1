@@ -411,7 +411,13 @@ p {
     position: relative;
     width: 50%;
     max-width: 300px;
-    border-radius: 50%;
+}
+
+/* Make the image to responsive */
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -425,7 +431,7 @@ p {
     transition: .5s ease;
     opacity: 0;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     padding: 20px;
     text-align: center;
 }
