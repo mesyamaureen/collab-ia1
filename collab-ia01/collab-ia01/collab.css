@@ -395,6 +395,8 @@ p {
 #meinProfilBild{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items:center;
     /*flex-grow: 1;*/
 }
 
@@ -402,4 +404,13 @@ p {
     width: inherit;
     height: inherit;
     border-radius: 50%;
+}
+
+.buttonHalterMP {
+    height: 10%;
+    width: 30%;
+    /*text-align: left;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
