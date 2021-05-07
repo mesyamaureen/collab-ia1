@@ -391,3 +391,14 @@ p {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+#meinProfilBild{
+    display: flex;
+    flex-direction: row;
+    /*flex-grow: 1;*/
+}
+
+.imgMeinProfil{
+    width: 200px;
+    height: 200px;
+}

@@ -71,43 +71,40 @@
         </div>
 
         <!-- middle Column -->
-        <!--<div id="primaryContentContainer">-->
-        <div id="primaryContentContainer">
-            <!--bild-->
-            <!--<div class="card">-->
             <div id="primaryContent">
                 <h1 class="center">Mein Profil</h1>
-                <div id="image">
-                    <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" style="width:100%" />
-                </div>
-                <div class="center">
-                    <button class="button">Meine Jobanzeigen</button>
-                </div>
-                <div id="formular">
-                    <p>
-                        Vorname:
-                        <input type="text" name="txtVorname" id="InputLeiste" placeholder="Vorname" required />
-                    </p>
-                    <p>
-                        Name:
-                        <input type="text" name="txtName" id="InputLeiste" placeholder="Name" required />
-                    </p>
-                    <p>
-                        Benutzername:
-                        <input type="text" name="txtBenutzername" id="InputLeiste" placeholder="Benutzername" required />
-                    </p>
-                    <p>
-                        Passwort:
-                        <input type="text" name="txtPasswort" id="InputLeiste" placeholder="Passwort" required />
-                    </p>
-                    <p>
-                        Branche:
-                        <input type="text" name="txtBranche" id="InputLeiste" placeholder="Branche" required />
-                    </p>
-
-
+                <div id="primaryContentBlock">
+                    <div id="meinProfilBild">
+                        <img src="Team.jpg" alt="https://unsplash.com/photos/DsquaRPU_tA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" class="imgMeinProfil"/>
+                        <button class="button">Meine Jobanzeigen</button>
+                    </div>
+                    <div id="formular">
+                        <form method="get" action="Registrieren.html">
+                            <p>
+                                <label for="txtVorname" id="lblVorname"><b>Vorname:</b></label>
+                                <input id="InputLeiste" type="text" name="txtVorname" placeholder="Vorname" required /> <!--soll disabled sein-->
+                            </p>
+                            <p>
+                                <label for="txtName" id="lblName"><b>Name:</b></label>
+                                <input id="InputLeiste" type="text" name="txtName" placeholder="Name" required /> <!--soll disabled sein-->
+                            </p>
+                            <p>
+                                <label for="txtBenutzername" id="lblBenutzername"><b>Benutzername:</b></label>
+                                <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Benutzername" required /> <!--soll disabled sein-->
+                            </p>
+                            <p>
+                                <label for="txtPasswort" id="lblPasswort"><b>Passwort:</b></label>
+                                <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Passwort" required /> <!--soll disabled sein-->
+                            </p>
+                            <p>
+                                <label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
+                                <input id="InputLeiste" type="text" name="txtBranche" placeholder="Branche" required /> <!--soll disabled sein-->
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
+
             <!--</div>-->
             <!-- right Column-->
             <div id="tertiaryContent">
@@ -132,9 +129,8 @@
                     </div>
                 </fieldset>
             </div>
-
-        </div>
      </div>
+
         <!-- FOOTER -->
         <div id="footer">
             <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
