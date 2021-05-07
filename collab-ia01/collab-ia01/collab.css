@@ -350,21 +350,21 @@ p {
 /* Facebook */
 .fa-facebook {
     background: #90CCF4;
-    color: #ECECEC;
+    color: #000000;
     margin-bottom: 2em;
 }
 
 /* Instagram*/
 .fa-instagram {
     background: #90CCF4;
-    color: #ECECEC;
+    color: #000000;
     margin-bottom: 2em;
 }
 
 /*Youtube*/
 .fa-youtube {
     background: #90CCF4;
-    color: #ECECEC;
+    color: #000000;
 }
 
 .parallax {
@@ -399,6 +399,7 @@ p {
 }
 
 .imgMeinProfil{
-    width: 200px;
-    height: 200px;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
 }
