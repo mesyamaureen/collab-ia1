@@ -104,7 +104,6 @@
     <Content Include="Html\Registrieren.html" />
     <Content Include="Html\Startseite.html" />
     <Content Include="Html\Unternehmen suchen.html" />
-    <Content Include="Bewerbung.html" />
     <Content Include="Bilder\BgParallax.jpg" />
     <Content Include="Bilder\ClaraScherf.jpeg" />
     <Content Include="Bilder\COLLAB-BILD.png" />
@@ -114,7 +113,6 @@
     <Content Include="Bilder\NinaHochtritt.jpeg" />
     <Content Include="Bilder\Startseite.jpg" />
     <Content Include="Bilder\Team.jpg" />
-    <Content Include="collab.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
