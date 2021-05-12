@@ -93,6 +93,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bewerbung.html" />
+    <Content Include="Bilder\BgParallax.jpg" />
+    <Content Include="Bilder\ClaraScherf.jpeg" />
+    <Content Include="Bilder\COLLAB-BILD.png" />
+    <Content Include="Bilder\InfluencerMarketing.jpg" />
+    <Content Include="Bilder\MesyaJeynie.jpeg" />
+    <Content Include="Bilder\Network.jpg" />
+    <Content Include="Bilder\NinaHochtritt.jpeg" />
+    <Content Include="Bilder\Startseite.jpg" />
+    <Content Include="Bilder\Team.jpg" />
     <Content Include="collab.css" />
     <Content Include="Einloggen.html" />
     <Content Include="Impressum.html" />
@@ -153,9 +162,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Bilder\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
