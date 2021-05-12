@@ -92,18 +92,18 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Bewerbung.html" />
-    <Content Include="collab.css" />
-    <Content Include="Einloggen.html" />
-    <Content Include="Impressum.html" />
-    <Content Include="Influencer suchen.html" />
-    <Content Include="Jobanzeigen.html" />
-    <Content Include="MeineJobanzeigen.html" />
-    <Content Include="meinProfil.html" />
-    <Content Include="Profil.html" />
-    <Content Include="Registrieren.html" />
-    <Content Include="Startseite.html" />
-    <Content Include="Unternehmen suchen.html" />
+    <Content Include="Html\Bewerbung.html" />
+    <Content Include="Css\collab.css" />
+    <Content Include="Html\Einloggen.html" />
+    <Content Include="Html\Impressum.html" />
+    <Content Include="Html\Influencer suchen.html" />
+    <Content Include="Html\Jobanzeigen.html" />
+    <Content Include="Html\MeineJobanzeigen.html" />
+    <Content Include="Html\meinProfil.html" />
+    <Content Include="Html\Profil.html" />
+    <Content Include="Html\Registrieren.html" />
+    <Content Include="Html\Startseite.html" />
+    <Content Include="Html\Unternehmen suchen.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
