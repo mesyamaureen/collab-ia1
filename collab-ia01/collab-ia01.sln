@@ -7,6 +7,8 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "collab-ia01", "collab-ia01\
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "collab-aspnet", "collab\collab-aspnet.vbproj", "{862C834B-6227-4BB2-9BF8-BDECE33DD5D5}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "collab-asp", "collab-asp\collab-asp.vbproj", "{925EB399-A4A5-4314-AC55-BAFF1198BBD4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{862C834B-6227-4BB2-9BF8-BDECE33DD5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{862C834B-6227-4BB2-9BF8-BDECE33DD5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{862C834B-6227-4BB2-9BF8-BDECE33DD5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{925EB399-A4A5-4314-AC55-BAFF1198BBD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{925EB399-A4A5-4314-AC55-BAFF1198BBD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{925EB399-A4A5-4314-AC55-BAFF1198BBD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{925EB399-A4A5-4314-AC55-BAFF1198BBD4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
