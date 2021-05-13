@@ -84,7 +84,7 @@
 
                         <div class="buttonHalterMP">
                             <input class="button" type="button" onclick="location.href='http://localhost:50935/Html/MeineJobanzeigen.html';" value="Meine Jobanzeigen" />
-                            <p style="font-size:20px; font-weight:800; margin-top: 20px;">Kunden ID: 12345</p>
+                            <p style="font-size:20px; font-weight:800; margin-top: 20px;">ID: 12345</p>
                             <!--<button class="button">Meine Jobanzeigen</button>-->
                         </div>
                     </div>
@@ -93,23 +93,52 @@
                         <form method="get" action="Registrieren.html" style="width:70%;">
                             <p>
                                 <label for="txtVorname" id="lblVorname"><b>Vorname:</b></label>
-                                <input id="InputLeiste" type="text" name="txtVorname" placeholder="Vorname" required /> <!--soll disabled sein-->
+                                <input id="InputLeiste" type="text" name="txtVorname" placeholder="Vorname des Influencers" required /> <!--disabled, wenn angemeldeter Benutzer = Unternehmer-->
                             </p>
                             <p>
                                 <label for="txtName" id="lblName"><b>Name:</b></label>
-                                <input id="InputLeiste" type="text" name="txtName" placeholder="Name" required /> <!--soll disabled sein-->
+                                <input id="InputLeiste" type="text" name="txtName" placeholder="Name des Influencers" required /> <!--disabled, wenn angemeldeter Benutzer = Unternehmer-->
+                            </p>
+                            <p>
+                                <label for="txtFirmenname" id="lblFirmenname"><b>Firmenname:</b></label>
+                                <input id="InputLeiste" type="text" name="txtFirmenname" placeholder="Firmenname des Unternehmens" required /> <!--disabled, wenn angemeldeter Benutzer = Influencer-->
+                            </p>
+                            <p>
+                                <label for="txtProfilbeschreibung" id="lblProfilbeschreibung"><b>Profilbeschreibung:</b></label>
+                                <input id="InputLeiste" type="text" name="txtProfilbeschreibung" placeholder="Profilbeschreibung max. 500 Wörter" size="500" style="height: 200px;" /> <!-- Profilbeschreibung -->
                             </p>
                             <p>
                                 <label for="txtBenutzername" id="lblBenutzername"><b>Benutzername:</b></label>
-                                <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Benutzername" required /> <!--soll disabled sein-->
+                                <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Benutzername" required />
                             </p>
                             <p>
                                 <label for="txtPasswort" id="lblPasswort"><b>Passwort:</b></label>
-                                <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Passwort" required /> <!--soll disabled sein-->
+                                <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Passwort" required />
                             </p>
                             <p>
+                                <label for="txtEmail" id="lblEmail"><b>E-Mail:</b></label>
+                                <input id="InputLeiste" type="email" name="txtEmail" placeholder="E-Mail" required />
+                            </p>
+                            <p>
+                                <!--<label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
+                                <input id="InputLeiste" type="text" name="txtBranche" placeholder="Branche" required />-->
                                 <label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
-                                <input id="InputLeiste" type="text" name="txtBranche" placeholder="Branche" required /> <!--soll disabled sein-->
+                                <select name="lstBranche"
+                                        multiple="multiple" size="5" id="InputLeiste">
+                                    <option value="1">Anime</option>
+                                    <option value="2">Autos & Fahrzeuge</option>
+                                    <option value="3">Beauty & Fashion</option>
+                                    <option value="4">Bildung</option>
+                                    <option value="5">DIY</option>
+                                    <option value="6">Ernährung</option>
+                                    <option value="7">Lifestyle</option>
+                                    <option value="8">Gesundheit</option>
+                                    <option value="9">Menschen & Blogs</option>
+                                    <option value="10">Reisen & Events</option>
+                                    <option value="11">Kunst & Design</option>
+                                    <option value="12">Finanzen</option>
+                                    <option value="13">Sonstiges</option>
+                                </select>
                             </p>
 
                             <div class="center" style="margin-top: 2em;">
