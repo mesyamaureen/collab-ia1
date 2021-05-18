@@ -150,6 +150,7 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
     <Compile Include="Models\Benutzer.vb" />
     <Compile Include="Global.asax.vb">
