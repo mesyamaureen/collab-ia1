@@ -71,45 +71,6 @@
 
         <!-- middle Column -->
         <div id="primaryContent">
-            <!-- passt ihr bitte nur diesen Teil an -->
-            <!-- Gehört dieser Inhalt tatsächlich in MeineJobanzeigen.html? -->
-            <!--
-            <h1 class="center">Meine Jobanzeigen</h1><br />
-            <h2 class="center">Hier können Sie Ihre Jobanzeigen verwalten</h2>
-            <div id="primaryContentBlock">
-                <table id="Tabelle">
-                    <tr class="header">
-                        <th>Nr</th>
-                        <th>Jobtitel</th>
-                        <th>Verwalten</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Kassierer/in bei Lidl</td>
-                        <td><a href="Bewerbung.html">Bearbeiten</a></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Wir suchen dich: Praktikum bei Lidl</td>
-                        <td><a href="Bewerbung.html">Bearbeiten</a></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Werkstudentin/Werkstudent Strategischer Einkauf</td>
-                        <td><a href="Bewerbung.html">Bearbeiten</a></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Duales Studium bei Lidl #WirSuchenDich</td>
-                        <td><a href="Bewerbung.html">Bearbeiten</a></td>
-                    </tr>
-                </table>
-                <div class="center">
-                    <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
-            <!--<button class="button">Löschen</button>
-            <button class="button">Hinzufügen</button>
-        </div>
-    </div>-->
     <!-- bis hier -->
             <div class="parallax">
                 <h1 class="center">Mehr über die Jobanzeige</h1>
@@ -151,7 +112,7 @@
 
                     <div class="right" style="margin: 15px 0 40px 0;">
                         <input type="submit" name="btnAbschicken" value="Abschicken" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
-                        <input type="reset" name="btnAbbrechen" value="Abbrechen" class="button" />
+                        <input type="reset" class="button" value="Abbrechen" onclick="javascript: confirm('Möchten Sie wirklich abbrechen? Ihre Nachricht wird endgültig gelöscht.');" />
                     </div>
                 </form>
             </div>
