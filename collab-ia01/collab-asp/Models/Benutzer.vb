@@ -66,7 +66,4 @@ Public Class Benutzer
 
     End Function
 
-    Public Function benutzerLaden() As Benutzer 'Parameter: ID gebraucht. Aber geht dann diese Function in die Unterklasse wegen verschiedener ID? (Stand: 18.05.)
-
-    End Function
 End Class

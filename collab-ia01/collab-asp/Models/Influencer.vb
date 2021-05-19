@@ -72,4 +72,8 @@ Public Class Influencer
         mbrBranche = pbrBranche
     End Sub
 
+    'Subs and Functions
+    Public Function influencerLaden(pintInfluencerID As Integer) As Influencer
+
+    End Function
 End Class

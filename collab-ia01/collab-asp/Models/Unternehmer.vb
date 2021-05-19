@@ -61,4 +61,8 @@ Public Class Unternehmer
         mstrFirmenname = pstrFirmenname
         mbrBranche = pbrBranche
     End Sub
+
+    Public Function unternehmerLaden(pintUntID As Integer) As Unternehmer
+
+    End Function
 End Class
