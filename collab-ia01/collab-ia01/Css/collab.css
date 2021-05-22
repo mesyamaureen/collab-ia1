@@ -234,6 +234,7 @@ p {
     flex-direction: row;
 }/*for Buttons wrap*/
 
+ /*might delete from here*/
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
     background-color: #90CCF4;
@@ -244,7 +245,7 @@ p {
     text-align:center;
     cursor: pointer;
     opacity: 0.8;
-    /*position: fixed;*/
+    position: fixed;
     bottom: 23px;
     right: 28px;
     width: 280px;
@@ -303,6 +304,17 @@ p {
     .form-container .btn:hover, .open-button:hover {
         opacity: 1;
     }
+
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+    /*might delete until here*/
 
 /* Team Columns*/
 .column {

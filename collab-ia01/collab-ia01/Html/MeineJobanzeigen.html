@@ -8,14 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../Css/collab.css" />
-    <script>
-        function openForm() {
-            document.getElementById("myForm").style.display = "block";
-        }
-        function closeForm() {
-            document.getElementById("myForm").style.display = "none";
-        }
-    </script>
 </head>
 <body>
     <!-- Header -->
@@ -97,8 +89,35 @@
                     <tr>
                         <td>1</td>
                         <td>#LidlStudio - Lidl sucht Influencer!</td>
-                        <td><input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button class="open-button" onclick="openForm()">Bearbeiten</button></td> 
-                    </tr>
+                        <td>
+                            <input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button class="open-button" onclick="openForm()">Bearbeiten</button>
+                            <!--Popup für "Bearbeiten" -->
+                            <div class="form-popup" id="myForm">
+                                <form action="/action_page.php" class="form-container">
+                                    <h1>Jobanzeige bearbeiten</h1>
+                                    <label for="Titel"><b>Jobtitel</b></label>
+                                    <input type="text" placeholder="Jobtitel" name="titel" />
+                                    <br />
+                                    <label for="Branche"><b>Branche</b></label>
+                                    <input type="text" placeholder="Branche" name="branche" />
+                                    <br />
+                                    <label for="Beschreibung"><b>Beschreibung</b></label>
+                                    <input type="text" placeholder="Beschreibung" name="beschreibung" />
+                                    <br />
+                                    <button type="submit" class="btn">Speichern</button>
+                                    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                                </form>
+                            </div>
+                            <script>
+                                function openForm() {
+                                    document.getElementById("myForm").style.display = "block";
+                                }
+                                function closeForm() {
+                                    document.getElementById("myForm").style.display = "none";
+                                }
+                            </script>
+                        </td>
+</tr>
                     <tr>
                         <td>2</td>
                         <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
@@ -114,25 +133,7 @@
                         <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
                         <td><input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
                     </tr>
-                </table> 
-
-                <!--Popup für "Bearbeiten" -->
-                <div class="form-popup" id="myForm">
-                    <form action="/action_page.php" class="form-container">
-                        <h1>Jobanzeige bearbeiten</h1>
-                        <label for="Titel"><b>Jobtitel</b></label>
-                        <input type="text" placeholder="Jobtitel" name="titel" />
-                        <br />
-                        <label for="Branche"><b>Branche</b></label>
-                        <input type="text" placeholder="Branche" name="branche" />
-                        <br />
-                        <label for="Beschreibung"><b>Beschreibung</b></label>
-                        <input type="text" placeholder="Beschreibung" name="beschreibung" />
-                        <br />
-                        <button type="submit" class="btn">Speichern</button>
-                        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-                    </form>
-                </div>
+                </table>
 
                 <div class="center">
                     <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
