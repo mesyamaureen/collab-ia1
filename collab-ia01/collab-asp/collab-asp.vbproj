@@ -150,6 +150,10 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\BrancheController.vb" />
+    <Compile Include="Controllers\InfluencerController.vb" />
+    <Compile Include="Controllers\JobanzeigeController.vb" />
+    <Compile Include="Controllers\UnternehmerController.vb" />
     <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
     <Compile Include="Models\Benutzer.vb" />
@@ -247,7 +251,12 @@
     <Content Include="Views\Shared\_Layout.vbhtml" />
     <Content Include="Views\Web.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Branche\" />
+    <Folder Include="Views\Influencer\" />
+    <Folder Include="Views\Jobanzeige\" />
+    <Folder Include="Views\Unternehmer\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
