@@ -11,13 +11,14 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function LadenProfil() As ActionResult
+        Function LadenProfil(intId As Integer) As ActionResult
+            Dim intId As Integer
 
         End Function
 
 
         Function AnzeigenProfil(pintInId As Integer) As Influencer
-
+            Dim intId As Integer
         End Function
 
         Function abbrechen() As ActionResult
