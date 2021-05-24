@@ -151,9 +151,9 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\BrancheController.vb" />
-    <Compile Include="Controllers\InfluencerController.vb" />
+    <Compile Include="Controllers\ProfilController.vb" />
     <Compile Include="Controllers\JobanzeigeController.vb" />
-    <Compile Include="Controllers\UnternehmerController.vb" />
+    <Compile Include="Controllers\AlleProfileController.vb" />
     <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
     <Compile Include="Models\Benutzer.vb" />
