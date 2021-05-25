@@ -151,6 +151,7 @@
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
     <Compile Include="Controllers\AlleInfluencerController.vb" />
+    <Compile Include="Controllers\AlleJobanzeigenController.vb" />
     <Compile Include="Controllers\AlleUnternehmenController.vb" />
     <Compile Include="Controllers\BrancheController.vb" />
     <Compile Include="Controllers\InfluencerEinzelnController.vb" />
@@ -258,6 +259,7 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Views\AlleInfluencer\" />
+    <Folder Include="Views\AlleJobanzeigen\" />
     <Folder Include="Views\AlleUnternehmen\" />
     <Folder Include="Views\Branche\" />
     <Folder Include="Views\InfluencerEinzeln\" />
