@@ -4,12 +4,21 @@ Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
 Public Class Benutzer
+    Private mintBenutzerID As Integer
     Private mstrBenutzername As String
     Private mstrPasswort As String
     Private mstrEmail As String
     Private mstrBeschreibung As String
 
     'Properties
+    Public Property BenutzerID As Integer
+        Get
+            Return mintBenutzerID
+        End Get
+        Set(value As Integer)
+
+        End Set
+    End Property
     Public Property Benutzername As String
         Get
             Return mstrBenutzername
@@ -47,6 +56,7 @@ Public Class Benutzer
 
     'Parameterloser Konstruktor
     Sub New()
+        mintBenutzerID = Nothing
         mstrBenutzername = String.Empty
         mstrPasswort = String.Empty
         mstrEmail = String.Empty
@@ -54,7 +64,8 @@ Public Class Benutzer
     End Sub
 
     'Konstruktor mit Parameter
-    Sub New(pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String)
+    Sub New(pintBenutzerID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String)
+        mintBenutzerID = pintBenutzerID
         mstrBenutzername = pstrBenutzername
         mstrPasswort = pstrPasswort
         mstrEmail = pstrEmail
@@ -62,8 +73,8 @@ Public Class Benutzer
     End Sub
 
     'Subs und Funktionen
-    Public Function alleBenutzerLaden() As List(Of Benutzer)
+    'Public Function alleBenutzerLaden() As List(Of Benutzer)
 
-    End Function
+    'End Function
 
 End Class

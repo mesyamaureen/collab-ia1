@@ -6,20 +6,11 @@ Imports System.ComponentModel
 Public Class Unternehmen
     Inherits Benutzer
 
-    Private mintUntID As Integer
     Private mstrFirmenname As String
     Private mjAnzeige As Jobanzeige
     Private mbrBranche As Branche
 
     'Properties
-    Public Property UnternehmensID As Integer
-        Get
-            Return mintUntID
-        End Get
-        Set(value As Integer)
-
-        End Set
-    End Property
 
     Public Property Firmenname As String
         Get
@@ -50,19 +41,21 @@ Public Class Unternehmen
 
     'Parameterloser Konstruktor
     Sub New()
-        mintUntID = Nothing
         mstrFirmenname = String.Empty
         mbrBranche = Nothing
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pintUntID As Integer, pstrFirmenname As String, pbrBranche As Branche)
-        mintUntID = pintUntID
+    Sub New(pstrFirmenname As String, pbrBranche As Branche)
         mstrFirmenname = pstrFirmenname
         mbrBranche = pbrBranche
     End Sub
 
-    Public Function unternehmerLaden(pintUntID As Integer) As Unternehmen
+    Public Function unternehmenLaden(pintBenutzerID As Integer) As Unternehmen
+
+    End Function
+
+    Public Function alleUnternehmenLaden() As List(Of Unternehmen)
 
     End Function
 End Class

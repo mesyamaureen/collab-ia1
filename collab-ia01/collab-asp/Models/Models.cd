@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="collab_asp.Jobanzeige">
-    <Position X="6.75" Y="3.75" Width="1.5" />
+    <Position X="7.25" Y="3.75" Width="2" />
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8.25" Y="5.562" />
-        <Point X="8.625" Y="5.562" />
-        <Point X="8.625" Y="5.343" />
-        <Point X="9" Y="5.343" />
+        <Point X="9.25" Y="5.562" />
+        <Point X="9.625" Y="5.562" />
+        <Point X="9.625" Y="5.343" />
+        <Point X="10.25" Y="5.343" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -21,36 +21,36 @@
   <Class Name="collab_asp.Benutzer">
     <Position X="1.75" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAACAAAACAAAAAgAAAAAAAAAgAAAAAQAgCgAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAACAAAAAgAAAAAAAAAgACAACQAgCgAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="collab_asp.Influencer">
-    <Position X="4.25" Y="2.25" Width="1.75" />
+    <Position X="4.25" Y="2.5" Width="1.75" />
     <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.5" Y="5.004" />
-        <Point X="3.875" Y="5.004" />
-        <Point X="3.875" Y="5.226" />
-        <Point X="4.25" Y="5.226" />
+        <Point X="3.5" Y="5.007" />
+        <Point X="3.875" Y="5.007" />
+        <Point X="3.875" Y="5.147" />
+        <Point X="4.25" Y="5.147" />
       </Path>
     </InheritanceLine>
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="6" Y="3.044" />
-        <Point X="9.438" Y="3.044" />
-        <Point X="9.438" Y="4.5" />
+        <Point X="6" Y="3.206" />
+        <Point X="10.688" Y="3.206" />
+        <Point X="10.688" Y="4.5" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Bewerbung" Type="collab_asp.Jobanzeige" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="6" Y="3.308" />
-        <Point X="7.5" Y="3.308" />
-        <Point X="7.5" Y="3.75" />
+        <Point X="6" Y="3.441" />
+        <Point X="8.25" Y="3.441" />
+        <Point X="8.25" Y="3.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAACABAAAAAAAAAAABUAAAAAAAEAAAAAIQAAAAI=</HashCode>
+      <HashCode>AAACAAACABAAAAAAAAAAABQAAAAAEAEAAAAAIQAAAAA=</HashCode>
       <FileName>Models\Influencer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -58,46 +58,23 @@
       <Property Name="Bewerbung" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="collab_asp.Unternehmer">
-    <Position X="4.25" Y="6" Width="1.75" />
-    <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true">
-      <Path>
-        <Point X="3.5" Y="6.364" />
-        <Point X="4.25" Y="6.364" />
-      </Path>
-    </InheritanceLine>
-    <AssociationLine Name="Jobanzeige" Type="collab_asp.Jobanzeige" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="8.132" />
-        <Point X="7.5" Y="8.132" />
-        <Point X="7.5" Y="7.488" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="8.532" />
-        <Point X="9.25" Y="8.532" />
-        <Point X="9.25" Y="6.891" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.505" Y="1.018" />
-      </MemberNameLabel>
-    </AssociationLine>
+  <Class Name="collab_asp.Branche">
+    <Position X="10.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAgCAAAAAAgAAAAAAQAAAAAAgAEAAAAAAgAAACA=</HashCode>
-      <FileName>Models\Unternehmer.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIBAAAgAAAA=</HashCode>
+      <FileName>Models\Branche.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="collab_asp.Unternehmen">
+    <Position X="4.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAAAAAAgAAgAIAAAAAAAAgAEAAAAAAgAAAAA=</HashCode>
+      <FileName>Models\Unternehmen.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Jobanzeige" />
       <Property Name="Branche" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="collab_asp.Branche">
-    <Position X="9" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIBAAAgAAAA=</HashCode>
-      <FileName>Models\Branche.vb</FileName>
-    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
