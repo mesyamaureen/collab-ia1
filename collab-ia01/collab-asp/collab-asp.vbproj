@@ -150,10 +150,14 @@
     <Compile Include="App_Start\BundleConfig.vb" />
     <Compile Include="App_Start\FilterConfig.vb" />
     <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Controllers\AlleInfluencerController.vb" />
+    <Compile Include="Controllers\AlleUnternehmenController.vb" />
     <Compile Include="Controllers\BrancheController.vb" />
+    <Compile Include="Controllers\InfluencerEinzelnController.vb" />
     <Compile Include="Controllers\ProfilController.vb" />
     <Compile Include="Controllers\JobanzeigeController.vb" />
     <Compile Include="Controllers\AlleProfileController.vb" />
+    <Compile Include="Controllers\UnternehmerEinzelnController.vb" />
     <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
     <Compile Include="Models\Benutzer.vb" />
@@ -177,7 +181,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
-    <Compile Include="Models\Unternehmer.vb" />
+    <Compile Include="Models\Unternehmen.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -252,9 +256,14 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Views\AlleInfluencer\" />
+    <Folder Include="Views\AlleUnternehmen\" />
     <Folder Include="Views\Branche\" />
+    <Folder Include="Views\InfluencerEinzeln\" />
     <Folder Include="Views\Influencer\" />
     <Folder Include="Views\Jobanzeige\" />
+    <Folder Include="Views\UnternehmerEinzeln\" />
     <Folder Include="Views\Unternehmer\" />
   </ItemGroup>
   <PropertyGroup>
