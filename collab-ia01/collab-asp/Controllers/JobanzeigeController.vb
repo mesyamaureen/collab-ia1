@@ -14,7 +14,7 @@ Namespace Controllers
             Dim intJobID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
-            Return "Job ID =" & intJobID
+            Return "Job ID =  " & intJobID
         End Function
 
         'anzeigenJobanzeige()

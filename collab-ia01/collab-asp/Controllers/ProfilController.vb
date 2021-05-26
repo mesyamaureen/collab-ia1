@@ -11,7 +11,7 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function LadenProfil(intId As Integer) As ActionResult
+        Function LadenProfil(pintId As Integer) As ActionResult
             Dim intId As Integer
 
         End Function
