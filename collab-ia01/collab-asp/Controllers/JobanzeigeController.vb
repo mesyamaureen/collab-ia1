@@ -10,11 +10,13 @@ Namespace Controllers
         End Function
 
         'ladenJobanzeigeEinzeln() - für Bewerbung.html?
-        Function LadenJobanzeigeEinzeln(pintJobID As Integer) As String 'Rückgabewert sollte Jobanzeige
+        Function LadenJobanzeigeEinzeln(ID As Integer) As String 'Rückgabewert sollte Jobanzeige/ActionResult?
             Dim intJobID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
-            Return "Job ID =  " & intJobID
+            intJobID = ID
+            Return "Job ID = " & intJobID
+
         End Function
 
         'anzeigenJobanzeige()
@@ -33,8 +35,13 @@ Namespace Controllers
         End Function
 
         'speichern()
+        <HttpPost>
         Function Speichern() As ActionResult
-
+            'Dim intJobID As Integer
+            'Dim strTitel As String
+            'Dim strBeschreibung As String
+            'strTitel = Request.Form("txtTitel")
+            'strBeschreibung = Request.Form("txtBeschreibung")
         End Function
 
         'abbrechen()
