@@ -228,6 +228,9 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\AlleInfluencer\AlleInfluencerAnzeigen.vbhtml" />
+    <Content Include="Views\AlleInfluencer\AlleInfluencerNeu.vbhtml" />
+    <Content Include="Views\AlleInfluencer\AlleInfluencerOeffnen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -258,7 +261,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Views\AlleInfluencer\" />
     <Folder Include="Views\AlleJobanzeigen\" />
     <Folder Include="Views\AlleUnternehmen\" />
     <Folder Include="Views\Branche\" />
