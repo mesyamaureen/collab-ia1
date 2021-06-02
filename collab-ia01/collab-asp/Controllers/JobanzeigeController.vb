@@ -10,13 +10,12 @@ Namespace Controllers
         End Function
 
         'ladenJobanzeigeEinzeln() - für Bewerbung.html?
-        Function LadenJobanzeigeEinzeln(ID As Integer) As String 'Rückgabewert sollte Jobanzeige/ActionResult?
+        Function LadenJobanzeigeEinzeln(ID As Integer) As ActionResult 'Rückgabewert=Jobanzeige/ActionResult?
             Dim intJobID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
             intJobID = ID
-            Return "Job ID = " & intJobID
-
+            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigeJobanzeige
         End Function
 
         'anzeigenJobanzeige()

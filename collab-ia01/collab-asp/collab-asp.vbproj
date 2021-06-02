@@ -228,6 +228,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Jobanzeige\LadenJobanzeigeEinzeln.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -264,7 +265,6 @@
     <Folder Include="Views\Branche\" />
     <Folder Include="Views\InfluencerEinzeln\" />
     <Folder Include="Views\Influencer\" />
-    <Folder Include="Views\Jobanzeige\" />
     <Folder Include="Views\UnternehmerEinzeln\" />
     <Folder Include="Views\Unternehmer\" />
   </ItemGroup>
