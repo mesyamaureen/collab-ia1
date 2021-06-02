@@ -6,22 +6,12 @@ Imports System.ComponentModel
 Public Class Influencer
     Inherits Benutzer
 
-    Private mintInfluencerID As Integer
     Private mstrVorname As String
     Private mstrName As String
     Private mbrBranche As Branche
     Private mjAnzeige As Jobanzeige
 
     'Properties
-    Public Property InfluencerID As Integer
-        Get
-            Return mintInfluencerID
-        End Get
-        Set(value As Integer)
-
-        End Set
-    End Property
-
     Public Property Vorname As String
         Get
             Return mstrVorname
@@ -48,7 +38,7 @@ Public Class Influencer
         End Set
     End Property
 
-    Public Property Bewerbung As Jobanzeige
+    Public Property Bewerbungen As Jobanzeige
         Get
             Return mjAnzeige
         End Get
@@ -56,24 +46,27 @@ Public Class Influencer
         End Set
     End Property
 
+
     'Parameterloser Konstruktor
     Sub New()
-        mintInfluencerID = Nothing
         mstrVorname = String.Empty
         mstrName = String.Empty
         mbrBranche = Nothing
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pintInfluencerID As Integer, pstrVorname As String, pstrName As String, pbrBranche As Branche)
-        mintInfluencerID = pintInfluencerID
+    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche)
         mstrVorname = pstrVorname
         mstrName = pstrName
         mbrBranche = pbrBranche
     End Sub
 
     'Subs and Functions
-    Public Function influencerLaden(pintInfluencerID As Integer) As Influencer
+    Public Function influencerLaden(pintBenutzerID As Integer) As Influencer
+
+    End Function
+
+    Public Function alleInfluencerLaden() As List(Of Influencer)
 
     End Function
 End Class

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="../Css/collab.css" />
+
 </head>
 <body>
     <!-- Header -->
@@ -94,7 +95,7 @@
                     <tr>
                         <td>2</td>
                         <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
-                        <td><input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                        <td><input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><a href="#" id="button-bearb" class="button">Bearbeiten</a></td> <!--<button id="button-bearb" class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button>-->
                     </tr>
                     <tr>
                         <td>3</td>
@@ -106,12 +107,34 @@
                         <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
                         <td><input type="button" class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
                     </tr>
-
                 </table>
+
                 <div class="center">
                     <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
                     <button class="button">Hinzufügen</button>
                 </div>
+
+                <div class="bg-modal">
+                    <div class="modal-content">
+                        <div class="close">x</div>
+                        <h2>Bearbeiten</h2>
+                        <form action="">
+                            <input type="text" placeholder="Titel" />
+                            <input type="text" placeholder="Beschreibung" />
+                            <a href="" class="button">Speichern</a>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById('button-bearb').addEventListener('click', function() {
+                        document.querySelector('.bg-modal').style.display = 'flex';
+                    });
+
+                    document.querySelector('.close').addEventListener('click', function () {
+                        document.querySelector('.bg-modal').style.display = 'none';
+                    });
+                </script>
             </div>
         </div>
         <!--</div>-->

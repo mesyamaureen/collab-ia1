@@ -82,7 +82,7 @@
                         <h1 class="left">Lidl</h1>
                         <h2 class="left">@lidl_de</h2>
                         <div style="display:flex; flex-direction:row;">
-                            <p>Bewertung:</p>
+                            <a href="#">Bewertung:</a>
                             <div style="display:flex; flex-direction: row; justify-content:flex-start; align-items:center;">
                                 <span class="fa fa-star checked" style="margin-left:0;"></span>
                                 <span class="fa fa-star checked" style="margin-left:0;"></span>
@@ -109,10 +109,37 @@
                     <h3 style="font-weight:600;">E-Mail:</h3>
                     <a href="mailto:lidl@info.de" style="font-size: small;">lidl@info.de</a>
                 </div>
+
+
+                <!--Chat Button -->
+                <button class="open-button" onclick="openForm()">Chat</button>
+
+                <div class="chat-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Chat</h1>
+
+                        <label for="msg"><b>Message</b></label>
+                        <textarea placeholder="Type message.." name="msg" required></textarea>
+
+                        <button type="submit" class="btn">Send</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+
+                <script>
+                    function openForm() {
+                        document.getElementById("myForm").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("myForm").style.display = "none";
+                    }
+                </script>
+                <!--until here-->
             </div>
         </div>
 
-        <!--</div>-->
+
         <!-- right Column-->
         <div id="tertiaryContent">
             <fieldset id="fldKontakt">
