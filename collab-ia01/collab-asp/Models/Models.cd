@@ -31,8 +31,8 @@
       <Path>
         <Point X="3.5" Y="5.007" />
         <Point X="3.875" Y="5.007" />
-        <Point X="3.875" Y="5.147" />
-        <Point X="4.25" Y="5.147" />
+        <Point X="3.875" Y="4.862" />
+        <Point X="4.25" Y="4.862" />
       </Path>
     </InheritanceLine>
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
@@ -42,20 +42,18 @@
         <Point X="10.688" Y="4.5" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="Bewerbung" Type="collab_asp.Jobanzeige" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="3.441" />
-        <Point X="8.25" Y="3.441" />
-        <Point X="8.25" Y="3.75" />
-      </Path>
+    <AssociationLine Name="Bewerbungen" Type="collab_asp.Jobanzeige">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.105" Y="0.024" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAACABAAAAAAAAAAABQAAAAAEAEAAAAAIQAAAAA=</HashCode>
+      <HashCode>ABACAAACABAAAAAAAAAAABQAAAAAEAEAAAAAAQAAAAA=</HashCode>
       <FileName>Models\Influencer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Branche" />
-      <Property Name="Bewerbung" />
+      <Property Name="Bewerbungen" />
     </ShowAsAssociation>
   </Class>
   <Class Name="collab_asp.Branche">
