@@ -231,6 +231,11 @@
     <Content Include="Views\AlleInfluencer\AlleInfluencerAnzeigen.vbhtml" />
     <Content Include="Views\AlleInfluencer\AlleInfluencerNeu.vbhtml" />
     <Content Include="Views\AlleInfluencer\AlleInfluencerOeffnen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\AlleUnternehmenAnzeigen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\AlleUnternehmenNeu.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\AlleUnternehmenOeffnen.vbhtml" />
+    <Content Include="Views\AlleInfluencer\AlleInfluencerLoeschen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\AlleUnternehmenLoeschen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -262,7 +267,6 @@
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Views\AlleJobanzeigen\" />
-    <Folder Include="Views\AlleUnternehmen\" />
     <Folder Include="Views\Branche\" />
     <Folder Include="Views\InfluencerEinzeln\" />
     <Folder Include="Views\Influencer\" />
