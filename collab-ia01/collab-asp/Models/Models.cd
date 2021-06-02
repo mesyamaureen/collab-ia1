@@ -29,72 +29,20 @@
     <Position X="4.25" Y="2.5" Width="1.75" />
     <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-<<<<<<< HEAD
-        <Point X="3.5" Y="5.004" />
-        <Point X="3.875" Y="5.004" />
-        <Point X="3.875" Y="5.4" />
-        <Point X="4.25" Y="5.4" />
-=======
         <Point X="3.5" Y="5.007" />
         <Point X="3.875" Y="5.007" />
         <Point X="3.875" Y="4.862" />
         <Point X="4.25" Y="4.862" />
->>>>>>> c0bddde29e1d5c04ae7a4e11f5ecc0d5cffc4a75
       </Path>
     </InheritanceLine>
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-<<<<<<< HEAD
-        <Point X="6" Y="3.09" />
-        <Point X="9.438" Y="3.09" />
-        <Point X="9.438" Y="4.5" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Bewerbung" Type="collab_asp.Jobanzeige" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="3.37" />
-        <Point X="7.5" Y="3.37" />
-        <Point X="7.5" Y="3.75" />
-      </Path>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAACAAACABAAAAAAAAAAABUAAAAAAAEAAAAAIQAAAAI=</HashCode>
-      <FileName>Models\Influencer.vb</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Branche" />
-      <Property Name="Bewerbung" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="collab_asp.Unternehmer">
-    <Position X="4.25" Y="6" Width="1.75" />
-    <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true">
-      <Path>
-        <Point X="3.5" Y="6.364" />
-        <Point X="4.25" Y="6.364" />
-      </Path>
-    </InheritanceLine>
-    <AssociationLine Name="Jobanzeige" Type="collab_asp.Jobanzeige" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="8.273" />
-        <Point X="7.5" Y="8.273" />
-        <Point X="7.5" Y="7.488" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6" Y="8.7" />
-        <Point X="9.25" Y="8.7" />
-        <Point X="9.25" Y="6.891" />
-      </Path>
-=======
         <Point X="6" Y="3.206" />
         <Point X="10.688" Y="3.206" />
         <Point X="10.688" Y="4.5" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Bewerbungen" Type="collab_asp.Jobanzeige">
->>>>>>> c0bddde29e1d5c04ae7a4e11f5ecc0d5cffc4a75
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="0.105" Y="0.024" />
       </MemberNameLabel>
