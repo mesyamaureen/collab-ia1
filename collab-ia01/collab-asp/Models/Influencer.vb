@@ -38,13 +38,14 @@ Public Class Influencer
         End Set
     End Property
 
-    Public Property Bewerbung As Jobanzeige
+    Public Property Bewerbungen As Jobanzeige
         Get
             Return mjAnzeige
         End Get
         Set(value As Jobanzeige)
         End Set
     End Property
+
 
     'Parameterloser Konstruktor
     Sub New()
