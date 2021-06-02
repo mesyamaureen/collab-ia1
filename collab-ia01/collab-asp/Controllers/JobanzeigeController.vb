@@ -19,7 +19,7 @@ Namespace Controllers
         End Function
 
         'anzeigenJobanzeige()
-        Function AnzeigenJobanzeige(pintJobID As Integer) As ActionResult
+        Function Jobanzeige(pintJobID As Integer) As ActionResult
 
         End Function
 
@@ -29,7 +29,7 @@ Namespace Controllers
         End Function
 
         'anzeigenFormular()
-        Function AnzeigenFormular() As ActionResult
+        Function Formular() As ActionResult
 
         End Function
 
