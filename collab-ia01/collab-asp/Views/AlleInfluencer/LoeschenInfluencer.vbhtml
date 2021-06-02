@@ -1,21 +1,23 @@
 ﻿@Code
-    ViewData("Title") = "AlleUnternehmenAnzeigen"
-    Layout = Nothing
+    ViewData("Title") = "LoeschenInfluencer"
 End Code
+
 
 <!DOCTYPE html>
 <html>
 <head>
 
     <meta name="viewport" content="width=device-width" />
-    <title>AlleUnternehmen</title>
+    <title>AlleInfluencerLoeschen</title>
 </head>
 <body>
     <div>
-        <h2>AlleUnternehmenAnzeigen</h2>
+        <h2>LoeschenInfluencer</h2>
+
     </div>
 </body>
 </html>
+
 
 
 

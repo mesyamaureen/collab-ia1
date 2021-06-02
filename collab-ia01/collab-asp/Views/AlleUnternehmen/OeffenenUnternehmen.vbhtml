@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "AlleUnternehmenNeu"
+    ViewData("Title") = "OeffenenUnternehmen"
 End Code
 
 
@@ -8,11 +8,12 @@ End Code
 <head>
 
     <meta name="viewport" content="width=device-width" />
-    <title>AlleUnternehmenNeu</title>
+    <title>AlleUnternehmen</title>
 </head>
 <body>
     <div>
-        <h2>AlleUnternehmenNeu</h2>
+        <h2>OeffenenUnternehmen</h2>
+
     </div>
 </body>
 </html>

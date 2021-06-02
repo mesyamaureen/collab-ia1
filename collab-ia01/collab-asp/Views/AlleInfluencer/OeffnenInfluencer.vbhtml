@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "AlleUnternehmenOeffnen"
+    ViewData("Title") = "OeffnenInfluencer"
 End Code
 
 
@@ -8,11 +8,13 @@ End Code
 <head>
 
     <meta name="viewport" content="width=device-width" />
-    <title>AlleUnternehmen</title>
+    <title>AlleInfluencerLoeschen</title>
 </head>
 <body>
     <div>
-        <h2>AlleUnternehmenOeffnen</h2>
+        <h2>OeffnenInfluencer</h2>
+
+
     </div>
 </body>
 </html>

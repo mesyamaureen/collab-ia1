@@ -10,14 +10,16 @@ Namespace Controllers
         End Function
 
         Function OeffenenUnternehmen(pUnId As Integer) As ActionResult
+            Return View()
 
         End Function
 
         Function LoeschenUnternehmen(pUintId As Integer) As ActionResult
-
+            Return View()
         End Function
 
         Function NeuUnternehmer() As Unternehmen
+            Return View()
 
         End Function
 

@@ -10,14 +10,15 @@ Namespace Controllers
         End Function
 
         Function OeffnenInfluencer(pInId As Integer) As ActionResult
-
+            Return View()
         End Function
 
         Function LoeschenInfluencer(pInintId As Integer) As ActionResult
-
+            Return View()
         End Function
 
         Function NeuInfluencer() As Influencer
+            Return View()
 
         End Function
 

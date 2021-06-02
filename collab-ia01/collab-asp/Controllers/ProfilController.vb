@@ -22,21 +22,22 @@ Namespace Controllers
         End Function
 
         Function abbrechen() As ActionResult
-
+            Return View()
 
         End Function
 
         Function speichernBewertung() As ActionResult
+            Return View()
 
         End Function
 
         Function AnzeigenChat() As ActionResult
-
+            Return View()
         End Function
 
 
         Function SpeichernNachricht() As ActionResult
-
+            Return
         End Function
 
 

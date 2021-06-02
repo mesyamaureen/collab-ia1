@@ -228,15 +228,15 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\AlleInfluencer\AlleInfluencerAnzeigen.vbhtml" />
-    <Content Include="Views\AlleInfluencer\AlleInfluencerNeu.vbhtml" />
-    <Content Include="Views\AlleInfluencer\AlleInfluencerOeffnen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\AlleUnternehmenAnzeigen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\AlleUnternehmenNeu.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\AlleUnternehmenOeffnen.vbhtml" />
-    <Content Include="Views\AlleInfluencer\AlleInfluencerLoeschen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\AlleUnternehmenLoeschen.vbhtml" />
     <Content Include="Views\Jobanzeige\LadenJobanzeigeEinzeln.vbhtml" />
+    <Content Include="Views\AlleInfluencer\OeffnenInfluencer.vbhtml" />
+    <Content Include="Views\AlleInfluencer\LoeschenInfluencer.vbhtml" />
+    <Content Include="Views\AlleInfluencer\NeuInfluencer.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\OeffenenUnternehmen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\LoeschenUnternehmen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\NeuUnternehmer.vbhtml" />
+    <Content Include="Views\InfluencerEinzeln\InfluencerBearbeiten.vbhtml" />
+    <Content Include="Views\UnternehmerEinzeln\UnternehmenBearbeiten.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -269,9 +269,7 @@
     <Folder Include="Data\" />
     <Folder Include="Views\AlleJobanzeigen\" />
     <Folder Include="Views\Branche\" />
-    <Folder Include="Views\InfluencerEinzeln\" />
     <Folder Include="Views\Influencer\" />
-    <Folder Include="Views\UnternehmerEinzeln\" />
     <Folder Include="Views\Unternehmer\" />
   </ItemGroup>
   <PropertyGroup>

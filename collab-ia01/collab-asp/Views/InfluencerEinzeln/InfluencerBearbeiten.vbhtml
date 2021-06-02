@@ -1,5 +1,5 @@
 ﻿@Code
-    ViewData("Title") = "AlleInfluenmcerOeffnen"
+    ViewData("Title") = "InfluencerBearbeiten"
 End Code
 
 <!DOCTYPE html>
@@ -7,15 +7,13 @@ End Code
 <head>
 
     <meta name="viewport" content="width=device-width" />
-    <title>AlleInfluencerOeffnen</title>
+    <title>AlleUnternehmenNeu</title>
 </head>
 <body>
     <div>
-        <h2>AlleInfluencerOeffnen</h2>
-
+        <h2>InfluencerBearbeiten</h2>
     </div>
 </body>
 </html>
-
 
 
