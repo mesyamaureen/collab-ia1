@@ -165,7 +165,9 @@
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\InfluencerListe.vb" />
     <Compile Include="Models\Jobanzeige.vb" />
+    <Compile Include="Models\UnternehmenListe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -229,14 +231,17 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Views\Jobanzeige\LadenJobanzeigeEinzeln.vbhtml" />
-    <Content Include="Views\AlleInfluencer\OeffnenInfluencer.vbhtml" />
-    <Content Include="Views\AlleInfluencer\LoeschenInfluencer.vbhtml" />
-    <Content Include="Views\AlleInfluencer\NeuInfluencer.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\OeffenenUnternehmen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\LoeschenUnternehmen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\NeuUnternehmer.vbhtml" />
-    <Content Include="Views\InfluencerEinzeln\InfluencerBearbeiten.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\UnternehmenBearbeiten.vbhtml" />
+    <Content Include="Views\AlleInfluencer\Neu.vbhtml" />
+    <Content Include="Views\AlleInfluencer\Index.vbhtml" />
+    <Content Include="Views\AlleInfluencer\Oeffnen.vbhtml" />
+    <Content Include="Views\AlleInfluencer\Loeschen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Index.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Oeffenen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Loeschen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Neu.vbhtml" />
+    <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
+    <Content Include="Views\UnternehmerEinzeln\Bearbeiten.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

@@ -18,7 +18,7 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function NeuUnternehmer() As Unternehmen
+        Function NeuUnternehmer() As ActionResult
             Return View()
 
         End Function
