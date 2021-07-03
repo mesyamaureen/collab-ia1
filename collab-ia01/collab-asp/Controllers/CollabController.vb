@@ -9,9 +9,6 @@ Namespace Controllers
             Return View()
         End Function
 
-        Function Startseite() As ActionResult
-            Return Index()
-        End Function
         ' GET: InfluencerSuchen
         Function InfluencerSuchen() As ActionResult
             Return View()

@@ -8,9 +8,10 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>InfluencerSuchen</title>
+    <title>UnternehmenSuchen</title>
 </head>
 <body>
+    <!-- Header -->
     <div>
         <div id="header">
             <a title="zur Startseite" href="Startseite.html">
@@ -42,6 +43,7 @@ End Code
                 <li>
                     @Html.ActionLink("Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                </li>
             </ul>
         </div>
     </div>
@@ -75,14 +77,13 @@ End Code
             </div>
         </div>
 
-
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
             <!-- passt ihr bitte nur diesen Teil an -->
             <div class="parallax">
-                <h1 class="center">Influencer suchen</h1>
-                <h1 class="center">Welcher Influencer passt zu mir?</h1>
+                <h1 class="center">Unternehmen suchen</h1>
+                <h1 class="center">Welches Unternehmen passt zu mir?</h1>
             </div>
 
             <div id="primaryContentBlock">
@@ -104,41 +105,31 @@ End Code
                     </select>
                 </h2>
 
+
                 <table id="Tabelle">
                     <tr class="header">
-                        <th style="width:20%;">Vorname</th>
-                        <th style="width:20%;">Name</th>
-                        <th style="width:20%;">Benutzername</th>
-                        <th style="width:20%;">Branche</th>
-                        <th style="width:20%;"></th>
-
+                        <th>Firmenname</th>
+                        <th>Branche</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>Carmen</td>
-                        <td>Kroll</td>
-                        <td>carmushka</td>
-                        <td>Beauty & Fashion</td>
+                        <td>Lidl</td>
+                        <td>Lebensmitteleinzelhandel</td>
                         <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
                     </tr>
                     <tr>
-                        <td>Karolina</td>
-                        <td>Kauer</td>
-                        <td>karokauer</td>
-                        <td>Beauty & Fashion</td>
+                        <td>Aldi</td>
+                        <td>Lebensmitteleinzelhandel</td>
                         <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
                     </tr>
                     <tr>
-                        <td>Ben</td>
-                        <td>Kauer</td>
-                        <td>benkauer</td>
-                        <td>Autos & Fahrzeuge</td>
+                        <td>Hennes und Mauritz</td>
+                        <td>Textilhandel</td>
                         <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
                     </tr>
                     <tr>
-                        <td>Bianca</td>
-                        <td>Claßen</td>
-                        <td>bibisbeautypalace</td>
-                        <td>Lifestyle</td>
+                        <td>Rossmann</td>
+                        <td>Drogerie</td>
                         <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
                     </tr>
                 </table>
@@ -171,7 +162,6 @@ End Code
         </div>
 
     </div>
-
     <!-- FOOTER -->
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>

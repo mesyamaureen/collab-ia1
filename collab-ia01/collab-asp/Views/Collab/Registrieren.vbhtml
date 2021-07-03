@@ -8,9 +8,10 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>InfluencerSuchen</title>
+    <title>Registrieren</title>
 </head>
 <body>
+    <!-- Header -->
     <div>
         <div id="header">
             <a title="zur Startseite" href="Startseite.html">
@@ -42,6 +43,7 @@ End Code
                 <li>
                     @Html.ActionLink("Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                </li>
             </ul>
         </div>
     </div>
@@ -75,76 +77,77 @@ End Code
             </div>
         </div>
 
-
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
-            <!-- passt ihr bitte nur diesen Teil an -->
-            <div class="parallax">
-                <h1 class="center">Influencer suchen</h1>
-                <h1 class="center">Welcher Influencer passt zu mir?</h1>
-            </div>
+            <h1 class="center">Registrieren</h1>
+            <h2 class="center">Erstellen Sie ein Konto!</h2>
 
-            <div id="primaryContentBlock">
-                <h2>
-                    Branche:<br /> <!-- als Dropdown -->
-                    <select name="lstBranche"
-                            multiple="multiple" size="5" id="InputLeiste">
-                        <option value="1">Anime</option>
-                        <option value="2">Autos & Fahrzeuge</option>
-                        <option value="3">Beauty & Fashion</option>
-                        <option value="4">Bildung</option>
-                        <option value="5">DIY</option>
-                        <option value="6">Essen</option>
-                        <option value="7">Lifestyle</option>
-                        <option value="8">Gesundheit</option>
-                        <option value="9">Menschen & Blogs</option>
-                        <option value="10">Reisen & Events</option>
-                        <option value="11">Kunst & Design</option>
-                    </select>
-                </h2>
+            <div id="formular" class="parallax">
+                <form method="get" action="Einloggen.html">
+                    <!-- als action: die aspx Datei aufrufen-->
+                    <p>
+                        Ich bin:
+                        <fieldset>
+                            <input type="radio" id="inf" name="Influencer" value="Influencer">
+                            <label for="txtInfluencer" id="lblInfluencer"> Influencer</label>
+                            <input type="radio" id="unt" name="Unternehmer" value="Unternehmer">
+                            <label for="txtUnternehmer" id="lblUnternehmer"> Unternehmer</label>
+                        </fieldset>
+                    </p>
+                    <p>
+                        Vorname:
+                        <input type="text" name="txtVorname" id="InputLeiste" placeholder="Ihr Vorname" /> <!-- disabled, wenn Rolle = Unternehmer -->
+                    </p>
+                    <p>
+                        Name:
+                        <input type="text" name="txtName" id="InputLeiste" placeholder="Ihr Name" /> <!-- disabled, wenn Rolle = Unternehmer -->
+                    </p>
+                    <p>
+                        Unternehmensname:
+                        <input type="text" name="txtUnternehmensname" id="InputLeiste" placeholder="Ihr Unternehmensname" /> <!-- disabled, wenn Rolle = Influencer -->
+                    </p>
+                    <p>
+                        <label for="txtProfilbeschreibung" id="lblProfilbeschreibung"><b>Profilbeschreibung:</b></label>
+                        <input id="InputLeiste" type="text" name="txtProfilbeschreibung" placeholder="Profilbeschreibung max. 500 Wörter" size="500" style="height: 200px;" /> <!-- Profilbeschreibung -->
+                    </p>
+                    <p>
+                        Branche:<br /> <!-- als Dropdown -->
+                        <select name="lstBranche"
+                                multiple="multiple" size="5" id="InputLeiste">
+                            <option value="1">Anime</option>
+                            <option value="2">Autos & Fahrzeuge</option>
+                            <option value="3">Beauty & Fashion</option>
+                            <option value="4">Bildung</option>
+                            <option value="5">DIY</option>
+                            <option value="6">Essen</option>
+                            <option value="7">Lifestyle</option>
+                            <option value="8">Gesundheit</option>
+                            <option value="9">Menschen & Blogs</option>
+                            <option value="10">Reisen & Events</option>
+                            <option value="11">Kunst & Design</option>
+                        </select>
+                    </p>
+                    <p>
+                        E-Mail:
+                        <input type="email" name="txtEMail" id="InputLeiste" placeholder="Ihre E-Mail" required />
+                    </p>
+                    <p>
+                        Benutzername:
+                        <input type="text" name="txtBenutzername" id="InputLeiste" placeholder="Ihr Benutzername" required />
+                    </p>
+                    <p>
+                        Passwort:
+                        <input type="password" name="txtPasswort" id="InputLeiste" placeholder="Ihr Passwort" required />
+                    </p>
+                </form>
 
-                <table id="Tabelle">
-                    <tr class="header">
-                        <th style="width:20%;">Vorname</th>
-                        <th style="width:20%;">Name</th>
-                        <th style="width:20%;">Benutzername</th>
-                        <th style="width:20%;">Branche</th>
-                        <th style="width:20%;"></th>
-
-                    </tr>
-                    <tr>
-                        <td>Carmen</td>
-                        <td>Kroll</td>
-                        <td>carmushka</td>
-                        <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Karolina</td>
-                        <td>Kauer</td>
-                        <td>karokauer</td>
-                        <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Ben</td>
-                        <td>Kauer</td>
-                        <td>benkauer</td>
-                        <td>Autos & Fahrzeuge</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Bianca</td>
-                        <td>Claßen</td>
-                        <td>bibisbeautypalace</td>
-                        <td>Lifestyle</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                </table>
+                <div class="center" style="margin-top: 4em;">
+                    <input type="submit" name="btnSpeichern" value="Speichern" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                    <input type="reset" name="btnAbbrechen" value="Abbrechen" class="button" />
+                </div>
             </div>
         </div>
-
         <!--</div>-->
         <!-- right Column-->
         <div id="tertiaryContent">
@@ -169,9 +172,7 @@ End Code
                 </div>
             </fieldset>
         </div>
-
     </div>
-
     <!-- FOOTER -->
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>

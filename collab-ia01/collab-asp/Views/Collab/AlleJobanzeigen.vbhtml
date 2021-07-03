@@ -8,9 +8,10 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>InfluencerSuchen</title>
+    <title>AlleJobanzeigen</title>
 </head>
 <body>
+    <!-- Header -->
     <div>
         <div id="header">
             <a title="zur Startseite" href="Startseite.html">
@@ -42,6 +43,7 @@ End Code
                 <li>
                     @Html.ActionLink("Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                </li>
             </ul>
         </div>
     </div>
@@ -75,16 +77,14 @@ End Code
             </div>
         </div>
 
-
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
             <!-- passt ihr bitte nur diesen Teil an -->
             <div class="parallax">
-                <h1 class="center">Influencer suchen</h1>
-                <h1 class="center">Welcher Influencer passt zu mir?</h1>
+                <h1 class="center">Jobanzeigen</h1><br />
+                <h2 class="center">Finden Sie hier alle Jobanzeige von Unternehmen!</h2>
             </div>
-
             <div id="primaryContentBlock">
                 <h2>
                     Branche:<br /> <!-- als Dropdown -->
@@ -95,56 +95,75 @@ End Code
                         <option value="3">Beauty & Fashion</option>
                         <option value="4">Bildung</option>
                         <option value="5">DIY</option>
-                        <option value="6">Essen</option>
+                        <option value="6">Ernährung</option>
                         <option value="7">Lifestyle</option>
                         <option value="8">Gesundheit</option>
                         <option value="9">Menschen & Blogs</option>
                         <option value="10">Reisen & Events</option>
                         <option value="11">Kunst & Design</option>
+                        <option value="12">Finanzen</option>
+                        <option value="13">Sonstiges</option>
                     </select>
                 </h2>
 
                 <table id="Tabelle">
                     <tr class="header">
-                        <th style="width:20%;">Vorname</th>
-                        <th style="width:20%;">Name</th>
-                        <th style="width:20%;">Benutzername</th>
-                        <th style="width:20%;">Branche</th>
-                        <th style="width:20%;"></th>
-
+                        <th>Jobtitel</th>
+                        <th>Branche</th>
+                        <th>Unternehmen</th>
+                        <th></th>
                     </tr>
                     <tr>
-                        <td>Carmen</td>
-                        <td>Kroll</td>
-                        <td>carmushka</td>
+                        <td>#LidlStudio - Lidl sucht Influencer!</td>
+                        <td>Ernährung</td>
+                        <td>Lidl</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                    </tr>
+                    <tr>
+                        <td>Beauty lovers: #dysonhair</td>
                         <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
+                        <td>Dyson</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
                     </tr>
                     <tr>
-                        <td>Karolina</td>
-                        <td>Kauer</td>
-                        <td>karokauer</td>
+                        <td>#urlaubsguruXcoachella</td>
+                        <td>Reisen & Events</td>
+                        <td>Urlaubsguru</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                    </tr>
+                    <tr>
+                        <td>Wie abgedreht ist das denn? #AbdrehenMitFanta</td>
+                        <td>Ernährung</td>
+                        <td>Fanta</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                    </tr>
+                    <tr>
+                        <td>Volksbank an Finance-Influencer</td>
+                        <td>Finanzen</td>
+                        <td>Volksbank</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                    </tr>
+                    <tr>
+                        <td>Bewirb dich für Fendi! #BaguetteFriendsForever</td>
                         <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
+                        <td>Fendi</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
                     </tr>
                     <tr>
-                        <td>Ben</td>
-                        <td>Kauer</td>
-                        <td>benkauer</td>
-                        <td>Autos & Fahrzeuge</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
+                        <td>Bald kommt Sommer! #EisIdeen</td>
+                        <td>Ernährung</td>
+                        <td>Dr.Oetker</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
                     </tr>
                     <tr>
-                        <td>Bianca</td>
-                        <td>Claßen</td>
-                        <td>bibisbeautypalace</td>
-                        <td>Lifestyle</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
+                        <td>#doitforyou - Wir suchen dich!</td>
+                        <td>Beauty & Fashion</td>
+                        <td>Douglas</td>
+                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
                     </tr>
                 </table>
             </div>
         </div>
-
         <!--</div>-->
         <!-- right Column-->
         <div id="tertiaryContent">
@@ -169,9 +188,7 @@ End Code
                 </div>
             </fieldset>
         </div>
-
     </div>
-
     <!-- FOOTER -->
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>

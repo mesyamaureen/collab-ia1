@@ -8,9 +8,10 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>InfluencerSuchen</title>
+    <title>Einloggen</title>
 </head>
 <body>
+    <!-- Header -->
     <div>
         <div id="header">
             <a title="zur Startseite" href="Startseite.html">
@@ -42,6 +43,7 @@ End Code
                 <li>
                     @Html.ActionLink("Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                </li>
             </ul>
         </div>
     </div>
@@ -79,72 +81,25 @@ End Code
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
-            <!-- passt ihr bitte nur diesen Teil an -->
-            <div class="parallax">
-                <h1 class="center">Influencer suchen</h1>
-                <h1 class="center">Welcher Influencer passt zu mir?</h1>
-            </div>
+            <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
 
-            <div id="primaryContentBlock">
-                <h2>
-                    Branche:<br /> <!-- als Dropdown -->
-                    <select name="lstBranche"
-                            multiple="multiple" size="5" id="InputLeiste">
-                        <option value="1">Anime</option>
-                        <option value="2">Autos & Fahrzeuge</option>
-                        <option value="3">Beauty & Fashion</option>
-                        <option value="4">Bildung</option>
-                        <option value="5">DIY</option>
-                        <option value="6">Essen</option>
-                        <option value="7">Lifestyle</option>
-                        <option value="8">Gesundheit</option>
-                        <option value="9">Menschen & Blogs</option>
-                        <option value="10">Reisen & Events</option>
-                        <option value="11">Kunst & Design</option>
-                    </select>
-                </h2>
-
-                <table id="Tabelle">
-                    <tr class="header">
-                        <th style="width:20%;">Vorname</th>
-                        <th style="width:20%;">Name</th>
-                        <th style="width:20%;">Benutzername</th>
-                        <th style="width:20%;">Branche</th>
-                        <th style="width:20%;"></th>
-
-                    </tr>
-                    <tr>
-                        <td>Carmen</td>
-                        <td>Kroll</td>
-                        <td>carmushka</td>
-                        <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Karolina</td>
-                        <td>Kauer</td>
-                        <td>karokauer</td>
-                        <td>Beauty & Fashion</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Ben</td>
-                        <td>Kauer</td>
-                        <td>benkauer</td>
-                        <td>Autos & Fahrzeuge</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                    <tr>
-                        <td>Bianca</td>
-                        <td>Claßen</td>
-                        <td>bibisbeautypalace</td>
-                        <td>Lifestyle</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Profil.html';">Profil einsehen</button></td>
-                    </tr>
-                </table>
+            <div id="formular" class="parallax">
+                <form method="get" action="meinProfil.html">
+                    <p>
+                        <label for="txtBenutzername" id="lblBenutzername"><b>Benutzername:</b></label>
+                        <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Geben Sie Ihr Benutzername ein" required />
+                    </p>
+                    <p>
+                        <label for="txtPasswort" id="lblPasswort"><b>Passwort:</b></label>
+                        <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Geben Sie Ihr Passwort ein" required />
+                    </p>
+                    <div class="center" style="margin-top: 4em;">
+                        <input type="submit" name="btnMeinProfil" value="Mein Profil" class="button" />
+                        <a href="Einloggen.html">Passwort vergessen?</a>
+                    </div>
+                </form>
             </div>
         </div>
-
         <!--</div>-->
         <!-- right Column-->
         <div id="tertiaryContent">
@@ -171,7 +126,6 @@ End Code
         </div>
 
     </div>
-
     <!-- FOOTER -->
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
