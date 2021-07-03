@@ -154,6 +154,7 @@
     <Compile Include="Controllers\AlleJobanzeigenController.vb" />
     <Compile Include="Controllers\AlleUnternehmenController.vb" />
     <Compile Include="Controllers\BrancheController.vb" />
+    <Compile Include="Controllers\CollabController.vb" />
     <Compile Include="Controllers\InfluencerEinzelnController.vb" />
     <Compile Include="Controllers\ProfilController.vb" />
     <Compile Include="Controllers\JobanzeigeController.vb" />
@@ -230,7 +231,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\Jobanzeige\LadenJobanzeigeEinzeln.vbhtml" />
+    <Content Include="Views\Jobanzeige\laden.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\UnternehmenBearbeiten.vbhtml" />
     <Content Include="Views\AlleInfluencer\Neu.vbhtml" />
     <Content Include="Views\AlleInfluencer\Index.vbhtml" />
@@ -242,6 +243,7 @@
     <Content Include="Views\AlleUnternehmen\Neu.vbhtml" />
     <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\Bearbeiten.vbhtml" />
+    <Content Include="Views\Collab\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

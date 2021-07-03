@@ -10,14 +10,14 @@ Namespace Controllers
         End Function
 
         'ladenJobanzeigeEinzeln() - für Bewerbung.html?
-        Function laden(ID As Integer) As ActionResult
-            Dim intJobID As Integer
+        Function laden(pintID As Integer) As ActionResult
+            Dim intID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
-            intJobID = Integer.Parse(Request.QueryString("ID"))
+            intID = Integer.Parse(Request.QueryString("ID"))
             strTitel = Request.QueryString("txtTitel")
             strBeschreibung = Request.QueryString("txtBeschreibung")
-            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigeJobanzeige
+            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigenJobanzeige
         End Function
 
         'anzeigenJobanzeige() - ist es nicht die gleiche Funktion wie laden?

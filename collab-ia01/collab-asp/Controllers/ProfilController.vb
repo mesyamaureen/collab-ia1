@@ -37,7 +37,6 @@ Namespace Controllers
 
 
         Function SpeichernNachricht() As ActionResult
-            Return
         End Function
 
 
