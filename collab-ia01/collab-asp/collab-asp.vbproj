@@ -244,6 +244,7 @@
     <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\Collab\Index.vbhtml" />
+    <Content Include="Views\Collab\InfluencerSuchen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

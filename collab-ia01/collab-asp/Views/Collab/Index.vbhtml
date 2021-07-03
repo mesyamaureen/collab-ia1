@@ -57,19 +57,20 @@ End Code
                         @Html.ActionLink("Startseite", "Index")
                     </li>
                     <li>
-                        <a href="Influencer suchen.html" style="color: black">Influencer suchen</a>
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
                     </li>
                     <li>
-                        <a href="Unternehmen suchen.html" style="color: black">Unternehmen suchen</a>
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
                     </li>
                     <li>
-                        <a href="Jobanzeigen.html" style="color: black">Jobanzeigen</a>
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li>
-                        <a href="Einloggen.html" style="color: black">Einloggen</a>
+                        @Html.ActionLink("Einloggen", "Einloggen")
                     </li>
                     <li>
-                        <a href="Impressum.html" style="color: black">Impressum</a>
+                        @Html.ActionLink("Impressum", "Impressum")
+                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>
