@@ -1,5 +1,4 @@
-﻿@ModelType collab_asp.InfluencerListe
-
+﻿
 @Code
     Layout = Nothing
 End Code
@@ -9,10 +8,10 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Formular</title>
 </head>
 <body>
-    <div>
+    <div> 
     </div>
 </body>
 </html>

@@ -117,6 +117,7 @@ End Code
                         <td>#LidlStudio - Lidl sucht Influencer!</td>
                         <td>Ernährung</td>
                         <td>Lidl</td>
+                        <td><input type="button" value="Bewerben" /></td>
                         <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
                     </tr>
                     <tr>
