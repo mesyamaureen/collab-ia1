@@ -1,4 +1,5 @@
-﻿
+﻿@ModelType collab_asp.Jobanzeige
+
 @Code
     Layout = Nothing
 End Code
@@ -95,95 +96,96 @@ End Code
                     </tr>
 
                     @For Each job In Model.Jobanzeige
-                            @<tr>
-                                <td>@job.Id</td>
-                                <td>@job.Titel</td>
-                                <td>
-                                    @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.Id})
-                                     @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.Id})
-                                </td>
-                             </tr>
+                        @<tr>
+                            <td>@job.Id</td>
+                            <td>@job.Titel</td>
+                            <td>
+                                @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.Id})
+                                @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.Id})
+                            </td>
+                        </tr>
                     Next
-                    </table>
-
-                @Html.ActionLink("Hinzufügen", "Hinzufuegen")
-     </div>
-
-                    @*<tr>
-                        <td>1</td>
-                        <td>#LidlStudio - Lidl sucht Influencer!</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><a href="#" id="button-bearb" Class="button">Bearbeiten</a></td> <!--<button id="button-bearb" Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button>-->
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Nachhaltig mit Lidl</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
                 </table>
 
-                <div Class="center">
-                    <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
-                    <Button Class="button">Hinzufügen</button>
-                </div>
-
-                <div Class="bg-modal">
-                    <div Class="modal-content">
-                        <div Class="close">x</div>
-                        <h2> Bearbeiten</h2>
-                        <form action = "" >
-                            <input type="text" placeholder="Titel"/>
-                                        <input type = "text" placeholder="Beschreibung" />
-                            <a href = "" Class="button">Speichern</a>
-                        </form>
-                    </div>
-                </div>
-
-                <Script>
-                                        document.getElementById('button-bearb').addEventListener('click', function() {
-                        document.querySelector('.bg-modal').style.display = 'flex';
-                    });
-
-                    document.querySelector('.close').addEventListener('click', function () {
-                        document.querySelector('.bg-modal').style.display = 'none';
-                    });
-                </script>
+                @Html.ActionLink("Hinzufügen", "Hinzufuegen")
             </div>
-        </div>*@
+        </div>
+
+        @*<tr>
+                            <td>1</td>
+                            <td>#LidlStudio - Lidl sucht Influencer!</td>
+                            <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
+                            <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><a href="#" id="button-bearb" Class="button">Bearbeiten</a></td> <!--<button id="button-bearb" Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button>-->
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Nachhaltig mit Lidl</td>
+                            <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
+                            <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                        </tr>
+                    </table>
+
+                    <div Class="center">
+                        <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
+                        <Button Class="button">Hinzufügen</button>
+                    </div>
+
+                    <div Class="bg-modal">
+                        <div Class="modal-content">
+                            <div Class="close">x</div>
+                            <h2> Bearbeiten</h2>
+                            <form action = "" >
+                                <input type="text" placeholder="Titel"/>
+                                            <input type = "text" placeholder="Beschreibung" />
+                                <a href = "" Class="button">Speichern</a>
+                            </form>
+                        </div>
+                    </div>
+
+                    <Script>
+                                            document.getElementById('button-bearb').addEventListener('click', function() {
+                            document.querySelector('.bg-modal').style.display = 'flex';
+                        });
+
+                        document.querySelector('.close').addEventListener('click', function () {
+                            document.querySelector('.bg-modal').style.display = 'none';
+                        });
+                    </script>
+                </div>
+            </div>*@
         <!--</div>-->
         <!-- right Column-->
-        <div id = "tertiaryContent" >
+        <div id="tertiaryContent">
             <fieldset id="fldKontakt">
-                                            <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                                            <p>Tel.: 030 38 99 00</p>
-                                            <p>E-Mail: collab@info.de</p>
+                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                <p>Tel.: 030 38 99 00</p>
+                <p>E-Mail: collab@info.de</p>
             </fieldset>
-                        <fieldset id = "fldSocMed" style="margin-top:5em;">
-                <legend style = "font-weight:600;" > Folgen Sie uns auch auf:</legend>
-                <div id = "socmed" >
-                        <!-- Add icon library -->
-                        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <fieldset id="fldSocMed" style="margin-top:5em;">
+                <legend style="font-weight:600;"> Folgen Sie uns auch auf:</legend>
+                <div id="socmed">
+                    <!-- Add icon library -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                     <!-- Add font awesome icons -->
-                    <a href = "https://www.facebook.com/" Class="fa fa-facebook"></a>
-                    <a href = "https://www.instagram.com/" Class="fa fa-instagram"></a>
-                    <a href = "https://www.youtube.com/" Class="fa fa-youtube"></a>
+                    <a href="https://www.facebook.com/" Class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/" Class="fa fa-instagram"></a>
+                    <a href="https://www.youtube.com/" Class="fa fa-youtube"></a>
                 </div>
             </fieldset>
         </div>
     </div>
     <!-- FOOTER -->
-    <div id = "footer" >
+    <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
-                                                                                                            </div>
+    </div>
 </body>
 </html>
