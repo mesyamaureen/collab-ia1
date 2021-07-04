@@ -82,15 +82,7 @@ Namespace Controllers
         'loeschen()
         Function Loeschen(ID As Integer) As ActionResult
             Dim job As Jobanzeige
-            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
-            If IsNothing(jobEntity) Then
-                Return RedirectToAction("Index")
-            End If
-            db.Entry(jobEntity).State = EntityState.Detached
-
-            job = New Jobanzeige(jobEntity)
-            Return View(job)
 
         End Function
 
