@@ -6,18 +6,12 @@ End Code
 <!DOCTYPE html>
 
 <html>
-<head runat="server">
-    @*<meta name="viewport" content="width=device-width" />
-        <title>LadenJobanzeigeEinzeln</title>*@
-    <meta charset="utf-8" />
+<head>
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jobanzeige</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="../Css/collab.css" />
+    <title>laden</title>
 </head>
 <body>
+    <!-- Header -->
     <div>
         <div id="header">
             <a title="zur Startseite" href="Startseite.html">
@@ -28,49 +22,56 @@ End Code
         <div id="menu">
             <ul style="list-style-type: none;">
                 <li class="first">
-                    <a href="Startseite.html" accesskey="1" title="Startseite">Startseite</a>
+                    @Html.ActionLink("Startseite", "Index")
                 </li>
                 <li>
-                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen">Influencer suchen</a>
+                    @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
+                    @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                 </li>
                 <li>
-                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen">Unternehmen suchen</a>
+                    @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
+                    @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                 </li>
                 <li>
-                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen">Jobanzeigen</a>
+                    @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                    @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                 </li>
                 <li>
-                    <a href="Einloggen.html" accesskey="5" title="Einloggen">Einloggen</a>
+                    @Html.ActionLink("Einloggen", "Einloggen")
+                    @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                 </li>
                 <li>
-                    <a href="Registrieren.html" accesskey="6" title="Registrieren">Registrieren</a>
+                    @Html.ActionLink("Registrieren", "Registrieren")
+                    @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                 </li>
             </ul>
         </div>
     </div>
+
     <div id="body">
         <!-- Content fängt hier an -->
         <!-- left Column -->
         <div id="secondaryContentContainer">
             <div id="secondaryContent">
-                <ul style="font-size:16px;">
+                <ul style="font-size: 16px;">
                     <li id="current">
-                        <a href="Startseite.html">Startseite</a>
+                        @Html.ActionLink("Startseite", "Index")
                     </li>
                     <li>
-                        <a href="Influencer suchen.html">Influencer suchen</a>
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
                     </li>
                     <li>
-                        <a href="Unternehmen suchen.html">Unternehmen suchen</a>
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
                     </li>
                     <li>
-                        <a href="Jobanzeigen.html">Jobanzeigen</a>
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li>
-                        <a href="Einloggen.html">Einloggen</a>
+                        @Html.ActionLink("Einloggen", "Einloggen")
                     </li>
                     <li>
-                        <a href="Impressum.html">Impressum</a>
+                        @Html.ActionLink("Impressum", "Impressum")
+                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>
@@ -125,7 +126,6 @@ End Code
                 </div>
             </div>
         </div>
-
 
         <!-- right Column-->
         <div id="tertiaryContent">

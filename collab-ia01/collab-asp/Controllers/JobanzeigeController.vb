@@ -10,26 +10,40 @@ Namespace Controllers
         End Function
 
         'ladenJobanzeigeEinzeln() - für Bewerbung.html?
-        Function LadenJobanzeigeEinzeln(ID As Integer) As ActionResult 'Rückgabewert=Jobanzeige/ActionResult?
-            Dim intJobID As Integer
+        Function laden(pintID As Integer) As ActionResult
+            Dim intID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
-            intJobID = ID
-            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigeJobanzeige
+            intID = Integer.Parse(Request.QueryString("ID"))
+            strTitel = Request.QueryString("txtTitel")
+            strBeschreibung = Request.QueryString("txtBeschreibung")
+            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigenJobanzeige
         End Function
 
-        'anzeigenJobanzeige()
-        Function Jobanzeige(pintJobID As Integer) As ActionResult
+        'anzeigenJobanzeige() - ist es nicht die gleiche Funktion wie laden?
+        Function Jobanzeige(ID As Integer) As ActionResult
 
         End Function
 
         'loeschen()
-        Function Loeschen(pintJobID As Integer) As ActionResult
+        Function Loeschen(ID As Integer) As ActionResult
+            Dim job As Jobanzeige
+
 
         End Function
 
-        'anzeigenFormular()
-        Function Formular() As ActionResult
+        'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 
+        <HttpPost>
+        Function Formular(ID As Integer) As ActionResult
+            Dim intJobID As Integer
+            Dim strTitel As String
+            Dim strBeschreibung As String
+            intJobID = Request.Form("intJobID")
+            strTitel = Request.Form("strTitel")
+            strBeschreibung = Request.Form("strBeschreibung")
+        End Function
+
+        Function hinzufuegen() As ActionResult
 
         End Function
 
@@ -43,7 +57,7 @@ Namespace Controllers
             'strBeschreibung = Request.Form("txtBeschreibung")
         End Function
 
-        'abbrechen()
+        'abbrechen()?
 
     End Class
 End Namespace

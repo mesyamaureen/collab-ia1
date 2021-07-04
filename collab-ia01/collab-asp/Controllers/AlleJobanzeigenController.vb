@@ -14,13 +14,8 @@ Namespace Controllers
 
         End Function
 
-        'anzeigenListe()
-        Function anzeigenListe() As ActionResult
-
-        End Function
-
-        'anzeigenJobanzeigen()
-        Function anzeigenJobanzeigen() As ActionResult
+        'anzeigenJobanzeigen() - = anzeigen Liste aller Jobanzeige?
+        Function Jobanzeigen() As ActionResult
 
         End Function
 
