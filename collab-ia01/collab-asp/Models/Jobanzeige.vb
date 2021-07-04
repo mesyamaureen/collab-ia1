@@ -8,6 +8,7 @@ Public Class Jobanzeige
     Private mstrTitel As String
     Private mstrBeschreibung As String
     Private mbrBranche As Branche
+    Private mlstJobanzeigeAlle As List(Of Jobanzeige)
 
     Private mstrVersion As String ' Neues Attribut vom Typ String  um UNICODE zu speichern
 
@@ -68,6 +69,15 @@ Public Class Jobanzeige
         End Get
         Set(value As String)
             mstrVersion = value
+        End Set
+    End Property
+
+    Public Property ListeJobanzeige As List(Of Jobanzeige)
+        Get
+            Return mlstJobanzeigeAlle
+        End Get
+        Set(value As List(Of Jobanzeige))
+            mlstJobanzeigeAlle = value
         End Set
     End Property
 

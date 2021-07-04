@@ -95,13 +95,13 @@ End Code
                         <th></th>
                     </tr>
 
-                    @For Each job In Model.Jobanzeige
+                    @For Each job In Model.ListeJobanzeige 'hier Model.alle öffentlichen Properties
                         @<tr>
-                            <td>@job.Id</td>
+                            <td>@job.JobID</td>
                             <td>@job.Titel</td>
                             <td>
-                                @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.Id})
-                                @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.Id})
+                                @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.JobID})
+                                @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.JobID})
                             </td>
                         </tr>
                     Next
