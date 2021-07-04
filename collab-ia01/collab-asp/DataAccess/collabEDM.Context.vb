@@ -10,6 +10,7 @@
 Imports System
 Imports System.Data.Entity
 Imports System.Data.Entity.Infrastructure
+Imports collab_asp
 
 Partial Public Class collabEntities
     Inherits DbContext
@@ -27,4 +28,11 @@ Partial Public Class collabEntities
     Public Property tblJobanzeigen() As DbSet(Of JobanzeigeEntity)
     Public Property tblUnternehmer() As DbSet(Of UnternehmerEntity)
 
+    Friend Function Entry(jobEntity As JobanzeigeEntity) As Object
+        Throw New NotImplementedException()
+    End Function
+
+    Friend Sub SaveChanges()
+        Throw New NotImplementedException()
+    End Sub
 End Class

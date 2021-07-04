@@ -8,7 +8,7 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Formular</title>
+    <title>Loeschen</title>
 </head>
 <body>
     <div> 

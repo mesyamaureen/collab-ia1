@@ -58,13 +58,6 @@ Namespace Controllers
             Return View(job)
 
         End Function
-        'anzeigenJobanzeige() - ist es nicht die gleiche Funktion wie laden?
-        Function Jobanzeige(ID As Integer) As ActionResult
-
-        End Function
-        Function Hinzufuegen() As ActionResult
-            Return View()
-        End Function
 
         Function Hinzufuegen(pjob As Jobanzeige) As ActionResult
             Dim jobEntity As JobanzeigeEntity
@@ -87,19 +80,19 @@ Namespace Controllers
         End Function
 
         'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 
-        <HttpPost>
-        Function Formular(ID As Integer) As ActionResult
-            Dim intJobID As Integer
-            Dim strTitel As String
-            Dim strBeschreibung As String
-            intJobID = Request.Form("intJobID")
-            strTitel = Request.Form("strTitel")
-            strBeschreibung = Request.Form("strBeschreibung")
-        End Function
+        '<HttpPost>
+        'Function Formular(ID As Integer) As ActionResult
+        '    Dim intJobID As Integer
+        '    Dim strTitel As String
+        '    Dim strBeschreibung As String
+        '    intJobID = Request.Form("intJobID")
+        '    strTitel = Request.Form("strTitel")
+        '    strBeschreibung = Request.Form("strBeschreibung")
+        'End Function
 
         'speichern()
         <HttpPost>
-        Function Speichern() As ActionResult
+        Function Speichern() As ActionResult 'nochmal sehen, ob benötigt ist
             'Dim intJobID As Integer
             'Dim strTitel As String
             'Dim strBeschreibung As String
@@ -107,7 +100,7 @@ Namespace Controllers
             'strBeschreibung = Request.Form("txtBeschreibung")
         End Function
 
-        'abbrechen()?
+        'abbrechen?
 
     End Class
 End Namespace

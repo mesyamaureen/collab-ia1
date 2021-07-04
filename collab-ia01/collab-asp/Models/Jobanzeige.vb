@@ -71,21 +71,21 @@ Public Class Jobanzeige
         End Set
     End Property
 
-    'Parameterloser Konstruktor
-    Sub New()
-        mintJobID = Nothing
-        mstrTitel = String.Empty
-        mstrBeschreibung = String.Empty
-        mbrBranche = Nothing
-    End Sub
+    ''Parameterloser Konstruktor
+    'Sub New()
+    '    mintJobID = Nothing
+    '    mstrTitel = String.Empty
+    '    mstrBeschreibung = String.Empty
+    '    mbrBranche = Nothing
+    'End Sub
 
-    'Konstruktor mit Parameter
-    Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
-        mintJobID = pintJobID
-        mstrTitel = pstrTitel
-        mstrBeschreibung = pstrBeschreibung
-        mbrBranche = pbrBranche
-    End Sub
+    ''Konstruktor mit Parameter
+    'Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
+    '    mintJobID = pintJobID
+    '    mstrTitel = pstrTitel
+    '    mstrBeschreibung = pstrBeschreibung
+    '    mbrBranche = pbrBranche
+    'End Sub
 
     'Subs and Functions
     Public Function alleJobanzeigenLaden(pintJobID As Integer) As List(Of Jobanzeige)

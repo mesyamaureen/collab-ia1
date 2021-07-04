@@ -8,7 +8,7 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Hinzufuegen</title>
+    <title>Bearbeiten</title>
 </head>
 <body>
     <div> 
