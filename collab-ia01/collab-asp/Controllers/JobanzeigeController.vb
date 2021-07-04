@@ -15,30 +15,36 @@ Namespace Controllers
 
 
         'ausklammern?
-        Function Index() As ActionResult
-            Dim lstJobanzeige As List(Of Jobanzeige)
-            Dim job As Jobanzeige
+        'Function Index() As ActionResult
+        '    Dim lstJobanzeige As List(Of Jobanzeige)
+        '    Dim job As Jobanzeige
 
-            lstJobanzeige = New List(Of Jobanzeige)
+        '    lstJobanzeige = New List(Of Jobanzeige)
 
-            Dim elements = db.tblJobanzeigen.ToArray()
+        '    Dim elements = db.tblJobanzeigen.ToArray()
 
-            ' Sollte vorher ein Speichern erfolgt sein, das auf diese Seite zurückführt, 
-            ' muss hier geprüft werden, ob ein Fehler aufgetreten ist
-            If TempData.ContainsKey(CONCURRENCY_EXCEPTION) Then
-                ' wenn ja wird eine Fehlermeldung zum ModelState hinzufügt und anschließend in der View angezeigt
-                ModelState.AddModelError(String.Empty, TempData.Item(CONCURRENCY_EXCEPTION))
-                ' Fehlermeldung aus temporärer Zwischenablage entfernen, um sie nicht noch einmal anzuzeigen
-                TempData.Remove(CONCURRENCY_EXCEPTION)
-            End If
-            Return View(lstJobanzeige)
-        End Function
+        '    ' Sollte vorher ein Speichern erfolgt sein, das auf diese Seite zurückführt, 
+        '    ' muss hier geprüft werden, ob ein Fehler aufgetreten ist
+        '    If TempData.ContainsKey(CONCURRENCY_EXCEPTION) Then
+        '        ' wenn ja wird eine Fehlermeldung zum ModelState hinzufügt und anschließend in der View angezeigt
+        '        ModelState.AddModelError(String.Empty, TempData.Item(CONCURRENCY_EXCEPTION))
+        '        ' Fehlermeldung aus temporärer Zwischenablage entfernen, um sie nicht noch einmal anzuzeigen
+        '        TempData.Remove(CONCURRENCY_EXCEPTION)
+        '    End If
+        '    Return View(lstJobanzeige)
+        'End Function
 
         'ladenJobanzeigeEinzeln() - für Bewerbung.html?
         Function laden(pintID As Integer) As ActionResult
             Dim intID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
+
+            'Benutzer prüfen, welcher angemeldete Unternehmer anhand Benutzer ID. Um die zugeordneten Jobanzeigen darzustellen
+
+            'Alle Jobanzeigen in der Bewerbung.html Seite übertragen
+
+            '
             intID = Integer.Parse(Request.QueryString("ID"))
             strTitel = Request.QueryString("txtTitel")
             strBeschreibung = Request.QueryString("txtBeschreibung")
@@ -73,6 +79,7 @@ Namespace Controllers
             End If
             Return View(pjob)
         End Function
+
         Function Loeschen(ID As Integer) As ActionResult
             Dim job As Jobanzeige
             Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
