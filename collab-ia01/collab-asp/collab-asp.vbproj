@@ -50,10 +50,16 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -160,6 +166,33 @@
     <Compile Include="Controllers\JobanzeigeController.vb" />
     <Compile Include="Controllers\AlleProfileController.vb" />
     <Compile Include="Controllers\UnternehmerEinzelnController.vb" />
+    <Compile Include="DataAccess\BrancheEntity.vb">
+      <DependentUpon>collabEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabEDM.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabEDM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabEDM.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabEDM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabEDM.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\InfluencerEntity.vb">
+      <DependentUpon>collabEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\JobanzeigeEntity.vb">
+      <DependentUpon>collabEDM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\UnternehmerEntity.vb">
+      <DependentUpon>collabEDM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
     <Compile Include="Models\Benutzer.vb" />
@@ -204,6 +237,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DataAccess\collabEDM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>collabEDM.Context.vb</LastGenOutput>
+      <DependentUpon>collabEDM.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataAccess\collabEDM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>collabEDM.edmx</DependentUpon>
+      <LastGenOutput>collabEDM.vb</LastGenOutput>
+    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -214,6 +257,13 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Models\Models.cd" />
+    <EntityDeploy Include="DataAccess\collabEDM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>collabEDM.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataAccess\collabEDM.edmx.diagram">
+      <DependentUpon>collabEDM.edmx</DependentUpon>
+    </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -281,11 +331,13 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="Views\AlleJobanzeigen\" />
     <Folder Include="Views\Branche\" />
     <Folder Include="Views\Influencer\" />
     <Folder Include="Views\Unternehmer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

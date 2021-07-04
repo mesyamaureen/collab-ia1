@@ -9,15 +9,30 @@ Public Class Jobanzeige
     Private mstrBeschreibung As String
     Private mbrBranche As Branche
 
+    Private mstrVersion As String ' Neues Attribut vom Typ String  um UNICODE zu speichern
 
 
+    Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
+        mintJobID = pJobanzeigeEntity.JaIdPk
+        mstrTitel = pJobanzeigeEntity.JaTitel
+        mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
+
+
+    End Sub
+
+    Public Sub New(pstrTitel As String, pstrBeschreibung As String)
+        mintJobID = Nothing
+
+        mstrTitel = pstrTitel
+        mstrBeschreibung = pstrBeschreibung
+    End Sub
     'Properties
     Public Property JobID As Integer
         Get
             Return mintJobID
         End Get
         Set(value As Integer)
-
+            mintJobID = value
         End Set
     End Property
 
@@ -26,7 +41,7 @@ Public Class Jobanzeige
             Return mstrTitel
         End Get
         Set(value As String)
-
+            mstrTitel = value
         End Set
     End Property
 
@@ -35,7 +50,7 @@ Public Class Jobanzeige
             Return mstrBeschreibung
         End Get
         Set(value As String)
-
+            mstrBeschreibung = value
         End Set
     End Property
 
@@ -45,6 +60,14 @@ Public Class Jobanzeige
         End Get
         Set(value As Branche)
 
+        End Set
+    End Property
+    Public Property Version As String
+        Get
+            Return mstrVersion
+        End Get
+        Set(value As String)
+            mstrVersion = value
         End Set
     End Property
 
@@ -80,4 +103,19 @@ Public Class Jobanzeige
     Public Sub jobAnzeigeAktualisieren()
 
     End Sub
+
+    Public Function gibAlsJobanzeigeEntity() As JobanzeigeEntity
+        Dim jobE As JobanzeigeEntity
+        jobE = New JobanzeigeEntity
+
+        jobE.JaIdPk = mintJobID
+        jobE.JaTitel = mstrTitel
+        jobE.JaBeschreibung = mstrBeschreibung
+        'jobE.JaBrIdFk = mbrBranche
+
+        'JOB VERSION FEHLT
+
+        Return jobE
+    End Function
+
 End Class
