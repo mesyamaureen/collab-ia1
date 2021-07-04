@@ -1,9 +1,9 @@
 ﻿Public Class HomeController
     Inherits System.Web.Mvc.Controller
 
-    'Function Index() As ActionResult
-    '    Return View()
-    'End Function
+    Function Index() As ActionResult
+        Return RedirectToAction("Index", "Collab")
+    End Function
 
     Function About() As ActionResult
         ViewData("Message") = "Your application description page."

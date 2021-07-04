@@ -28,8 +28,6 @@ Namespace Controllers
         'loeschen()
         Function Loeschen(ID As Integer) As ActionResult
             Dim job As Jobanzeige
-
-
         End Function
 
         'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 
