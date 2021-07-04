@@ -40,6 +40,26 @@ Namespace Controllers
             Dim strTitel As String
             Dim strBeschreibung As String
 
+            '' Deklaration
+            'Dim auf As Aufgabe
+            'Dim aufEntity As AufgabeEntity
+            'Dim aufListe As AufgabenListe
+
+            '' Leere Liste initislisieren
+            'aufListe = New AufgabenListe()
+
+            '' Alle Aufgaben aus der Datenbank holen
+            'For Each aufEntity In db.tblAufgaben.ToList
+            '    ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
+            '    auf = New Aufgabe(aufEntity)
+
+            '    ' Objekt der Model-Klasse zur Liste hinzufügen
+            '    aufListe.Aufgaben.Add(auf)
+            'Next
+
+            '' Gesamte list anzeigen
+            'Return View(aufListe)
+
             'Benutzer prüfen, welcher angemeldete Unternehmer anhand Benutzer ID. Um die zugeordneten Jobanzeigen darzustellen
 
             'Alle Jobanzeigen in der Bewerbung.html Seite übertragen als eine Liste aller dazu gehörigen Jobanzeigen
