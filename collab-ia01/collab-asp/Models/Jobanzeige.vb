@@ -9,6 +9,8 @@ Public Class Jobanzeige
     Private mstrBeschreibung As String
     Private mbrBranche As Branche
 
+
+
     'Properties
     Public Property JobID As Integer
         Get
