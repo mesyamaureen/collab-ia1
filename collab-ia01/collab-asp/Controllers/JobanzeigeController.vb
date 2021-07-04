@@ -14,6 +14,7 @@ Namespace Controllers
         ' End Function
 
 
+        'ausklammern?
         Function Index() As ActionResult
             Dim lstJobanzeige As List(Of Jobanzeige)
             Dim job As Jobanzeige
@@ -72,11 +73,18 @@ Namespace Controllers
             End If
             Return View(pjob)
         End Function
-        'loeschen()
         Function Loeschen(ID As Integer) As ActionResult
             Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
+            If IsNothing(jobEntity) Then
+                Return RedirectToAction("Index")
+            End If
 
+            db.Entry(jobEntity).State = EntityState.Detached
+
+            job = New Jobanzeige(jobEntity)
+            Return View(job)
         End Function
 
         'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 
