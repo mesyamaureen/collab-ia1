@@ -42,9 +42,8 @@ Namespace Controllers
 
             'Benutzer prüfen, welcher angemeldete Unternehmer anhand Benutzer ID. Um die zugeordneten Jobanzeigen darzustellen
 
-            'Alle Jobanzeigen in der Bewerbung.html Seite übertragen
+            'Alle Jobanzeigen in der Bewerbung.html Seite übertragen als eine Liste aller dazu gehörigen Jobanzeigen
 
-            '
             intID = Integer.Parse(Request.QueryString("ID"))
             strTitel = Request.QueryString("txtTitel")
             strBeschreibung = Request.QueryString("txtBeschreibung")

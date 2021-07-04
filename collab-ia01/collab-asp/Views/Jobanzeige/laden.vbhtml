@@ -78,78 +78,112 @@ End Code
         </div>
 
         <!-- middle Column -->
+        <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
-            <!-- bis hier -->
+            <!-- passt ihr bitte nur diesen Teil an -->
             <div class="parallax">
-                <h1 class="center">Mehr über die Jobanzeige</h1>
-                <h2 class="center">Passt der Job für mich?</h2>
+                <h1 class="center">Meine Jobanzeigen</h1>
+                <h2 class="center">Verwalten Sie Ihre Jobanzeigen</h2>
             </div>
+
             <div id="primaryContentBlock">
-                <h3 style="font-weight:800;">#LidlStudio - Lidl sucht Influencer!</h3>
-                <div>
-                    <h4><i>Beschreibung</i></h4>
-                    <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <table id="Tabelle">
+                    <tr class="header">
+                        <th>Nr</th>
+                        <th>Jobtitel</th>
+                        <th></th>
+                    </tr>
 
-                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    @For Each job In Model.Jobanzeige
+                            @<tr>
+                                <td>@job.Id</td>
+                                <td>@job.Titel</td>
+                                <td>
+                                    @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.Id})
+                                     @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.Id})
+                                </td>
+                             </tr>
+                    Next
+                    </table>
 
-                            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                @Html.ActionLink("Hinzufügen", "Hinzufuegen")
+     </div>
 
-                            Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    @*<tr>
+                        <td>1</td>
+                        <td>#LidlStudio - Lidl sucht Influencer!</td>
+                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
+                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><a href="#" id="button-bearb" Class="button">Bearbeiten</a></td> <!--<button id="button-bearb" Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button>-->
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Nachhaltig mit Lidl</td>
+                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
+                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
+                    </tr>
+                </table>
 
-                            Duis autem vel eum iriure
-                        </p>
-                    </div>
+                <div Class="center">
+                    <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
+                    <Button Class="button">Hinzufügen</button>
                 </div>
 
-                <div style="margin-top: 5em;">
-                    <h4><i>Bauen Sie Kontakt mit dem Unternehmen ab!</i></h4>
-                    <div>
-                        <form method="get" action="MeineJobanzeigen.html">
-                            <!-- Neu erstellte Bewerbung-->
-                            <!-- Enable: nur von einem angemeldeten Benutzer. Sonst disabled -->
-                            <p>
-                                Betreff:
-                                <input type="text" name="txtBetreff" id="InputLeiste" placeholder="Ihr Betreff" />
-                            </p>
-                            <p>
-                                Nachricht:
-                                <textarea id="nachricht" name="nachricht" placeholder="Ihre Nachricht..." style="width: 100%; height: 100%;"></textarea>
-                            </p>
-
-                            <div class="right" style="margin: 15px 0 40px 0;">
-                                <input type="submit" name="btnAbschicken" value="Abschicken" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
-                            </div>
+                <div Class="bg-modal">
+                    <div Class="modal-content">
+                        <div Class="close">x</div>
+                        <h2> Bearbeiten</h2>
+                        <form action = "" >
+                            <input type="text" placeholder="Titel"/>
+                                        <input type = "text" placeholder="Beschreibung" />
+                            <a href = "" Class="button">Speichern</a>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
 
+                <Script>
+                                        document.getElementById('button-bearb').addEventListener('click', function() {
+                        document.querySelector('.bg-modal').style.display = 'flex';
+                    });
+
+                    document.querySelector('.close').addEventListener('click', function () {
+                        document.querySelector('.bg-modal').style.display = 'none';
+                    });
+                </script>
+            </div>
+        </div>*@
+        <!--</div>-->
         <!-- right Column-->
-        <div id="tertiaryContent">
+        <div id = "tertiaryContent" >
             <fieldset id="fldKontakt">
-                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                <p>Tel.: 030 38 99 00</p>
-                <p>E-Mail: collab@info.de</p>
+                                            <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                                            <p>Tel.: 030 38 99 00</p>
+                                            <p>E-Mail: collab@info.de</p>
             </fieldset>
-            <fieldset id="fldSocMed" style="margin-top:5em;">
-                <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
-                <div id="socmed">
-                    <!-- Add icon library -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        <fieldset id = "fldSocMed" style="margin-top:5em;">
+                <legend style = "font-weight:600;" > Folgen Sie uns auch auf:</legend>
+                <div id = "socmed" >
+                        <!-- Add icon library -->
+                        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
                     <!-- Add font awesome icons -->
-                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                    <a href = "https://www.facebook.com/" Class="fa fa-facebook"></a>
+                    <a href = "https://www.instagram.com/" Class="fa fa-instagram"></a>
+                    <a href = "https://www.youtube.com/" Class="fa fa-youtube"></a>
                 </div>
             </fieldset>
         </div>
     </div>
     <!-- FOOTER -->
-    <div id="footer">
+    <div id = "footer" >
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
-    </div>
+                                                                                                            </div>
 </body>
 </html>
