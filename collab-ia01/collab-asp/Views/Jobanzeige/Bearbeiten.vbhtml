@@ -134,34 +134,35 @@ End Code
             </div>
         </div>
 
-        <!--</div>-->
-        <!-- right Column-->
-        <div id="tertiaryContent">
-            <fieldset id="fldKontakt">
-                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                <p>Tel.: 030 38 99 00</p>
-                <div class="email">
-                    <p>E-Mail:</p>
-                    <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
-                </div>
-            </fieldset>
-            <fieldset id="fldSocMed" style="margin-top:5em;">
-                <legend style="font-weight:600;"> Folgen Sie uns auch auf:</legend>
-                <div id="socmed">
-                    <!-- Add icon library -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                    <!-- Add font awesome icons -->
-                    <a href="https://www.facebook.com/" Class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/" Class="fa fa-instagram"></a>
-                    <a href="https://www.youtube.com/" Class="fa fa-youtube"></a>
-                </div>
-            </fieldset>
+        <div id="footer">
+            <!--</div>-->
+            <!-- right Column-->
+            <div id="tertiaryContent">
+                <fieldset id="fldKontakt">
+                    <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                    <p>Tel.: 030 38 99 00</p>
+                    <div class="email">
+                        <p>E-Mail:</p>
+                        <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
+                    </div>
+                </fieldset>
+                <fieldset id="fldSocMed" style="margin-top:5em;">
+                    <legend style="font-weight:600;"> Folgen Sie uns auch auf:</legend>
+                    <div id="socmed">
+                        <!-- Add icon library -->
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                        <!-- Add font awesome icons -->
+                        <a href="https://www.facebook.com/" Class="fa fa-facebook"></a>
+                        <a href="https://www.instagram.com/" Class="fa fa-instagram"></a>
+                        <a href="https://www.youtube.com/" Class="fa fa-youtube"></a>
+                    </div>
+                </fieldset>
+            </div>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
+        <!-- FOOTER -->
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 </body>

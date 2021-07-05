@@ -72,12 +72,49 @@ End Code
             </div>
         </div>
 
+
+
         <!-- middle Column -->
         <div id="primaryContent">
             <h1 class="center">Jobanzeige</h1>
             <div id="primaryContentBlock" class="parallax">
                 <div style="display:flex; flex-direction: column; justify-content: center; align-items: center; margin: 2em 0 2em 0;">
                     <!--style="width: 100%; margin: 4em 0 2em 0;"-->
+
+                    <h1>Neue Jobanzeige hinzufügen</h1>
+                    <p>Hier können Sie eine neue Jobanzeige hinzufuegen.</p>
+
+                    @Using Html.BeginForm()
+                        @<div>
+                            <!-- Verstecktes Feld für die ID der Aufgabe, die dem Benutzer nicht angezeigt werden muss -->
+                            @Html.HiddenFor(Function(m) Model.JobID)
+                        </div>
+                        @<div>
+                            <!-- Titel der Jobanzeige -->
+                            @Html.LabelFor(Function(m) Model.JobID)
+                            @Html.TextBoxFor(Function(m) Model.JobID)
+                            @Html.ValidationMessageFor(Function(m) Model.JobID)
+                        </div>
+                        @<div>
+                            <!-- Beschreibung der Jobanzeige -->
+                            @Html.LabelFor(Function(m) Model.Beschreibung)
+                            @Html.TextAreaFor(Function(m) Model.Beschreibung)
+                            @Html.ValidationMessageFor(Function(m) Model.Beschreibung)
+                        </div>
+
+                        @<div>
+                            <!-- Branche der Jobanzeige -->
+                            @Html.LabelFor(Function(m) Model.Branche.BrancheTitel)
+                            @Html.DropDownListFor(Function(m) Model.Branche.BrancheID, New SelectList(Model.Branche, "ID", "Bezeichnung"))
+                            @Html.ValidationMessageFor(Function(m) Model.Branche.BrancheTitel)
+                        </div>
+                        @<div>
+                            <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->
+                            @Html.ActionLink("Abbrechen", "Index")
+                            <input type="submit" value="Speichern" />
+                        </div>
+                    End Using
+
                     <form method="post" action="MeineJobanzeigen.html" style="width:70%;">
                         <!-- bitte method und action hier aufpassen -->
                         <p>
@@ -88,19 +125,19 @@ End Code
                             <label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
                             <select name="lstBranche"
                                     multiple="multiple" size="5" id="InputLeiste">
-                                <option value="1">Anime</option>
-                                <option value="2">Autos & Fahrzeuge</option>
-                                <option value="3">Beauty & Fashion</option>
-                                <option value="4">Bildung</option>
-                                <option value="5">DIY</option>
-                                <option value="6">Ernährung</option>
-                                <option value="7">Lifestyle</option>
-                                <option value="8">Gesundheit</option>
-                                <option value="9">Menschen & Blogs</option>
-                                <option value="10">Reisen & Events</option>
-                                <option value="11">Kunst & Design</option>
-                                <option value="12">Finanzen</option>
-                                <option value="13">Sonstiges</option>
+                                <option value="1"> Anime</option>
+                                <option value="2"> Autos & Fahrzeuge</option>
+                                <option value="3"> Beauty & Fashion</option>
+                                <option value="4"> Bildung</option>
+                                <option value="5"> DIY</option>
+                                <option value="6"> Ernährung</option>
+                                <option value="7"> Lifestyle</option>
+                                <option value="8"> Gesundheit</option>
+                                <option value="9"> Menschen & Blogs</option>
+                                <option value="10"> Reisen & Events</option>
+                                <option value="11"> Kunst & Design</option>
+                                <option value="12"> Finanzen</option>
+                                <option value="13"> Sonstiges</option>
                             </select>
                         </p>
                         <p>
@@ -108,44 +145,56 @@ End Code
                             <input id="InputLeiste" type="text" name="txtBeschreibung" placeholder="Beschreibung" size="500" style="height: 200px;" required /> <!--disabled, wenn angemeldeter Benutzer = Influencer-->
                         </p>
 
-                        <div class="center" style="margin-top: 2em;">
-                            <input type="submit" name="btnSpeichern" value="Speichern" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
-                            <input type="reset" class="button" value="Abbrechen" onclick="javascript: confirm('Möchten Sie wirklich abbrechen? Ihre Änderungen werden endgültig gelöscht.');" />
+                        <div Class="center" style="margin-top: 2em;">
+                            <input type="submit" name="btnSpeichern" value="Speichern" Class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                            <input type="reset" Class="button" value="Abbrechen" onclick="javascript: confirm('Möchten Sie wirklich abbrechen? Ihre Änderungen werden endgültig gelöscht.');" />
                         </div>
                     </form>
                 </div>
             </div>
         </div>
 
-        <!--</div>-->
-        <!-- right Column-->
-        <div id="tertiaryContent">
-            <fieldset id="fldKontakt">
-                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                <p>Tel.: 030 38 99 00</p>
-                <div class="email">
-                    <p>E-Mail:</p>
-                    <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
-                </div>
-            </fieldset>
-            <fieldset id="fldSocMed" style="margin-top:5em;">
-                <legend style="font-weight:600;">Folgen Sie uns auch auf:</legend>
-                <div id="socmed">
-                    <!-- Add icon library -->
-                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-                    <!-- Add font awesome icons -->
-                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
-                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
-                    <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
-                </div>
-            </fieldset>
+
+
+    </div>
+            </div>
         </div>
-    </div>
 
-    <!-- FOOTER -->
-    <div id="footer">
-        <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
-    </div>
+
+
+
+
+                                <div id = "footer" >
+                                        <!--</div>-->
+                                                    <!-- right Column-->
+                                    <div id = "tertiaryContent" >
+                                        <fieldset id="fldKontakt">
+                                            <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                                            <p>Tel.: 030 38 99 00</p>
+                                            <div class="email">
+                                                <p>E-Mail:</p>
+                                                <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
+                                                                    </div>
+                                                                </fieldset>
+                                                                <fieldset id = "fldSocMed" style="margin-top:5em;">
+                                                                    <legend style = "font-weight:600;" > Folgen Sie uns auch auf:</legend>
+                                                                    <div id = "socmed" >
+                                                                <!-- Add icon library -->
+                                                                        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                                                        <!-- Add font awesome icons -->
+                                                                        <a href = "https://www.facebook.com/" Class="fa fa-facebook"></a>
+                                                                        <a href = "https://www.instagram.com/" Class="fa fa-instagram"></a>
+                                                                        <a href = "https://www.youtube.com/" Class="fa fa-youtube"></a>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- FOOTER -->
+                                                        <div id = "footer" >
+                                                            <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
+                                                                        </div>
 </body>
 </html>
