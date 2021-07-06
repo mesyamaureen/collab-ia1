@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.Jobanzeige
+﻿@ModelType collab_asp.JobanzeigeViewModel
 
 @Code
     Layout = Nothing
@@ -87,26 +87,26 @@ End Code
                     @Using Html.BeginForm()
                         @<div>
                             <!-- Verstecktes Feld für die ID der Aufgabe, die dem Benutzer nicht angezeigt werden muss -->
-                            @Html.HiddenFor(Function(m) Model.JobID)
+                            @Html.HiddenFor(Function(m) Model.Jobanzeige.JobID)
                         </div>
                         @<div>
                             <!-- Titel der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.JobID)
-                            @Html.TextBoxFor(Function(m) Model.JobID)
-                            @Html.ValidationMessageFor(Function(m) Model.JobID)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.JobID)
+                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.JobID)
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.JobID)
                         </div>
                         @<div>
                             <!-- Beschreibung der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Beschreibung)
-                            @Html.TextAreaFor(Function(m) Model.Beschreibung)
-                            @Html.ValidationMessageFor(Function(m) Model.Beschreibung)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Beschreibung)
+                            @Html.TextAreaFor(Function(m) Model.Jobanzeige.Beschreibung)
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
                         </div>
 
                         @<div>
                             <!-- Branche der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Branche.BrancheTitel)
-                            @Html.DropDownListFor(Function(m) Model.Branche.BrancheID, New SelectList(Model.Branche, "ID", "Bezeichnung"))
-                            @Html.ValidationMessageFor(Function(m) Model.Branche.BrancheTitel)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "ID", "Bezeichnung"))
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
                         @<div>
                             <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->

@@ -3,7 +3,7 @@
 Namespace Controllers
     Public Class JobanzeigeController
         Inherits Controller
-
+        Public Shared mlstBranche As List(Of Branche)
 
         Private db As collabEntities = New collabEntities
 
@@ -71,17 +71,17 @@ Namespace Controllers
         End Function
 
         Function Bearbeiten(ID As Integer) As ActionResult
-            Dim job As Jobanzeige
-            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+            'Dim job As Jobanzeige
+            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
-            If IsNothing(jobEntity) Then
-                Return RedirectToAction("Index")
-            End If
+            'If IsNothing(jobEntity) Then
+            '    Return RedirectToAction("Index")
+            'End If
 
-            db.Entry(jobEntity).State = EntityState.Detached
+            'db.Entry(jobEntity).State = EntityState.Detached
 
-            job = New Jobanzeige(jobEntity)
-            Return View(job)
+            'job = New Jobanzeige(jobEntity)
+            'Return View(job)
 
         End Function
 
@@ -100,17 +100,17 @@ Namespace Controllers
         End Function
 
         Function Loeschen(ID As Integer) As ActionResult
-            Dim job As Jobanzeige
-            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+            'Dim job As Jobanzeige
+            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
-            If IsNothing(jobEntity) Then
-                Return RedirectToAction("Index")
-            End If
+            'If IsNothing(jobEntity) Then
+            '    Return RedirectToAction("Index")
+            'End If
 
-            db.Entry(jobEntity).State = EntityState.Detached
+            'db.Entry(jobEntity).State = EntityState.Detached
 
-            job = New Jobanzeige(jobEntity)
-            Return View(job)
+            'job = New Jobanzeige(jobEntity)
+            'Return View(job)
         End Function
 
         'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 

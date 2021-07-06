@@ -1,7 +1,7 @@
 ﻿Imports System.Web
 Imports System.Web.Services
 Imports System.Web.Services.Protocols
-Imports System.ComponentModel
+Imports System.ComponentModel.DataAnnotations
 
 Public Class Branche
     Private mintBrancheID As Integer
@@ -17,6 +17,7 @@ Public Class Branche
         End Set
     End Property
 
+    <Display(Name:="Branche")>
     Public Property BrancheTitel As String
         Get
             Return mstrBrancheTitel

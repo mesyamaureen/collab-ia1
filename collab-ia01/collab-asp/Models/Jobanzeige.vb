@@ -13,20 +13,20 @@ Public Class Jobanzeige
     Private mstrVersion As String ' Neues Attribut vom Typ String  um UNICODE zu speichern
 
 
-    Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
-        mintJobID = pJobanzeigeEntity.JaIdPk
-        mstrTitel = pJobanzeigeEntity.JaTitel
-        mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
+    'Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
+    'mintJobID = pJobanzeigeEntity.JaIdPk
+    'mstrTitel = pJobanzeigeEntity.JaTitel
+    'mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
 
 
-    End Sub
+    'End Sub
 
-    Public Sub New(pstrTitel As String, pstrBeschreibung As String)
-        mintJobID = Nothing
+    'Public Sub New(pstrTitel As String, pstrBeschreibung As String)
+    '    mintJobID = Nothing
 
-        mstrTitel = pstrTitel
-        mstrBeschreibung = pstrBeschreibung
-    End Sub
+    '    mstrTitel = pstrTitel
+    '    mstrBeschreibung = pstrBeschreibung
+    'End Sub
     'Properties
     Public Property JobID As Integer
         Get
@@ -81,21 +81,21 @@ Public Class Jobanzeige
         End Set
     End Property
 
-    ''Parameterloser Konstruktor
-    'Sub New()
-    '    mintJobID = Nothing
-    '    mstrTitel = String.Empty
-    '    mstrBeschreibung = String.Empty
-    '    mbrBranche = Nothing
-    'End Sub
+    'Parameterloser Konstruktor
+    Sub New()
+        mintJobID = Nothing
+        mstrTitel = String.Empty
+        mstrBeschreibung = String.Empty
+        mbrBranche = Nothing
+    End Sub
 
-    ''Konstruktor mit Parameter
-    'Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
-    '    mintJobID = pintJobID
-    '    mstrTitel = pstrTitel
-    '    mstrBeschreibung = pstrBeschreibung
-    '    mbrBranche = pbrBranche
-    'End Sub
+    'Konstruktor mit Parameter
+    Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
+        mintJobID = pintJobID
+        mstrTitel = pstrTitel
+        mstrBeschreibung = pstrBeschreibung
+        mbrBranche = pbrBranche
+    End Sub
 
     'Subs and Functions
     Public Function alleJobanzeigenLaden(pintJobID As Integer) As List(Of Jobanzeige)
