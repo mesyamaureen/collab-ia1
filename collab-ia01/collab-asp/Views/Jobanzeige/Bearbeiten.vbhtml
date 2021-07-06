@@ -87,9 +87,9 @@ End Code
 
                     @Using Html.BeginForm
                         @<div>
-                            @Html.LabelFor(Function(m) m.Jobanzeige.Id)
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.Id, New With {.readonly = "readonly"})
-                            @Html.ValidationMessageFor(Function(m) m.Jobanzeige.Id)
+                            @Html.LabelFor(Function(m) m.JobID)
+                            @Html.TextBoxFor(Function(m) m.JobID, New With {.readonly = "readonly"})
+                            @Html.ValidationMessageFor(Function(m) m.JobID)
                         </div>
 
 
