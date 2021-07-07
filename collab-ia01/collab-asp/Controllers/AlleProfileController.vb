@@ -10,7 +10,7 @@ Namespace Controllers
         End Function
 
 
-        Function ermittelnBenutzer(pintId As Integer) As ActionResult
+        Function Einloggen(pintId As Integer) As ActionResult
             Dim intId As Integer
 
         End Function
