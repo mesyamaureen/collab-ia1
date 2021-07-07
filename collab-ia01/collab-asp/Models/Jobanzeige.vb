@@ -3,6 +3,7 @@ Imports System.Web.Services
 Imports System.Web.Services.Protocols
 Imports System.ComponentModel
 
+'ACHTUNG: JOBANZEIGE EINES BENUTZERS
 Public Class Jobanzeige
     Private mintJobID As Integer
     Private mstrTitel As String

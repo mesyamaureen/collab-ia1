@@ -201,6 +201,7 @@
     </Compile>
     <Compile Include="Models\InfluencerListe.vb" />
     <Compile Include="Models\Jobanzeige.vb" />
+    <Compile Include="Models\JobanzeigenListe.vb" />
     <Compile Include="Models\UnternehmenListe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

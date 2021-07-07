@@ -1,4 +1,5 @@
-﻿
+﻿@ModelType collab_asp.JobanzeigenListe
+
 @Code
     Layout = Nothing
 End Code
@@ -108,61 +109,79 @@ End Code
 
                 <table id="Tabelle">
                     <tr class="header">
+                        <th>Nr</th>
                         <th>Jobtitel</th>
-                        <th>Branche</th>
-                        <th>Unternehmen</th>
                         <th></th>
                     </tr>
-                    <tr>
-                        <td>#LidlStudio - Lidl sucht Influencer!</td>
-                        <td>Ernährung</td>
-                        <td>Lidl</td>
-                        <td><input type="button" value="Bewerben" /></td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>Beauty lovers: #dysonhair</td>
-                        <td>Beauty & Fashion</td>
-                        <td>Dyson</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>#urlaubsguruXcoachella</td>
-                        <td>Reisen & Events</td>
-                        <td>Urlaubsguru</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>Wie abgedreht ist das denn? #AbdrehenMitFanta</td>
-                        <td>Ernährung</td>
-                        <td>Fanta</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>Volksbank an Finance-Influencer</td>
-                        <td>Finanzen</td>
-                        <td>Volksbank</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>Bewirb dich für Fendi! #BaguetteFriendsForever</td>
-                        <td>Beauty & Fashion</td>
-                        <td>Fendi</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>Bald kommt Sommer! #EisIdeen</td>
-                        <td>Ernährung</td>
-                        <td>Dr.Oetker</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
-                    <tr>
-                        <td>#doitforyou - Wir suchen dich!</td>
-                        <td>Beauty & Fashion</td>
-                        <td>Douglas</td>
-                        <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
-                    </tr>
+
+                    @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
+                        @<tr>
+                            <td>@job.JobID</td>
+                            <td>@job.Titel</td>
+                            <td>
+                                @Html.ActionLink("Bewerben", "Bewerben", New With {.ID = job.JobID})
+                            </td>
+                        </tr>
+                    Next
                 </table>
+
+                @*<table id="Tabelle">
+                        <tr class="header">
+                            <th>Jobtitel</th>
+                            <th>Branche</th>
+                            <th>Unternehmen</th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>#LidlStudio - Lidl sucht Influencer!</td>
+                            <td>Ernährung</td>
+                            <td>Lidl</td>
+                            <td><input type="button" value="Bewerben" /></td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>Beauty lovers: #dysonhair</td>
+                            <td>Beauty & Fashion</td>
+                            <td>Dyson</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>#urlaubsguruXcoachella</td>
+                            <td>Reisen & Events</td>
+                            <td>Urlaubsguru</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>Wie abgedreht ist das denn? #AbdrehenMitFanta</td>
+                            <td>Ernährung</td>
+                            <td>Fanta</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>Volksbank an Finance-Influencer</td>
+                            <td>Finanzen</td>
+                            <td>Volksbank</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bewirb dich für Fendi! #BaguetteFriendsForever</td>
+                            <td>Beauty & Fashion</td>
+                            <td>Fendi</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>Bald kommt Sommer! #EisIdeen</td>
+                            <td>Ernährung</td>
+                            <td>Dr.Oetker</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                        <tr>
+                            <td>#doitforyou - Wir suchen dich!</td>
+                            <td>Beauty & Fashion</td>
+                            <td>Douglas</td>
+                            <td><button class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bewerben</button></td>
+                        </tr>
+                    </table>*@
             </div>
         </div>
         <!--</div>-->
