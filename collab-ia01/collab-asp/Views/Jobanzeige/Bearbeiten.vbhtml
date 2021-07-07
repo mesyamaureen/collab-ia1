@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.Jobanzeige
+﻿@ModelType collab_asp.JobanzeigeViewModel
 
 @Code
     Layout = Nothing
@@ -87,12 +87,33 @@ End Code
 
                     @Using Html.BeginForm
                         @<div>
-                            @Html.LabelFor(Function(m) m.JobID)
-                            @Html.TextBoxFor(Function(m) m.JobID, New With {.readonly = "readonly"})
-                            @Html.ValidationMessageFor(Function(m) m.JobID)
+                            @Html.LabelFor(Function(m) m.Jobanzeige.JobID)
+                            @Html.TextBoxFor(Function(m) m.Jobanzeige.JobID, New With {.readonly = "readonly"})
+                            @Html.ValidationMessageFor(Function(m) m.Jobanzeige.JobID)
                         </div>
 
+                        @<div>
+                             @Html.LabelFor(Function(m) Model.Jobanzeige.Titel)
+                             @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel)
+                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
+                        </div>
 
+                        @<div>
+                            @Html.LabelFor(Function(m) m.Jobanzeige.Beschreibung)
+                            @Html.TextBoxFor(Function(m) m.Jobanzeige.Beschreibung)
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
+                        </div>
+
+                        @<div>
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "ID", "Bezeichnung"))
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
+                        </div>
+
+                        @<div>
+                            @Html.ActionLink("Speichern", "laden") @*nicht zurück an Index sondern laden*@
+                            <input type="submit" value="Speichern" />
+                        </div>
                     End Using
 
                     <form method="post" action="MeineJobanzeigen.html" style="width:70%;">
