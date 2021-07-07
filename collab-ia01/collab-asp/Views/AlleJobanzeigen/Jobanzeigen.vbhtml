@@ -9,7 +9,7 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>AlleJobanzeigen</title>
+    <title>Alle Jobanzeigen</title>
 </head>
 <body>
     <!-- Header -->

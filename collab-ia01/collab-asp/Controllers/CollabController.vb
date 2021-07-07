@@ -19,10 +19,10 @@ Namespace Controllers
             Return View()
         End Function
 
-        'GET: Jobanzeigen
-        Function AlleJobanzeigen() As ActionResult
-            Return View()
-        End Function
+        ''GET: Jobanzeigen
+        'Function AlleJobanzeigen() As ActionResult
+        '    Return View()
+        'End Function
 
         'GET: Einloggen
         Function Einloggen() As ActionResult
