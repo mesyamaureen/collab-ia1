@@ -7,10 +7,6 @@ Namespace Controllers
         Private db As collabEntities = New collabEntities
 
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
-        ' GET: AlleJobanzeigen
-        Function Index() As ActionResult
-            Return View()
-        End Function
 
         'anzeigenJobanzeigen() - = anzeigen Liste aller Jobanzeige?
         Function Jobanzeigen() As ActionResult
