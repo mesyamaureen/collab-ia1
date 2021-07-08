@@ -43,4 +43,14 @@ Public Class Branche
         mintBrancheID = pbrEntity.BrIdPk
         mstrBrancheTitel = pbrEntity.BrTitel
     End Sub
+
+    Public Function gibAlsBrancheEntity() As BrancheEntity
+        Dim brEntity As BrancheEntity
+        brEntity = New BrancheEntity
+
+        brEntity.BrIdPk = mintBrancheID
+        brEntity.BrIdPk = mstrBrancheTitel
+
+        Return brEntity
+    End Function
 End Class
