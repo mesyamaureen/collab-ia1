@@ -38,4 +38,9 @@ Public Class Branche
         mintBrancheID = pintBrancheID
         mstrBrancheTitel = pstrBrancheTitel
     End Sub
+
+    Sub New(pbrEntity As BrancheEntity)
+        mintBrancheID = pbrEntity.BrIdPk
+        mstrBrancheTitel = pbrEntity.BrTitel
+    End Sub
 End Class
