@@ -5,9 +5,14 @@ Namespace Controllers
         Inherits Controller
         Public Shared mlstBranche As List(Of Branche)
 
-        Private db As collabEntities = New collabEntities
+        Private db As collabEntities '= New collabEntities
 
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
+
+        Public Sub New()
+            MyBase.New()
+            db = New collabEntities
+        End Sub
 
         'ausklammern?
         'Function Index() As ActionResult
@@ -47,6 +52,7 @@ Namespace Controllers
             Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigenJobanzeige
         End Function
 
+        <HttpGet>
         Function Bearbeiten(ID As Integer) As ActionResult
             ''Deklaration
             'Dim job As Jobanzeige
@@ -74,9 +80,9 @@ Namespace Controllers
             brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
 
             If jobEntity Is Nothing Then
-                Return RedirectToAction("laden") 'wenn keine Jobanzeige gefunden, laden
+                Return New HttpNotFoundResult("Aufgabe mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
             End If
-            'Gefundene Datensatz aus der Datenbank loslösen
+            'Gefundenen Datensatz aus der Datenbank loslösen
             db.Entry(jobEntity).State = EntityState.Detached
             'Umwandeln in ein Objekt der Model-Klasse
             job = New Jobanzeige(jobEntity)

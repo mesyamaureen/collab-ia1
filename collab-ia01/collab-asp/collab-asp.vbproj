@@ -305,6 +305,7 @@
     <Content Include="Views\Jobanzeige\Bearbeiten.vbhtml" />
     <Content Include="Views\AlleJobanzeigen\Jobanzeigen.vbhtml" />
     <Content Include="Views\AlleProfile\Einloggen.vbhtml" />
+    <Content Include="Views\AlleJobanzeigen\Bearbeiten.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
