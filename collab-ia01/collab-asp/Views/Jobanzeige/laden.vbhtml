@@ -95,6 +95,7 @@ End Code
                         <th></th>
                     </tr>
 
+
                     @For Each job In Model.ListeJobanzeige 'hier Model.alle öffentlichen Properties
                         @<tr>
                             <td>@job.JobID</td>

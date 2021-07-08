@@ -1,4 +1,5 @@
-﻿
+﻿@ModelType collab_asp.JobanzeigenListe
+
 @Code
     Layout = Nothing
 End Code
@@ -8,7 +9,7 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Einloggen</title>
+    <title>Alle Jobanzeigen</title>
 </head>
 <body>
     <!-- Header -->
@@ -33,7 +34,7 @@ End Code
                     @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                 </li>
                 <li>
-                    @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                    @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                     @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                 </li>
                 <li>
@@ -77,27 +78,52 @@ End Code
             </div>
         </div>
 
-
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
-            <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
+            <!-- passt ihr bitte nur diesen Teil an -->
+            <div class="parallax">
+                <h1 class="center">Jobanzeigen</h1><br />
+                <h2 class="center">Finden Sie hier alle Jobanzeige von Unternehmen!</h2>
+            </div>
+            <div id="primaryContentBlock">
+                <h2>
+                    Branche:<br /> <!-- als Dropdown -->
+                    <select name="lstBranche"
+                            multiple="multiple" size="5" id="InputLeiste">
+                        <option value="1">Anime</option>
+                        <option value="2">Autos & Fahrzeuge</option>
+                        <option value="3">Beauty & Fashion</option>
+                        <option value="4">Bildung</option>
+                        <option value="5">DIY</option>
+                        <option value="6">Ernährung</option>
+                        <option value="7">Lifestyle</option>
+                        <option value="8">Gesundheit</option>
+                        <option value="9">Menschen & Blogs</option>
+                        <option value="10">Reisen & Events</option>
+                        <option value="11">Kunst & Design</option>
+                        <option value="12">Finanzen</option>
+                        <option value="13">Sonstiges</option>
+                    </select>
+                </h2>
 
-            <div id="formular" class="parallax">
-                <form method="get" action="meinProfil.html">
-                    <p>
-                        <label for="txtBenutzername" id="lblBenutzername"><b>Benutzername:</b></label>
-                        <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Geben Sie Ihr Benutzername ein" required />
-                    </p>
-                    <p>
-                        <label for="txtPasswort" id="lblPasswort"><b>Passwort:</b></label>
-                        <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Geben Sie Ihr Passwort ein" required />
-                    </p>
-                    <div class="center" style="margin-top: 4em;">
-                        <input type="submit" name="btnMeinProfil" value="Mein Profil" class="button" />
-                        <a href="Einloggen.html">Passwort vergessen?</a>
-                    </div>
-                </form>
+                <table id="Tabelle">
+                    <tr class="header">
+                        <th>Nr</th>
+                        <th>Jobtitel</th>
+                        <th></th>
+                    </tr>
+
+                    @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
+                        @<tr>
+                            <td>@job.JobID</td>
+                            <td>@job.Titel</td>
+                            <td>
+                                @Html.ActionLink("Bewerben", "Bewerben", New With {.ID = job.JobID})
+                            </td>
+                        </tr>
+                    Next
+                </table>
             </div>
         </div>
         <!--</div>-->
@@ -124,7 +150,6 @@ End Code
                 </div>
             </fieldset>
         </div>
-
     </div>
     <!-- FOOTER -->
     <div id="footer">

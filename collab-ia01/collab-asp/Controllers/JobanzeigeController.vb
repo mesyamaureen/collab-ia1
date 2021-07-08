@@ -8,11 +8,6 @@ Namespace Controllers
         Private db As collabEntities = New collabEntities
 
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
-        ' GET: Jobanzeige
-        'Function Index() As ActionResult
-        ' Return View()
-        ' End Function
-
 
         'ausklammern?
         'Function Index() As ActionResult
@@ -34,31 +29,13 @@ Namespace Controllers
         '    Return View(lstJobanzeige)
         'End Function
 
-        'ladenJobanzeigeEinzeln() - für Bewerbung.html?
+        'ladenJobanzeigeEinzeln() - für Jobanzeige eines zugeordneten Unternehmens
         Function laden(pintID As Integer) As ActionResult
             Dim intID As Integer
             Dim strTitel As String
             Dim strBeschreibung As String
 
-            '' Deklaration
-            'Dim auf As Aufgabe
-            'Dim aufEntity As AufgabeEntity
-            'Dim aufListe As AufgabenListe
 
-            '' Leere Liste initislisieren
-            'aufListe = New AufgabenListe()
-
-            '' Alle Aufgaben aus der Datenbank holen
-            'For Each aufEntity In db.tblAufgaben.ToList
-            '    ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
-            '    auf = New Aufgabe(aufEntity)
-
-            '    ' Objekt der Model-Klasse zur Liste hinzufügen
-            '    aufListe.Aufgaben.Add(auf)
-            'Next
-
-            '' Gesamte list anzeigen
-            'Return View(aufListe)
 
             'Benutzer prüfen, welcher angemeldete Unternehmer anhand Benutzer ID. Um die zugeordneten Jobanzeigen darzustellen
 
@@ -71,17 +48,17 @@ Namespace Controllers
         End Function
 
         Function Bearbeiten(ID As Integer) As ActionResult
-            'Dim job As Jobanzeige
-            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+            Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
-            'If IsNothing(jobEntity) Then
-            '    Return RedirectToAction("Index")
-            'End If
+            If IsNothing(jobEntity) Then
+                Return RedirectToAction("Index")
+            End If
 
-            'db.Entry(jobEntity).State = EntityState.Detached
+            db.Entry(jobEntity).State = EntityState.Detached
 
-            'job = New Jobanzeige(jobEntity)
-            'Return View(job)
+            job = New Jobanzeige()
+            Return View(job)
 
         End Function
 
@@ -100,17 +77,17 @@ Namespace Controllers
         End Function
 
         Function Loeschen(ID As Integer) As ActionResult
-            'Dim job As Jobanzeige
-            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+            Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
 
-            'If IsNothing(jobEntity) Then
-            '    Return RedirectToAction("Index")
-            'End If
+            If IsNothing(jobEntity) Then
+                Return RedirectToAction("Index")
+            End If
 
-            'db.Entry(jobEntity).State = EntityState.Detached
+            db.Entry(jobEntity).State = EntityState.Detached
 
-            'job = New Jobanzeige(jobEntity)
-            'Return View(job)
+            job = New Jobanzeige(jobEntity)
+            Return View(job)
         End Function
 
         'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 

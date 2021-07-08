@@ -201,6 +201,7 @@
     </Compile>
     <Compile Include="Models\InfluencerListe.vb" />
     <Compile Include="Models\Jobanzeige.vb" />
+    <Compile Include="Models\JobanzeigenListe.vb" />
     <Compile Include="Models\UnternehmenListe.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -296,14 +297,14 @@
     <Content Include="Views\Collab\Index.vbhtml" />
     <Content Include="Views\Collab\InfluencerSuchen.vbhtml" />
     <Content Include="Views\Collab\UnternehmenSuchen.vbhtml" />
-    <Content Include="Views\Collab\AlleJobanzeigen.vbhtml" />
-    <Content Include="Views\Collab\Einloggen.vbhtml" />
     <Content Include="Views\Collab\Registrieren.vbhtml" />
     <Content Include="Views\Collab\Impressum.vbhtml" />
     <Content Include="Views\Jobanzeige\laden.vbhtml" />
     <Content Include="Views\Jobanzeige\Hinzufuegen.vbhtml" />
     <Content Include="Views\Jobanzeige\Loeschen.vbhtml" />
     <Content Include="Views\Jobanzeige\Bearbeiten.vbhtml" />
+    <Content Include="Views\AlleJobanzeigen\Jobanzeigen.vbhtml" />
+    <Content Include="Views\AlleProfile\Einloggen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -333,7 +334,6 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\AlleJobanzeigen\" />
     <Folder Include="Views\Branche\" />
     <Folder Include="Views\Influencer\" />
     <Folder Include="Views\Unternehmer\" />

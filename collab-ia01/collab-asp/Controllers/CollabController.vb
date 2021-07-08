@@ -19,16 +19,6 @@ Namespace Controllers
             Return View()
         End Function
 
-        'GET: Jobanzeigen
-        Function AlleJobanzeigen() As ActionResult
-            Return View()
-        End Function
-
-        'GET: Einloggen
-        Function Einloggen() As ActionResult
-            Return View()
-        End Function
-
         'GET: Registrieren
         Function Registrieren() As ActionResult
             Return View()
