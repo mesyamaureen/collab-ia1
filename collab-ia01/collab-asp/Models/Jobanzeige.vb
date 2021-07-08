@@ -116,7 +116,10 @@ Public Class Jobanzeige
         jobE.JaIdPk = mintJobID
         jobE.JaTitel = mstrTitel
         jobE.JaBeschreibung = mstrBeschreibung
-        'jobE.JaBrIdFk = mbrBranche
+
+        If mbrBranche IsNot Nothing Then
+            jobE.JaBrIdFk = mbrBranche.BrancheID
+        End If
 
         'JOB VERSION FEHLT
 
