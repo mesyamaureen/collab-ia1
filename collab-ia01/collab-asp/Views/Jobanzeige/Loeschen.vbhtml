@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.Jobanzeige
+﻿@ModelType collab_asp.JobanzeigeViewModel
 
 @Code
     Layout = Nothing
