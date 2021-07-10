@@ -51,11 +51,8 @@ Public Class Unternehmen
         mbrBranche = pbrBranche
     End Sub
 
-    Public Function unternehmenLaden(pintBenutzerID As Integer) As Unternehmen
-
-    End Function
-
-    Public Function alleUnternehmenLaden() As List(Of Unternehmen)
-
-    End Function
+    Sub New(puntEntity As UnternehmerEntity)
+        mstrFirmenname = puntEntity.UName
+        'mbrBranche = puntEntity.UBrIdFk
+    End Sub
 End Class

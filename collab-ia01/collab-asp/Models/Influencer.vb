@@ -61,12 +61,9 @@ Public Class Influencer
         mbrBranche = pbrBranche
     End Sub
 
-    'Subs and Functions
-    Public Function influencerLaden(pintBenutzerID As Integer) As Influencer
-
-    End Function
-
-    Public Function alleInfluencerLaden() As List(Of Influencer)
-
-    End Function
+    Sub New(pinflEntity As InfluencerEntity)
+        mstrVorname = pinflEntity.InVorname
+        mstrName = pinflEntity.InName
+        'mbrBranche = pinflEntity.InBrIdFk
+    End Sub
 End Class

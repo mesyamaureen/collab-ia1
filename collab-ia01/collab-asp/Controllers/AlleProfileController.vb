@@ -39,7 +39,7 @@ Namespace Controllers
                     End If
                 End Using
             End If
-            Return View()
+            Return View(pben)
         End Function
 
         Function UserDashBoard() As ActionResult
