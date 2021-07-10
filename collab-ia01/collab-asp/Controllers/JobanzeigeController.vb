@@ -5,9 +5,9 @@ Namespace Controllers
         Inherits Controller
         Public Shared mlstBranche As List(Of Branche)
 
-        Private db As collabEntities '= New collabEntities
-
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
+
+        Private db As collabEntities '= New collabEntities
 
         Public Sub New()
             MyBase.New()

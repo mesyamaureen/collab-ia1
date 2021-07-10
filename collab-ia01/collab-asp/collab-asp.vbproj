@@ -167,7 +167,22 @@
     <Compile Include="Controllers\AlleProfileController.vb" />
     <Compile Include="Controllers\UnternehmerEinzelnController.vb" />
     <Compile Include="DataAccess\BrancheEntity.vb">
-      <DependentUpon>collabEDM.tt</DependentUpon>
+      <DependentUpon>collabDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabDB.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabDB.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\collabDB.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\collabEDM.Context.vb">
       <AutoGen>True</AutoGen>
@@ -185,13 +200,13 @@
       <DependentUpon>collabEDM.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\InfluencerEntity.vb">
-      <DependentUpon>collabEDM.tt</DependentUpon>
+      <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\JobanzeigeEntity.vb">
-      <DependentUpon>collabEDM.tt</DependentUpon>
+      <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\UnternehmerEntity.vb">
-      <DependentUpon>collabEDM.tt</DependentUpon>
+      <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Branche.vb" />
     <Compile Include="Models\Influencer.vb" />
@@ -239,6 +254,16 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DataAccess\collabDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>collabDB.edmx</DependentUpon>
+      <LastGenOutput>collabDB.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="DataAccess\collabDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>collabDB.edmx</DependentUpon>
+      <LastGenOutput>collabDB.vb</LastGenOutput>
+    </Content>
     <Content Include="DataAccess\collabEDM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>collabEDM.Context.vb</LastGenOutput>
@@ -265,6 +290,13 @@
     </EntityDeploy>
     <Content Include="DataAccess\collabEDM.edmx.diagram">
       <DependentUpon>collabEDM.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DataAccess\collabDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>collabDB.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataAccess\collabDB.edmx.diagram">
+      <DependentUpon>collabDB.edmx</DependentUpon>
     </Content>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

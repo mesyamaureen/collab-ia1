@@ -17,6 +17,7 @@ Partial Public Class JobanzeigeEntity
     Public Property JaUIdFk As Nullable(Of Integer)
     Public Property JaInIdFk As Nullable(Of Integer)
     Public Property JaBrIdFk As Nullable(Of Integer)
+    Public Property JaVersion As Byte()
 
     Public Overridable Property tblBranchen As BrancheEntity
     Public Overridable Property tblInfluencer As InfluencerEntity

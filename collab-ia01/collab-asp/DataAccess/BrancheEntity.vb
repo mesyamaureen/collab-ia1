@@ -13,6 +13,7 @@ Imports System.Collections.Generic
 Partial Public Class BrancheEntity
     Public Property BrIdPk As Integer
     Public Property BrTitel As String
+    Public Property BrVersion As Byte()
 
     Public Overridable Property tblInfluencer As ICollection(Of InfluencerEntity) = New HashSet(Of InfluencerEntity)
     Public Overridable Property tblJobanzeigen As ICollection(Of JobanzeigeEntity) = New HashSet(Of JobanzeigeEntity)
