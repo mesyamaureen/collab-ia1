@@ -27,8 +27,7 @@ Namespace Controllers
                             benInfluencer = infl
                         End If
                     Next
-                    'Dim benInfluencer As InfluencerEntity = From infl In db.tblInfluencer.ToList
-                    '                                        Where (infl.InBenutzername.Equals(pben.Benutzername) And infl.InPasswort.Equals(pben.Passwort))
+
                     If benInfluencer IsNot Nothing Then
                         System.Web.HttpContext.Current.Session("BenutzerID") = benInfluencer.InIdPk.ToString()
                         System.Web.HttpContext.Current.Session("Benutzername") = benInfluencer.InBenutzername.ToString()
