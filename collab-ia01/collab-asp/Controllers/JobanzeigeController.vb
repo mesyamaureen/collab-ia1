@@ -110,7 +110,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Bearbeiten war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("Jobanzeigen", "AlleJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
 
 

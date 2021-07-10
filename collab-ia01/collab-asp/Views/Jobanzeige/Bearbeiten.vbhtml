@@ -111,7 +111,7 @@ End Code
                         </div>
 
                         @<div>
-                            @Html.ActionLink("Abbrechen", "Jobanzeigen", "AlleJobanzeigen") @*nicht zurück an Index sondern laden*@
+                            @Html.ActionLink("Abbrechen", "meineJobanzeigen") @*nicht zurück an Index sondern laden*@
                             <input type="submit" value="Speichern" />
                         </div>
                     End Using
