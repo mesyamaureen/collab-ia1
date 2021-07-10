@@ -5,7 +5,7 @@ Namespace Controllers
         Inherits Controller
 
         ' GET: UnternehmerEinzeln
-        Function Index() As ActionResult
+        Function MeinProfilUnternehmer() As ActionResult
             Return View()
         End Function
 
