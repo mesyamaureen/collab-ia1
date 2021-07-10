@@ -78,14 +78,15 @@ End Code
             </div>
         </div>
 
-
+        
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
             <h1 style="text-align: center;">Loggen Sie sich jetzt ein!</h1>
 
+
             <div id="formular" class="parallax">
-                @Using Html.BeginForm
+                @Using Html.BeginForm("Einloggen", "AlleProfile", FormMethod.Post)
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(True)
                     @<div>
@@ -93,7 +94,6 @@ End Code
                         @Html.TextBoxFor(Function(m) m.Benutzername)
                         @Html.ValidationMessageFor(Function(m) m.Benutzername)
                     </div>
-
                     @<div>
                         @Html.LabelFor(Function(m) m.Passwort)
                         @Html.TextBoxFor(Function(m) m.Passwort)
@@ -106,21 +106,6 @@ End Code
                     </div>
 
                 End Using
-
-                @*<form method="get" action="meinProfil.html">
-            <p>
-                <label for="txtBenutzername" id="lblBenutzername"><b>Benutzername:</b></label>
-                <input id="InputLeiste" type="text" name="txtBenutzername" placeholder="Geben Sie Ihr Benutzername ein" required />
-            </p>
-            <p>
-                <label for="txtPasswort" id="lblPasswort"><b>Passwort:</b></label>
-                <input id="InputLeiste" type="password" name="txtPasswort" placeholder="Geben Sie Ihr Passwort ein" required />
-            </p>
-            <div class="center" style="margin-top: 4em;">
-                <input type="submit" name="btnMeinProfil" value="Mein Profil" class="button" />
-                <a href="Einloggen.html">Passwort vergessen?</a>
-            </div>
-        </form>*@
             </div>
         </div>
         <!--</div>-->

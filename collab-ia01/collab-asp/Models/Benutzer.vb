@@ -24,7 +24,7 @@ Public Class Benutzer
             Return mstrBenutzername
         End Get
         Set(value As String)
-
+            mstrBenutzername = value
         End Set
     End Property
 
@@ -33,7 +33,7 @@ Public Class Benutzer
             Return mstrPasswort
         End Get
         Set(value As String)
-
+            mstrPasswort = value
         End Set
     End Property
 
@@ -71,6 +71,13 @@ Public Class Benutzer
         mstrEmail = pstrEmail
         mstrBeschreibung = pstrBeschreibung
     End Sub
+
+    Sub New(pstrBenutzername As String, pstrPasswort As String)
+        mstrBenutzername = pstrBenutzername
+        mstrPasswort = pstrPasswort
+    End Sub
+
+
 
     'Subs und Funktionen
     'Public Function alleBenutzerLaden() As List(Of Benutzer)
