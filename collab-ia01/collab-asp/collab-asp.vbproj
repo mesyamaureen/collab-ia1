@@ -299,7 +299,7 @@
     <Content Include="Views\Collab\UnternehmenSuchen.vbhtml" />
     <Content Include="Views\Collab\Registrieren.vbhtml" />
     <Content Include="Views\Collab\Impressum.vbhtml" />
-    <Content Include="Views\Jobanzeige\laden.vbhtml" />
+    <Content Include="Views\Jobanzeige\meineJobanzeigen.vbhtml" />
     <Content Include="Views\Jobanzeige\Hinzufuegen.vbhtml" />
     <Content Include="Views\Jobanzeige\Loeschen.vbhtml" />
     <Content Include="Views\Jobanzeige\Bearbeiten.vbhtml" />

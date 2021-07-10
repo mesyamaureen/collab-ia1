@@ -91,7 +91,8 @@ End Code
                     </div>
 
                     <div class="buttonHalterMP">
-                        <input class="button" type="button" onclick="location.href='http://localhost:50935/Html/MeineJobanzeigen.html';" value="Meine Jobanzeigen" />
+                        @Html.ActionLink("Meine Jobanzeigen", "meineJobanzeigen", "Jobanzeige")
+                        @*<input class="button" type="button" onclick="location.href='http://localhost:50935/Html/MeineJobanzeigen.html';" value="Meine Jobanzeigen" />*@
                         <p style="font-size:20px; font-weight:800; margin-top: 20px;">ID: 12345</p>
                         <!--<button class="button">Meine Jobanzeigen</button>-->
                     </div>

@@ -9,59 +9,35 @@ Namespace Controllers
 
         Private db As collabDBEntities = New collabDBEntities '= New collabEntities
 
-        'ausklammern?
-        'Function Index() As ActionResult
-        '    Dim lstJobanzeige As List(Of Jobanzeige)
-        '    Dim job As Jobanzeige
+        'GET: /Jobanzeige/meineJobanzeigen
+        Function meineJobanzeigen() As ActionResult
 
-        '    lstJobanzeige = New List(Of Jobanzeige)
+            ' Deklaration
+            Dim job As Jobanzeige
+            Dim jaEntity As JobanzeigeEntity
+            Dim jaListe As JobanzeigenListe
 
-        '    Dim elements = db.tblJobanzeigen.ToArray()
+            ' Leere Liste initislisieren
+            jaListe = New JobanzeigenListe()
 
-        '    ' Sollte vorher ein Speichern erfolgt sein, das auf diese Seite zurückführt, 
-        '    ' muss hier geprüft werden, ob ein Fehler aufgetreten ist
-        '    If TempData.ContainsKey(CONCURRENCY_EXCEPTION) Then
-        '        ' wenn ja wird eine Fehlermeldung zum ModelState hinzufügt und anschließend in der View angezeigt
-        '        ModelState.AddModelError(String.Empty, TempData.Item(CONCURRENCY_EXCEPTION))
-        '        ' Fehlermeldung aus temporärer Zwischenablage entfernen, um sie nicht noch einmal anzuzeigen
-        '        TempData.Remove(CONCURRENCY_EXCEPTION)
-        '    End If
-        '    Return View(lstJobanzeige)
-        'End Function
+            ' Alle Aufgaben aus der Datenbank holen
+            For Each jaEntity In db.tblJobanzeigen.ToList
+                ' Überprüfen, ob der Entity zum angemeldeten Unternehmer gehört
+                If jaEntity.JaUIdFk.ToString().Equals(System.Web.HttpContext.Current.Session("BenutzerID")) Then
+                    ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
+                    job = New Jobanzeige(jaEntity)
 
-        'ladenJobanzeigeEinzeln() - für Jobanzeige eines zugeordneten Unternehmens
-        Function laden(pintID As Integer) As ActionResult
-            Dim intID As Integer
-            Dim strTitel As String
-            Dim strBeschreibung As String
+                    ' Objekt der Model-Klasse zur Liste hinzufügen
+                    jaListe.Jobanzeige.Add(job)
+                End If
+            Next
 
-
-
-            'Benutzer prüfen, welcher angemeldete Unternehmer anhand Benutzer ID. Um die zugeordneten Jobanzeigen darzustellen
-
-            'Alle Jobanzeigen in der Bewerbung.html Seite übertragen als eine Liste aller dazu gehörigen Jobanzeigen
-
-            intID = Integer.Parse(Request.QueryString("ID"))
-            strTitel = Request.QueryString("txtTitel")
-            strBeschreibung = Request.QueryString("txtBeschreibung")
-            Return View() 'hier nochmal überprüfen, ob es zurück in View geht oder zu anderer Funktion darunter z.B. AnzeigenJobanzeige
+            ' Gesamte list anzeigen
+            Return View(jaListe)
         End Function
 
         <HttpGet>
         Function Bearbeiten(ID As Integer) As ActionResult
-            ''Deklaration
-            'Dim job As Jobanzeige
-            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
-            ''Falls keine entsprechende Job gefunden wurde
-            'If IsNothing(jobEntity) Then
-            '    Return RedirectToAction("Index")
-            'End If
-
-            'db.Entry(jobEntity).State = EntityState.Detached
-
-            'job = New Jobanzeige()
-            'Return View(job)
-
             'Deklaration
             Dim job As Jobanzeige
             Dim jobEntity As JobanzeigeEntity

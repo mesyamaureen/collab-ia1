@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.Jobanzeige
+﻿@ModelType collab_asp.JobanzeigenListe
 
 @Code
     Layout = Nothing
@@ -9,7 +9,7 @@ End Code
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>laden</title>
+    <title>Meine Jobanzeigen</title>
 </head>
 <body>
     <!-- Header -->
@@ -96,7 +96,7 @@ End Code
                     </tr>
 
 
-                    @For Each job In Model.ListeJobanzeige 'hier Model.alle öffentlichen Properties
+                    @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
                         @<tr>
                             <td>@job.JobID</td>
                             <td>@job.Titel</td>
