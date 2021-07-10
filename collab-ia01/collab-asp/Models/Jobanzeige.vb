@@ -34,7 +34,7 @@ Public Class Jobanzeige
         mstrTitel = pJobanzeigeEntity.JaTitel
         mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
 
-        mbrBranche = New Branche(pJobanzeigeEntity.JaBrIdFk, "")
+        'mbrBranche = New Branche(pJobanzeigeEntity.JaBrIdFk, "")
     End Sub
 
     'Properties

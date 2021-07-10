@@ -106,51 +106,15 @@ End Code
 
                         @<div>
                             @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
-                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "ID", "Bezeichnung"))
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"))
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
 
                         @<div>
-                            @Html.ActionLink("Speichern", "laden") @*nicht zurück an Index sondern laden*@
+                            @Html.ActionLink("Abbrechen", "Jobanzeigen", "AlleJobanzeigen") @*nicht zurück an Index sondern laden*@
                             <input type="submit" value="Speichern" />
                         </div>
                     End Using
-
-                    <form method="post" action="MeineJobanzeigen.html" style="width:70%;">
-                        <!-- bitte method und action hier aufpassen -->
-                        <p>
-                            <label for="txtTitel" id="lblTitel"><b>Titel:</b></label>
-                            <input id="InputLeiste" type="text" name="txtTitel" placeholder="Titel der Jobanzeige" required /> <!--disabled, wenn angemeldeter Benutzer = Unternehmer-->
-                        </p>
-                        <p>
-                            <label for="txtBranche" id="lblBranche"><b>Branche:</b></label>
-                            <select name="lstBranche"
-                                    multiple="multiple" size="5" id="InputLeiste">
-                                <option value="1"> Anime</option>
-                                <option value="2"> Autos & Fahrzeuge</option>
-                                <option value="3"> Beauty & Fashion</option>
-                                <option value="4"> Bildung</option>
-                                <option value="5"> DIY</option>
-                                <option value="6"> Ernährung</option>
-                                <option value="7"> Lifestyle</option>
-                                <option value="8"> Gesundheit</option>
-                                <option value="9"> Menschen & Blogs</option>
-                                <option value="10"> Reisen & Events</option>
-                                <option value="11"> Kunst & Design</option>
-                                <option value="12"> Finanzen</option>
-                                <option value="13"> Sonstiges</option>
-                            </select>
-                        </p>
-                        <p>
-                            <label for="txtBeschreibung" id="lblBeschreibung"><b>Beschreibung:</b></label>
-                            <input id="InputLeiste" type="text" name="txtBeschreibung" placeholder="Beschreibung" size="500" style="height: 200px;" required /> <!--disabled, wenn angemeldeter Benutzer = Influencer-->
-                        </p>
-
-                        <div Class="center" style="margin-top: 2em;">
-                            <input type="submit" name="btnSpeichern" value="Speichern" Class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
-                            <input type="reset" Class="button" value="Abbrechen" onclick="javascript: confirm('Möchten Sie wirklich abbrechen? Ihre Änderungen werden endgültig gelöscht.');" />
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

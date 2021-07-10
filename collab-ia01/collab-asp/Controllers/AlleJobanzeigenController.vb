@@ -4,7 +4,7 @@ Namespace Controllers
     Public Class AlleJobanzeigenController
         Inherits Controller
 
-        Private db As collabEntities = New collabEntities
+        Private db As collabDBEntities = New collabDBEntities
 
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
 

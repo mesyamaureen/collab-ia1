@@ -7,12 +7,7 @@ Namespace Controllers
 
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
 
-        Private db As collabEntities '= New collabEntities
-
-        Public Sub New()
-            MyBase.New()
-            db = New collabEntities
-        End Sub
+        Private db As collabDBEntities = New collabDBEntities '= New collabEntities
 
         'ausklammern?
         'Function Index() As ActionResult
@@ -139,7 +134,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Bearbeiten war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("laden") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("Jobanzeigen", "AlleJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
 
 
