@@ -184,21 +184,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\collabEDM.Context.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>collabEDM.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\collabEDM.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>collabEDM.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\collabEDM.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>collabEDM.tt</DependentUpon>
-    </Compile>
     <Compile Include="DataAccess\InfluencerEntity.vb">
       <DependentUpon>collabDB.tt</DependentUpon>
     </Compile>
@@ -264,16 +249,6 @@
       <DependentUpon>collabDB.edmx</DependentUpon>
       <LastGenOutput>collabDB.vb</LastGenOutput>
     </Content>
-    <Content Include="DataAccess\collabEDM.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>collabEDM.Context.vb</LastGenOutput>
-      <DependentUpon>collabEDM.edmx</DependentUpon>
-    </Content>
-    <Content Include="DataAccess\collabEDM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>collabEDM.edmx</DependentUpon>
-      <LastGenOutput>collabEDM.vb</LastGenOutput>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -284,13 +259,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Models\Models.cd" />
-    <EntityDeploy Include="DataAccess\collabEDM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>collabEDM.Designer.vb</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="DataAccess\collabEDM.edmx.diagram">
-      <DependentUpon>collabEDM.edmx</DependentUpon>
-    </Content>
     <EntityDeploy Include="DataAccess\collabDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>collabDB.Designer.vb</LastGenOutput>
