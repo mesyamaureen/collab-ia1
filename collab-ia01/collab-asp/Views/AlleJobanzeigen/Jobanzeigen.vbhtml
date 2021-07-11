@@ -120,8 +120,6 @@ End Code
                             <td>@job.Titel</td>
                             <td>
                                 @Html.ActionLink("Bewerben", "Bewerben", New With {.ID = job.JobID})
-                                @*@Html.ActionLink("Bearbeiten", "Bearbeiten", "Jobanzeige", New With {.ID = job.JobID}, Nothing)*@
-                                @*@Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.JobID})*@
                             </td>
                         </tr>
                     Next

@@ -308,6 +308,8 @@
     <Content Include="Views\AlleJobanzeigen\Bearbeiten.vbhtml" />
     <Content Include="Views\InfluencerEinzeln\MeinProfilInfluencer.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\MeinProfilUnternehmer.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Unternehmensuchen.vbhtml" />
+    <Content Include="Views\AlleUnternehmen\Unternehmer.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />

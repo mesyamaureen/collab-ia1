@@ -115,6 +115,7 @@ Namespace Controllers
             Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
 
+
         'GET: /Jobanzeige/Hinzufuegen
         Function Hinzufuegen() As ActionResult
             'Dim jobEntity As JobanzeigeEntity
@@ -169,7 +170,6 @@ Namespace Controllers
                 pvmJob.ListeBranche = lstBranche
                 Return View(pvmJob)
             End If
-
 
             'Jobanzeige aus dem ViewModel holen und in Jobanzeige entity umwandeln
             job = pvmJob.Jobanzeige

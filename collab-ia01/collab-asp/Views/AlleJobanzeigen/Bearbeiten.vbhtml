@@ -34,11 +34,11 @@ End Code
                     @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                 </li>
                 <li>
-                    @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                    @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                     @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                 </li>
                 <li>
-                    @Html.ActionLink("Einloggen", "Einloggen")
+                    @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                 </li>
                 <li>
