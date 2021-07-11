@@ -66,9 +66,5 @@ Namespace Controllers
                 Return RedirectToAction("Einloggen")
             End If
         End Function
-
-        Function AnzeigenListe() As List(Of Benutzer)
-
-        End Function
     End Class
 End Namespace
