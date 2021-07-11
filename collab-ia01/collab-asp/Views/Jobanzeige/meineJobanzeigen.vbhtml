@@ -8,7 +8,12 @@ End Code
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Meine Jobanzeigen</title>
 </head>
 <body>
@@ -82,33 +87,40 @@ End Code
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
             <!-- passt ihr bitte nur diesen Teil an -->
-            <div class="parallax">
-                <h1 class="center">Meine Jobanzeigen</h1>
-                <h2 class="center">Verwalten Sie Ihre Jobanzeigen</h2>
-            </div>
+            <div class="container-fluid">
+                <div class="jumbotron">
+                    <div class="parallax">
+                        <h1 class="center">Meine Jobanzeigen</h1>
+                        <h2 class="center">Verwalten Sie Ihre Jobanzeigen</h2>
+                    </div>
+                </div>
 
-            <div id="primaryContentBlock">
-                <table id="Tabelle">
-                    <tr class="header">
-                        <th>Nr</th>
-                        <th>Jobtitel</th>
-                        <th></th>
-                    </tr>
+                <div id="primaryContentBlock">
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered" id="Tabelle">
+                            <tr class="header">
+                                <th>Nr</th>
+                                <th>Jobtitel</th>
+                                <th></th>
+                            </tr>
 
 
-                    @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
-                        @<tr>
-                            <td>@job.JobID</td>
-                            <td>@job.Titel</td>
-                            <td>
-                                @Html.ActionLink("Bearbeiten", "Bearbeiten", New With {.ID = job.JobID})
-                                @Html.ActionLink("Löschen", "Loeschen", New With {.ID = job.JobID})
-                            </td>
-                        </tr>
-                    Next
-                </table>
-
-                @Html.ActionLink("Hinzufügen", "Hinzufuegen")
+                            @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
+                                @<tr>
+                                    <td>@job.JobID</td>
+                                    <td>@job.Titel</td>
+                                    <td>
+                                        @Html.ActionLink("Bearbeiten", "Bearbeiten", Nothing, New With {.ID = job.JobID}, New With {.class = "btn btn-primary btn-sm", .role = "button"})
+                                        @Html.ActionLink("Löschen", "Loeschen", Nothing, New With {.ID = job.JobID}, New With {.class = "btn btn-danger btn-sm", .role = "button"})
+                                    </td>
+                                </tr>
+                            Next
+                        </table>
+                    </div>
+                    <div class="text-center">
+                        @Html.ActionLink("Hinzufügen", "Hinzufuegen", Nothing, New With {.class = "btn btn-primary", .role = "button"})
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -188,5 +200,18 @@ End Code
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
+
+
+    <!-- Option 2: JavaScript -->
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>*@
+
+    <!-- Bootstrap Bundle with Popper -->
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>*@
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 </html>
