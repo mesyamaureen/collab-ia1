@@ -13,7 +13,7 @@ Public Class Branche
             Return mintBrancheID
         End Get
         Set(value As Integer)
-
+            mintBrancheID = value
         End Set
     End Property
 
@@ -23,7 +23,7 @@ Public Class Branche
             Return mstrBrancheTitel
         End Get
         Set(value As String)
-
+            mstrBrancheTitel = value
         End Set
     End Property
 
@@ -49,7 +49,7 @@ Public Class Branche
         brEntity = New BrancheEntity
 
         brEntity.BrIdPk = mintBrancheID
-        brEntity.BrIdPk = mstrBrancheTitel
+        brEntity.BrTitel = mstrBrancheTitel
 
         Return brEntity
     End Function

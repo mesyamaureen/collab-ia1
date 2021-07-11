@@ -9,15 +9,25 @@ Public Class Unternehmen
     Private mstrFirmenname As String
     Private mjAnzeige As Jobanzeige
     Private mbrBranche As Branche
+    Private muntID As Integer
 
     'Properties
+
+    Public Property UnternehmerID As Integer
+        Get
+            Return muntID
+        End Get
+        Set(value As Integer)
+            muntID = value
+        End Set
+    End Property
 
     Public Property Firmenname As String
         Get
             Return mstrFirmenname
         End Get
         Set(value As String)
-
+            mstrFirmenname = value
         End Set
     End Property
 
@@ -26,7 +36,7 @@ Public Class Unternehmen
             Return mjAnzeige
         End Get
         Set(value As Jobanzeige)
-
+            mjAnzeige = value
         End Set
     End Property
 
@@ -35,24 +45,27 @@ Public Class Unternehmen
             Return mbrBranche
         End Get
         Set(value As Branche)
-
+            mbrBranche = value
         End Set
     End Property
 
     'Parameterloser Konstruktor
     Sub New()
+        muntID = Nothing
         mstrFirmenname = String.Empty
         mbrBranche = Nothing
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pstrFirmenname As String, pbrBranche As Branche)
+    Sub New(puntID As Integer, pstrFirmenname As String, pbrBranche As Branche)
+        muntID = puntID
         mstrFirmenname = pstrFirmenname
         mbrBranche = pbrBranche
     End Sub
 
     Sub New(puntEntity As UnternehmerEntity)
         mstrFirmenname = puntEntity.UName
+        muntID = puntEntity.UIdPk
         'mbrBranche = puntEntity.UBrIdFk
     End Sub
 End Class

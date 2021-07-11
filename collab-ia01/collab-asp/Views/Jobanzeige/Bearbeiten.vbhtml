@@ -93,9 +93,9 @@ End Code
                         </div>
 
                         @<div>
-                             @Html.LabelFor(Function(m) Model.Jobanzeige.Titel)
-                             @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel)
-                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel)
+                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel)
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
                         </div>
 
                         @<div>
@@ -108,6 +108,12 @@ End Code
                             @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                             @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"))
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
+                        </div>
+
+                        @<div>
+                            @Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
+                            @Html.TextBoxFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
+                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.UnternehmerID)
                         </div>
 
                         @<div>

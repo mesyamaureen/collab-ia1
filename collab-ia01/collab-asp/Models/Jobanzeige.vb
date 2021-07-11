@@ -10,8 +10,11 @@ Public Class Jobanzeige
     Private mstrBeschreibung As String
     Private mbrBranche As Branche
     Private mlstJobanzeigeAlle As List(Of Jobanzeige)
+    Private muntId As Integer
+    Private untBrancheId As Integer
+    Private minfId As Integer
 
-    Private mstrVersion As String ' Neues Attribut vom Typ String  um UNICODE zu speichern
+    Private mbytVersion As Byte() ' Neues Attribut vom Typ String  um UNICODE zu speichern
 
     'Parameterloser Konstruktor
     Sub New()
@@ -19,22 +22,34 @@ Public Class Jobanzeige
         mstrTitel = String.Empty
         mstrBeschreibung = String.Empty
         mbrBranche = Nothing
+        muntId = Nothing
+        'mbytVersion = Nothing
     End Sub
 
     'Konstruktor mit Parameter
-    Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
+    Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche, puntId As Integer)
         mintJobID = pintJobID
         mstrTitel = pstrTitel
         mstrBeschreibung = pstrBeschreibung
         mbrBranche = pbrBranche
+        muntId = puntId
+        'mbytVersion = pbytVersion
     End Sub
 
     Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
         mintJobID = pJobanzeigeEntity.JaIdPk
         mstrTitel = pJobanzeigeEntity.JaTitel
         mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
+        muntId = pJobanzeigeEntity.JaUIdFk
+        'mbytVersion = pJobanzeigeEntity.JaVersion
 
-        'mbrBranche = New Branche(pJobanzeigeEntity.JaBrIdFk, "")
+        If IsNothing(pJobanzeigeEntity.JaVersion) Then
+            mbytVersion = Nothing
+        Else
+            mbytVersion = pJobanzeigeEntity.JaVersion
+        End If
+
+        mbrBranche = New Branche(pJobanzeigeEntity.JaBrIdFk, "")
     End Sub
 
     'Properties
@@ -70,15 +85,15 @@ Public Class Jobanzeige
             Return mbrBranche
         End Get
         Set(value As Branche)
-
+            mbrBranche = value
         End Set
     End Property
-    Public Property Version As String
+    Public Property Version As Byte()
         Get
-            Return mstrVersion
+            Return mbytVersion
         End Get
-        Set(value As String)
-            mstrVersion = value
+        Set(value As Byte())
+            mbytVersion = value
         End Set
     End Property
 
@@ -91,23 +106,24 @@ Public Class Jobanzeige
         End Set
     End Property
 
+    Public Property UnternehmerID As Integer
+        Get
+            Return muntId
+        End Get
+        Set(value As Integer)
+            muntId = value
+        End Set
+    End Property
 
-    'Subs and Functions
-    Public Function alleJobanzeigenLaden(pintJobID As Integer) As List(Of Jobanzeige)
+    Public Property InfluencerID As Integer
+        Get
+            Return minfId
+        End Get
+        Set(value As Integer)
+            minfId = value
+        End Set
+    End Property
 
-    End Function
-
-    Public Sub jobanzeigeLoeschen(pJobanzeige As Jobanzeige)
-
-    End Sub
-
-    Public Sub jobanzeigeAnlegen(pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche)
-
-    End Sub
-
-    Public Sub jobAnzeigeAktualisieren()
-
-    End Sub
 
     Public Function gibAlsJobanzeigeEntity() As JobanzeigeEntity
         Dim jobE As JobanzeigeEntity
@@ -116,6 +132,7 @@ Public Class Jobanzeige
         jobE.JaIdPk = mintJobID
         jobE.JaTitel = mstrTitel
         jobE.JaBeschreibung = mstrBeschreibung
+        jobE.JaUIdFk = muntId
 
         If mbrBranche IsNot Nothing Then
             jobE.JaBrIdFk = mbrBranche.BrancheID
