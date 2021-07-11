@@ -235,6 +235,15 @@
     <Content Include="App_Data\collab_log.ldf">
       <DependentUpon>collab.mdf</DependentUpon>
     </Content>
+    <Content Include="Bilder\BgParallax.jpg" />
+    <Content Include="Bilder\ClaraScherf.jpeg" />
+    <Content Include="Bilder\COLLAB-BILD.png" />
+    <Content Include="Bilder\InfluencerMarketing.jpg" />
+    <Content Include="Bilder\MesyaJeynie.jpeg" />
+    <Content Include="Bilder\Network.jpg" />
+    <Content Include="Bilder\NinaHochtritt.jpeg" />
+    <Content Include="Bilder\Startseite.jpg" />
+    <Content Include="Bilder\Team.jpg" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
