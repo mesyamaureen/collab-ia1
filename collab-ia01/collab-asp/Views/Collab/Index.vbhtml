@@ -24,8 +24,8 @@ End Code
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
         </div>
-        <div id="menu">
-            <ul class="nav justify-content-end stretched-link">
+        <div>
+            <ul class="nav justify-content-end">
                 <li class="nav-item">
                     @Html.ActionLink("Startseite", "Index")
                 </li>
