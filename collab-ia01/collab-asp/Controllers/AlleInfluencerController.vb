@@ -4,12 +4,33 @@ Namespace Controllers
     Public Class AlleInfluencerController
         Inherits Controller
 
+        Private db As collabDBEntities = New collabDBEntities
+
+        Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
         ' GET: AlleInfluencer
-        Function Index() As ActionResult
-            Return View()
+        Function Influencersuchen() As ActionResult
+            ' Deklaration
+            Dim infl As Influencer
+            Dim infEntity As InfluencerEntity
+            Dim lstInfluencer As InfluencerListe
+
+            ' Leere Liste initislisieren
+            lstInfluencer = New InfluencerListe()
+
+            ' Alle Aufgaben aus der Datenbank holen
+            For Each infEntity In db.tblInfluencer.ToList
+                ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
+                infl = New Influencer(infEntity)
+
+                ' Objekt der Model-Klasse zur Liste hinzufügen
+                lstInfluencer.Influencer.Add(infl)
+            Next
+
+            ' Gesamte list anzeigen
+            Return View(lstInfluencer)
         End Function
 
-        Function Oeffnen(pInId As Integer) As ActionResult
+        Function Influencer(pInId As Integer) As ActionResult
             Return View()
         End Function
 

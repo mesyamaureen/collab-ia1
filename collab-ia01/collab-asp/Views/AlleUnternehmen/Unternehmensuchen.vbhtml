@@ -65,7 +65,7 @@ End Code
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
                     </li>
                     <li>
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li>
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
