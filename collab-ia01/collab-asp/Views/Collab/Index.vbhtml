@@ -18,42 +18,42 @@ End Code
 </head>
 <body>
     <div>
-        <div id="header">
+        <div id="header" style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
-        </div>
-        <div>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    @Html.ActionLink("Startseite", "Index")
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
-                    @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
-                    @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
-                    @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
-                    @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
-                </li>
-                <li class="nav-item">
-                    @Html.ActionLink("Registrieren", "Registrieren")
-                    @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
-                </li>
-            </ul>
+            <div>
+                <ul class="nav justify-content-evenly align-items-end">
+                    <li class="nav-item">
+                        @Html.ActionLink("Startseite", "Index")
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                        @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
+                        @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
+                        @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Registrieren", "Registrieren")
+                        @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="background-color:#FFCCBC;">
         <!-- Content fängt hier an -->
         <!-- left Column -->
         <div class="row">
@@ -83,7 +83,7 @@ End Code
 
 
             <!-- middle Column -->
-            <div class="col-md-8">
+            <div class="col-md-8" style="background-color:#ECECEC;">
                 <div class="text-center" style="margin-bottom: 40px;">
                     <div class="justify-content-evenly">
                         <img src="../Bilder/Startseite.jpg" id="image" height="400" alt="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" />
@@ -93,8 +93,8 @@ End Code
                         <h2 class="center">Übersichtliche Überblick, vielfältige Auswahlen, Kosten- und Zeitersparnis</h2>
                     </div>
                     <div class="text-center">
-                        <button class="button" onclick="location.href='http://localhost:50935/Html/Influencer%20suchen.html';">Influencer suchen</button>
-                        <button class="button" onclick="location.href='http://localhost:50935/Html/Unternehmen%20suchen.html';">Unternehmen suchen</button>
+                        @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer", Nothing, New With {.class = "btn btn-info", .role = "button"})
+                        @Html.ActionLink("Unternehmen suchen", "Unternehmensuchen", "AlleUnternehmen", Nothing, New With {.class = "btn btn-info", .role = "button"})
                     </div>
                 </div>
 
@@ -144,7 +144,7 @@ End Code
             </div>
 
                 <!-- right Column-->
-                <div class="col-2">
+                <div class="col-2" style="background-color:#FFCCBC;">
                     <fieldset id="fldKontakt">
                         <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
                         <p>Tel.: 030 38 99 00</p>
