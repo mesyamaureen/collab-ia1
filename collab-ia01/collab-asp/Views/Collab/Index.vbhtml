@@ -24,27 +24,27 @@ End Code
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
             <div>
-                <ul class="nav justify-content-evenly align-items-end">
+                <ul class="nav justify-content-end align-items-end">
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -53,7 +53,7 @@ End Code
         </div>
     </div>
 
-    <div class="container" style="background-color:#FFCCBC;">
+    <div class="container-fluid" style="background-color:#FFCCBC;">
         <!-- Content fängt hier an -->
         <!-- left Column -->
         <div class="row">

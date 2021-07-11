@@ -54,7 +54,7 @@ End Code
         </div>
     </div>
 
-    <div class="container" style="background-color:#FFCCBC;">
+    <div class="container-fluid" style="background-color:#FFCCBC;">
         <!-- Content fängt hier an -->
         <!-- left Column -->
         <div class="row">
