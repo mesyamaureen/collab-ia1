@@ -172,7 +172,7 @@ End Code
     </div>
 
             <!-- FOOTER -->
-            <div id="footer">
+            <div id="footer" class="text-center">
                 <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
             </div>
 
