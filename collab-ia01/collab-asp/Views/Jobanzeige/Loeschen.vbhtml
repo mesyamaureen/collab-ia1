@@ -23,22 +23,27 @@ End Code
         <div id="menu">
             <ul style="list-style-type: none;">
                 <li class="first">
-                    <a href="Startseite.html" accesskey="1" title="Startseite" style="color: black">Startseite</a>
+                    @Html.ActionLink("Startseite", "Index", "Collab")
                 </li>
                 <li>
-                    <a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>
+                    @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                    @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                 </li>
                 <li>
-                    <a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>
+                    @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                    @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                 </li>
                 <li>
-                    <a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>
+                    @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
+                    @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                 </li>
                 <li>
-                    <a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>
+                    @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
+                    @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                 </li>
                 <li>
-                    <a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>
+                    @Html.ActionLink("Registrieren", "Registrieren")
+                    @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                 </li>
             </ul>
         </div>
@@ -69,22 +74,23 @@ End Code
             <div id="secondaryContent">
                 <ul style="font-size: 16px;">
                     <li id="current">
-                        <a href="Startseite.html" style="color: black">Startseite</a>
+                        @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li>
-                        <a href="Influencer suchen.html" style="color: black">Influencer suchen</a>
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                     </li>
                     <li>
-                        <a href="Unternehmen suchen.html" style="color: black">Unternehmen suchen</a>
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                     </li>
                     <li>
-                        <a href="Jobanzeigen.html" style="color: black">Jobanzeigen</a>
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li>
-                        <a href="Einloggen.html" style="color: black">Einloggen</a>
+                        @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     </li>
                     <li>
-                        <a href="Impressum.html" style="color: black">Impressum</a>
+                        @Html.ActionLink("Impressum", "Impressum")
+                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>

@@ -24,11 +24,11 @@ End Code
                     @Html.ActionLink("Startseite", "Index")
                 </li>
                 <li>
-                    @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
+                    @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                     @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                 </li>
                 <li>
-                    @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
+                    @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                     @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                 </li>
                 <li>
@@ -42,6 +42,7 @@ End Code
                 <li>
                     @Html.ActionLink("Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
+                </li>
             </ul>
         </div>
     </div>
@@ -56,16 +57,16 @@ End Code
                         @Html.ActionLink("Startseite", "Index")
                     </li>
                     <li>
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                     </li>
                     <li>
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                     </li>
                     <li>
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li>
-                        @Html.ActionLink("Einloggen", "Einloggen")
+                        @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     </li>
                     <li>
                         @Html.ActionLink("Impressum", "Impressum")
