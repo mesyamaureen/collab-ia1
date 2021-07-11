@@ -103,10 +103,14 @@ End Code
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
                         </div>
 
-                        @<div class="form-group">
-                            @Html.LabelFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "control-label"})
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "form-control"})
-                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
+                        @<div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    @Html.LabelFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "control-label"})
+                                    @Html.TextBoxFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "form-control"})
+                                    @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
+                                </div>
+                            </div>
                         </div>
 
                         @<div class="form-group">
