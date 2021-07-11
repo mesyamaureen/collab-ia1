@@ -10,8 +10,18 @@ Public Class Unternehmen
     Private mjAnzeige As Jobanzeige
     Private mbrBranche As Branche
     Private muntID As Integer
+    Private mbrID As Integer
 
     'Properties
+    Public Property BrancheID As Integer
+        Get
+            Return mbrID
+        End Get
+        Set(value As Integer)
+            mbrID = value
+        End Set
+    End Property
+
 
     Public Property UnternehmerID As Integer
         Get
@@ -54,18 +64,21 @@ Public Class Unternehmen
         muntID = Nothing
         mstrFirmenname = String.Empty
         mbrBranche = Nothing
+        mbrID = Nothing
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(puntID As Integer, pstrFirmenname As String, pbrBranche As Branche)
+    Sub New(puntID As Integer, pstrFirmenname As String, pbrBranche As Branche, pbrID As Integer)
         muntID = puntID
         mstrFirmenname = pstrFirmenname
         mbrBranche = pbrBranche
+        mbrID = pbrID
     End Sub
 
     Sub New(puntEntity As UnternehmerEntity)
         mstrFirmenname = puntEntity.UName
         muntID = puntEntity.UIdPk
+        mbrID = puntEntity.UBrIdFk
         'mbrBranche = puntEntity.UBrIdFk
     End Sub
 End Class
