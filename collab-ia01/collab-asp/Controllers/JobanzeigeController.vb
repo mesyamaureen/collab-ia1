@@ -9,6 +9,7 @@ Namespace Controllers
 
         Private db As collabDBEntities = New collabDBEntities '= New collabEntities
 
+        'laden alle zugehörigen Jobanzeigen
         'GET: /Jobanzeige/meineJobanzeigen
         Function meineJobanzeigen() As ActionResult
 
@@ -36,6 +37,7 @@ Namespace Controllers
             Return View(jaListe)
         End Function
 
+        'GET: /Jobanzeige/Bearbeiten
         <HttpGet>
         Function Bearbeiten(ID As Integer) As ActionResult
             'Deklaration
@@ -113,57 +115,127 @@ Namespace Controllers
             Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
 
+        'GET: /Jobanzeige/Hinzufuegen
+        Function Hinzufuegen() As ActionResult
+            'Dim jobEntity As JobanzeigeEntity
 
-        Function Hinzufuegen(pjob As Jobanzeige) As ActionResult
-            Dim jobEntity As JobanzeigeEntity
+            'jobEntity = pjob.gibAlsJobanzeigeEntity()
 
-            jobEntity = pjob.gibAlsJobanzeigeEntity()
+            'If ModelState.IsValid Then
+            '    db.tblJobanzeigen.Attach(jobEntity)
+            '    db.Entry(jobEntity).State = EntityState.Added
+            '    db.SaveChanges()
+            '    Return RedirectToAction("Index")
+            'End If
+            'Return View(pjob)
 
-            If ModelState.IsValid Then
-                db.tblJobanzeigen.Attach(jobEntity)
-                db.Entry(jobEntity).State = EntityState.Added
-                db.SaveChanges()
-                Return RedirectToAction("Index")
-            End If
-            Return View(pjob)
+            Dim job As Jobanzeige
+            Dim branche As Branche
+            Dim lstBranche As List(Of Branche)
+            Dim vmJob As JobanzeigeViewModel
+
+            job = New Jobanzeige 'Neue leere Jobanzeige erzeugen
+
+            'Alle Kategorien aus Datenbank laden
+            lstBranche = New List(Of Branche)
+            For Each brancheEntity In db.tblBranchen.ToList
+                branche = New Branche(brancheEntity)
+                lstBranche.Add(branche)
+            Next
+
+            'ViewModel vorbereiten
+            vmJob = New JobanzeigeViewModel
+            vmJob.Jobanzeige = job
+            vmJob.ListeBranche = lstBranche
+            Return View(vmJob) 'Neue Jobanzeige und Liste aller Branche als ViewModel an die View übergeben
         End Function
 
-        Function Loeschen(ID As Integer) As ActionResult
+        'POST: /Jobanzeige/Hinzufuegen
+        <HttpPost>
+        Function Hinzufuegen(pvmJob As JobanzeigeViewModel) As ActionResult
             Dim job As Jobanzeige
-            Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+            Dim jobEntity As JobanzeigeEntity
+            Dim branche As Branche
+            Dim lstBranche As List(Of Branche)
+            Dim lstJobanzeige As List(Of Jobanzeige)
 
-            If IsNothing(jobEntity) Then
-                Return RedirectToAction("Index")
+            If Not ModelState.IsValid Then
+                lstBranche = New List(Of Branche) 'Alle Branche aus Datenbank laden
+
+                For Each brancheEntity In db.tblBranchen.ToList
+                    branche = New Branche(brancheEntity)
+                    lstBranche.Add(branche)
+                Next
+                pvmJob.ListeBranche = lstBranche
+                Return View(pvmJob)
+            End If
+
+
+            'Jobanzeige aus dem ViewModel holen und in Jobanzeige entity umwandeln
+            job = pvmJob.Jobanzeige
+            job.UnternehmerID = Web.HttpContext.Current.Session("BenutzerID")
+            jobEntity = job.gibAlsJobanzeigeEntity
+            'speichern vorbereiten
+            db.tblJobanzeigen.Attach(jobEntity) 'Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
+            db.Entry(jobEntity).State = EntityState.Added 'als Hinzugefügt markieren
+
+            'Vorsichtig Änderungen speichern
+            Try
+                db.SaveChanges()
+            Catch ex As Exception
+                'Im Fehlerfall wird der Fehler im ViewModel vermerkt
+                ModelState.AddModelError(String.Empty, "Hinzufügen war nicht erfolgreich.")
+            End Try
+            Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
+        End Function
+
+
+        'GET: /Jobanzeige/Loeschen
+        Function Loeschen(ID As Integer) As ActionResult
+            'Dim job As Jobanzeige
+            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
+
+            'If IsNothing(jobEntity) Then
+            '    Return RedirectToAction("Index")
+            'End If
+
+            'db.Entry(jobEntity).State = EntityState.Detached
+
+            'job = New Jobanzeige(jobEntity)
+            'Return View(job)
+
+            Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity
+            jobEntity = db.tblJobanzeigen.Find(ID) 'Jobanzeige in Datenbank finden
+
+            If jobEntity Is Nothing Then
+                Return New HttpNotFoundResult("Jobanzeige mit der ID " & ID & " wurde nicht gefunden.")
             End If
 
             db.Entry(jobEntity).State = EntityState.Detached
 
             job = New Jobanzeige(jobEntity)
-            Return View(job)
+            Return View(job) 'An die View geben, damit dort das Löschen bestätigt werden soll
         End Function
 
-        'anzeigenFormular() - bei "Bearbeiten" + "hinzufügen" Pop-Up Fenster? 
-        '<HttpPost>
-        'Function Formular(ID As Integer) As ActionResult
-        '    Dim intJobID As Integer
-        '    Dim strTitel As String
-        '    Dim strBeschreibung As String
-        '    intJobID = Request.Form("intJobID")
-        '    strTitel = Request.Form("strTitel")
-        '    strBeschreibung = Request.Form("strBeschreibung")
-        'End Function
-
-        'speichern()
+        'POST: /Jobanzeige/Loeschen
         <HttpPost>
-        Function Speichern() As ActionResult 'nochmal sehen, ob benötigt ist
-            'Dim intJobID As Integer
-            'Dim strTitel As String
-            'Dim strBeschreibung As String
-            'strTitel = Request.Form("txtTitel")
-            'strBeschreibung = Request.Form("txtBeschreibung")
+        Function Loeschen(pJob As Jobanzeige) As ActionResult
+            Dim jobEntity As JobanzeigeEntity
+
+            ' Aufgabe in AufgabeEntity umwandeln
+            jobEntity = pJob.gibAlsJobanzeigeEntity
+            'Speichern vorbereiten
+            db.tblJobanzeigen.Attach(jobEntity)
+            db.Entry(jobEntity).State = EntityState.Deleted 'als Gelöscht markieren
+            'Vorsichtig Änderungen speichern
+            Try
+                db.SaveChanges()
+            Catch ex As Exception
+                ModelState.AddModelError(String.Empty, "Löschen war nicht erfolgreich.")
+            End Try
+
+            Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
-
-        'abbrechen?
-
     End Class
 End Namespace

@@ -18,7 +18,7 @@ Public Class Jobanzeige
 
     'Parameterloser Konstruktor
     Sub New()
-        mintJobID = Nothing
+        mintJobID = -1
         mstrTitel = String.Empty
         mstrBeschreibung = String.Empty
         mbrBranche = Nothing
