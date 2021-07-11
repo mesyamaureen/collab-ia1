@@ -8,7 +8,12 @@ End Code
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>MeinProfilUnternehmer</title>
 </head>
 <body>
@@ -91,7 +96,7 @@ End Code
                     </div>
 
                     <div class="buttonHalterMP">
-                        @Html.ActionLink("Meine Jobanzeigen", "meineJobanzeigen", "Jobanzeige")
+                        @Html.ActionLink("Meine Jobanzeigen", "meineJobanzeigen", "Jobanzeige", Nothing, New With {.class = "btn btn-info", .role = "button"})
                         @*<input class="button" type="button" onclick="location.href='http://localhost:50935/Html/MeineJobanzeigen.html';" value="Meine Jobanzeigen" />*@
                         <p style="font-size:20px; font-weight:800; margin-top: 20px;">ID: 12345</p>
                         <!--<button class="button">Meine Jobanzeigen</button>-->
@@ -190,5 +195,9 @@ End Code
     <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 </html>

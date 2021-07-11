@@ -96,34 +96,34 @@ End Code
                     <p>Hier können Sie eine neue Jobanzeige hinzufuegen.</p>
 
                     @Using Html.BeginForm()
-                        @<div>
+                        @<div class="form-group">
                             <!-- Verstecktes Feld für die ID der Aufgabe, die dem Benutzer nicht angezeigt werden muss -->
                             @Html.HiddenFor(Function(m) Model.Jobanzeige.JobID)
                         </div>
 
-                        @<div>
-                            @Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
+                        @<div class="form-group">
+                            @*@Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})*@
+                            @Html.HiddenFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.UnternehmerID)
                         </div>
 
-                        @<div>
+                        @<div class="form-group">
                             <!-- Titel der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel)
-                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "control-label"})
+                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
                         </div>
-                        @<div>
+                        @<div class="form-group">
                             <!-- Beschreibung der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Beschreibung)
-                            @Html.TextAreaFor(Function(m) Model.Jobanzeige.Beschreibung)
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Beschreibung, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) Model.Jobanzeige.Beschreibung, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
                         </div>
 
-                        @<div>
+                        @<div class="form-group">
                             <!-- Branche der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
-                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"))
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel, New With {.class = "control-label"})
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
                         @<div>

@@ -8,7 +8,12 @@ End Code
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Einloggen</title>
 </head>
 <body>
@@ -78,7 +83,7 @@ End Code
             </div>
         </div>
 
-        
+
         <!-- middle Column -->
         <!--<div id="primaryContentContainer">-->
         <div id="primaryContent">
@@ -89,20 +94,21 @@ End Code
                 @Using Html.BeginForm("Einloggen", "AlleProfile", FormMethod.Post)
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(True)
-                    @<div>
-                        @Html.LabelFor(Function(m) m.Benutzername)
-                        @Html.TextBoxFor(Function(m) m.Benutzername)
+
+                    @<div class="form-group">
+                        @Html.LabelFor(Function(m) m.Benutzername, New With {.class = "control-label"})
+                        @Html.TextBoxFor(Function(m) m.Benutzername, New With {.class = "form-control"})
                         @Html.ValidationMessageFor(Function(m) m.Benutzername)
                     </div>
-                    @<div>
-                        @Html.LabelFor(Function(m) m.Passwort)
-                        @Html.TextBoxFor(Function(m) m.Passwort)
+                    @<div class="form-group">
+                        @Html.LabelFor(Function(m) m.Passwort, New With {.class = "control-label"})
+                        @Html.TextBoxFor(Function(m) m.Passwort, New With {.class = "form-control"})
                         @Html.ValidationMessageFor(Function(m) m.Passwort)
                     </div>
 
                     @<div>
-                        @Html.ActionLink("Passwort vergessen", "Einlogen")
-                        <input type="submit" value="Login" />
+                        @Html.ActionLink("Passwort vergessen", "Einlogen", Nothing, New With {.class = "btn btn-default", .role = "button"})
+                        <input type="submit" class="btn btn-primary" value="Login" />
                     </div>
 
                 End Using
@@ -110,33 +116,37 @@ End Code
         </div>
         <!--</div>-->
         <!-- right Column-->
-        <div id = "tertiaryContent" >
+        <div id="tertiaryContent">
             <fieldset id="fldKontakt">
-        <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-        <p>Tel.: 030 38 99 00</p>
-        <div class="email">
-            <p>E-Mail:</p>
-            <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
+                <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
+                <p>Tel.: 030 38 99 00</p>
+                <div class="email">
+                    <p>E-Mail:</p>
+                    <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
                 </div>
             </fieldset>
-            <fieldset id = "fldSocMed" style="margin-top:5em;">
-                <legend style = "font-weight:600;" > Folgen Sie uns auch auf:</legend>
-                <div id = "socmed" >
-    <!-- Add icon library -->
-                    <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <fieldset id="fldSocMed" style="margin-top:5em;">
+                <legend style="font-weight:600;"> Folgen Sie uns auch auf:</legend>
+                <div id="socmed">
+                    <!-- Add icon library -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                     <!-- Add font awesome icons -->
-                    <a href = "https://www.facebook.com/" Class="fa fa-facebook"></a>
-                    <a href = "https://www.instagram.com/" Class="fa fa-instagram"></a>
-                    <a href = "https://www.youtube.com/" Class="fa fa-youtube"></a>
+                    <a href="https://www.facebook.com/" Class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/" Class="fa fa-instagram"></a>
+                    <a href="https://www.youtube.com/" Class="fa fa-youtube"></a>
                 </div>
             </fieldset>
         </div>
 
     </div>
     <!-- FOOTER -->
-    <div id = "footer" >
+    <div id="footer">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
-                    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 </html>

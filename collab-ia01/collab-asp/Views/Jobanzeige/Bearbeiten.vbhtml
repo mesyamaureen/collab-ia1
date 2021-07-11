@@ -91,38 +91,37 @@ End Code
                     <!--style="width: 100%; margin: 4em 0 2em 0;"-->
 
                     @Using Html.BeginForm
-                        @<div>
+                        @<div class="form-group row">
                             @Html.LabelFor(Function(m) m.Jobanzeige.JobID)
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.JobID, New With {.readonly = "readonly"})
+                            @Html.TextBoxFor(Function(m) m.Jobanzeige.JobID, New With {.readonly = "readonly", .class = "form-control-plaintext"})
                             @Html.ValidationMessageFor(Function(m) m.Jobanzeige.JobID)
                         </div>
 
-                        @<div>
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel)
-                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel)
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "control-label"})
+                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
                         </div>
 
-                        @<div>
-                            @Html.LabelFor(Function(m) m.Jobanzeige.Beschreibung)
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.Beschreibung)
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "control-label"})
+                            @Html.TextBoxFor(Function(m) m.Jobanzeige.Beschreibung, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
                         </div>
 
-                        @<div>
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
-                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"))
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel, New With {.class = "control-label"})
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
 
-                        @<div>
-                            @Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
-                            @Html.TextBoxFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})
+                        @<div class="form-group">
+                            @*@Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})*@
+                            @Html.HiddenFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.UnternehmerID)
                         </div>
 
                         @<div>
-                            @*@Html.ActionLink("Abbrechen", "meineJobanzeigen") @*nicht zurück an Index sondern laden*@
                             @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing, New With {.class = "btn btn-default", .role = "button"})
                             <input type="submit" class="btn btn-primary" value="Speichern" />
                         </div>
