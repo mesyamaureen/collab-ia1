@@ -19,10 +19,10 @@ Namespace Controllers
             Dim jaEntity As JobanzeigeEntity
             Dim jaListe As JobanzeigenListe
 
-            ' Leere Liste initislisieren
+            ' Leere Liste initialisieren
             jaListe = New JobanzeigenListe()
 
-            ' Alle Aufgaben aus der Datenbank holen
+            ' Alle Jobanzeigen aus der Datenbank holen
             For Each jaEntity In db.tblJobanzeigen.ToList
                 ' Überprüfen, ob der Entity zum angemeldeten Unternehmer gehört
                 If jaEntity.JaUIdFk.ToString().Equals(System.Web.HttpContext.Current.Session("BenutzerID")) Then
