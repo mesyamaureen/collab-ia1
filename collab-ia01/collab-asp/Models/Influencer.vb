@@ -9,7 +9,7 @@ Public Class Influencer
     Private mstrVorname As String
     Private mstrName As String
     Private mbrBranche As Branche
-    Private mjAnzeige As Jobanzeige
+    Private mjAnzeigen As List(Of Jobanzeige)
     Private mstrBenutzername As String
     Private mintBrancheID As Integer
 
@@ -59,12 +59,12 @@ Public Class Influencer
         End Set
     End Property
 
-    Public Property Bewerbungen As Jobanzeige
+    Public Property Bewerbungen As List(Of Jobanzeige)
         Get
-            Return mjAnzeige
+            Return mjAnzeigen
         End Get
-        Set(value As Jobanzeige)
-            mjAnzeige = value
+        Set(value As List(Of Jobanzeige))
+            mjAnzeigen = value
         End Set
     End Property
 

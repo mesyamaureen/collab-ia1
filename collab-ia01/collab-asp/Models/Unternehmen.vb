@@ -7,7 +7,7 @@ Public Class Unternehmen
     Inherits Benutzer
 
     Private mstrFirmenname As String
-    Private mjAnzeige As Jobanzeige
+    Private mjAnzeigen As List(Of Jobanzeige)
     Private mbrBranche As Branche
     Private muntID As Integer
     Private mbrID As Integer
@@ -41,12 +41,12 @@ Public Class Unternehmen
         End Set
     End Property
 
-    Public Property Jobanzeige As Jobanzeige
+    Public Property Jobanzeigen As List(Of Jobanzeige)
         Get
-            Return mjAnzeige
+            Return mjAnzeigen
         End Get
-        Set(value As Jobanzeige)
-            mjAnzeige = value
+        Set(value As List(Of Jobanzeige))
+            mjAnzeigen = value
         End Set
     End Property
 

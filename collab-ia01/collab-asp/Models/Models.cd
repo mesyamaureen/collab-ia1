@@ -11,7 +11,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAQAEAAAAEACAAAAAgAAAAAAAAAEAAIIAAAAQAIA=</HashCode>
+      <HashCode>IQgCAAgBACAAEACCAAAAgAEAAAAAAAEAAIIAAIAQAAA=</HashCode>
       <FileName>Models\Jobanzeige.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -38,41 +38,40 @@
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="6" Y="3.206" />
-        <Point X="10.688" Y="3.206" />
-        <Point X="10.688" Y="4.5" />
+        <Point X="10.761" Y="3.206" />
+        <Point X="10.761" Y="4.5" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="Bewerbungen" Type="collab_asp.Jobanzeige">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.105" Y="0.024" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ABACAAACABAAAAAAAAAAABQAAAAAEAEAAAAAAQAAAAA=</HashCode>
+      <HashCode>ABACAAAAABAAAAAAIAAAAAQAAAAAAAkAAABAQQgAAAA=</HashCode>
       <FileName>Models\Influencer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Branche" />
-      <Property Name="Bewerbungen" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Bewerbungen" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="collab_asp.Branche">
-    <Position X="10.25" Y="4.5" Width="1.5" />
+    <Position X="10.25" Y="4.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIBAAAgAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIFAAAgAAAA=</HashCode>
       <FileName>Models\Branche.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="collab_asp.Unternehmen">
     <Position X="4.25" Y="6.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAACAAAAAAgAAgAIAAAAAAAAgAEAAAAAAgAAAAA=</HashCode>
+      <HashCode>AQADAAAAAAAAAAgAIAAAAAgAAAAAAAEAAAAAAogAAAA=</HashCode>
       <FileName>Models\Unternehmen.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Jobanzeige" />
       <Property Name="Branche" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Jobanzeigen" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
