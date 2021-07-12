@@ -10,8 +10,28 @@ Public Class Influencer
     Private mstrName As String
     Private mbrBranche As Branche
     Private mjAnzeige As Jobanzeige
+    Private mstrBenutzername As String
+    Private mintBrancheID As Integer
 
     'Properties
+    Public Property BrancheID As Integer
+        Get
+            Return mintBrancheID
+        End Get
+        Set(value As Integer)
+            mintBrancheID = value
+        End Set
+    End Property
+
+    Public Property Benutzername As String
+        Get
+            Return mstrBenutzername
+        End Get
+        Set(value As String)
+            mstrBenutzername = value
+        End Set
+    End Property
+
     Public Property Vorname As String
         Get
             Return mstrVorname
@@ -54,18 +74,24 @@ Public Class Influencer
         mstrVorname = String.Empty
         mstrName = String.Empty
         mbrBranche = Nothing
+        mstrBenutzername = Nothing
+        mintBrancheID = Nothing
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche)
+    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche, pstrBenutzername As String, pintBrancheID As Integer)
         mstrVorname = pstrVorname
         mstrName = pstrName
         mbrBranche = pbrBranche
+        mstrBenutzername = pstrBenutzername
+        mintBrancheID = pintBrancheID
     End Sub
 
     Sub New(pinflEntity As InfluencerEntity)
         mstrVorname = pinflEntity.InVorname
         mstrName = pinflEntity.InName
+        mstrBenutzername = pinflEntity.InBenutzername
+        mintBrancheID = pinflEntity.InBrIdFk
         'mbrBranche = pinflEntity.InBrIdFk
     End Sub
 End Class

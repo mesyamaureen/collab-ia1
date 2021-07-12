@@ -125,7 +125,7 @@ End Code
 
                 <div id="primaryContentBlock">
                     <div class="panel-body">
-                        <table class="table table-striped table-bordered" id="Tabelle">
+                        <table class="table table-striped table-bordered mb-lg-5" id="Tabelle">
                             <tr class="header">
                                 <th>Firmenname</th>
                                 <th>Branche</th>
@@ -135,7 +135,7 @@ End Code
                             @For Each unt In Model.Unternehmen  'hier Model.alle öffentlichen Properties
                                 @<tr>
                                     <td>@unt.Firmenname</td>
-                                    <td>@unt.Branche</td>
+                                    <td>@unt.BrancheID</td>
                                     <td>
                                         @Html.ActionLink("Profil einsehen", "Unternehmer", Nothing, New With {.ID = unt.BenutzerID}, New With {.class = "btn btn-info", .role = "button"})
                                     </td>
@@ -174,7 +174,7 @@ End Code
     </div>
 
     <!-- FOOTER -->
-    <div class="text-center">
+    <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 

@@ -12,14 +12,14 @@ End Code
 </head>
 <body>
     <div>
-        <div id="header">
+        <div style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
         </div>
         <div id="menu">
-            <ul style="list-style-type: none;">
+            <ul class="nav justify-content-end align-items-end">
                 <li class="first">
                     @Html.ActionLink("Startseite", "Index")
                 </li>
@@ -47,7 +47,7 @@ End Code
         </div>
     </div>
 
-    <div id="body">
+    <div class="container-fluid" style="background-color:#FFCCBC;">
         <!-- Content fängt hier an -->
         <!-- left Column -->
         <div id="secondaryContentContainer">
