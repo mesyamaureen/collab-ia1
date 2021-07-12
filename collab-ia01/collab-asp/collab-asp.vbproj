@@ -220,6 +220,7 @@
     </Compile>
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Models\Unternehmen.vb" />
+    <Compile Include="ViewModel\InfluencerViewModel.vb" />
     <Compile Include="ViewModel\JobanzeigeViewModel.vb" />
     <Compile Include="ViewModel\UnternehmerViewModel.vb" />
   </ItemGroup>
@@ -325,10 +326,6 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\AlleInfluencer\Neu.vbhtml" />
-    <Content Include="Views\AlleInfluencer\Index.vbhtml" />
-    <Content Include="Views\AlleInfluencer\Oeffnen.vbhtml" />
-    <Content Include="Views\AlleInfluencer\Loeschen.vbhtml" />
     <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\Collab\Index.vbhtml" />
     <Content Include="Views\Collab\InfluencerSuchen.vbhtml" />

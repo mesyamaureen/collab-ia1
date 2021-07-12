@@ -136,7 +136,7 @@ End Code
                                     <td>@inf.Benutzername</td>
                                     <td>@inf.BrancheID</td>
                                     <td>
-                                        @Html.ActionLink("Profil einsehen", "Unternehmer", Nothing, New With {.ID = inf.BenutzerID}, New With {.class = "btn btn-info", .role = "button"})
+                                        @Html.ActionLink("Profil einsehen", "Influencer", "InfluencerEinzeln", New With {.ID = inf.InfluencerID}, New With {.class = "btn btn-info", .role = "button"})
                                     </td>
                                 </tr>
                             Next

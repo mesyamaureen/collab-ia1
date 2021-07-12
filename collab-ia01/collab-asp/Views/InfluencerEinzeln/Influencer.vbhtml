@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.Influencer
+﻿@ModelType collab_asp.InfluencerViewModel
 
 @Code
     Layout = Nothing
@@ -8,7 +8,12 @@ End Code
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Influencer</title>
 </head>
 <body>
@@ -22,10 +27,10 @@ End Code
             <div>
                 <ul class="nav justify-content-end align-items-end">
                     <li class="nav-item">
-                        @Html.ActionLink("Startseite", "Index")
+                        @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
@@ -56,7 +61,7 @@ End Code
             <div class="col-2">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        @Html.ActionLink("Startseite", "Index")
+                        @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
@@ -72,22 +77,62 @@ End Code
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Impressum", "Impressum")
-                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>
 
             <!-- Middle Column -->
-            <div class="col-8">
-                <div class="form-group">
-                    @Html.LabelFor(Function(m) m.BenutzerID)
-                    @Html.TextBoxFor(Function(m) m.BenutzerID, New With {.readonly = "readonly", .class = "form-control-plaintext"})
-                    @Html.ValidationMessageFor(Function(m) m.BenutzerID)
+            <div class="col-md-8" style="background-color:#ECECEC;">
+                <div class="container-fluid">
+                    <div class="jumbotron">
+                        <div class="text-center">
+                            <h1 class="align-content-lg-end mb-lg-3">
+                                @*@Html.LabelFor(Function(m) m.Influencer.Benutzername)*@
+                                @Html.DisplayFor(Function(m) m.Influencer.Vorname)
+                                @Html.DisplayFor(Function(m) m.Influencer.Name)
+                            </h1>
+                            <h2 class="align-content-end mb-lg-3">
+                                [at]
+                                @Html.DisplayFor(Function(m) m.Influencer.Benutzername)
+                            </h2>
+                            <h3 class="align-content-end mb-lg-5"> <!-- Hier Bewertung in Form von Sternchen -->
+                                Bewertung: 
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-lg-2">
+                    <div>
+                        <h4 class="text-center mb-lg-3">
+                            Branche
+                        </h4>
+                        <p class="text-center mb-lg-5">
+                            @Html.DisplayFor(Function(m) m.Influencer.Branche.BrancheTitel)
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-center mb-lg-3">
+                            Profilbeschreibung
+                        </h4>
+                        <p class="text-center mb-lg-5">
+                            @Html.DisplayFor(Function(m) m.Influencer.Beschreibung)
+                            adfadfadf
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-center mb-lg-3">
+                            E-Mail
+                        </h4>
+                        <p class="text-center mb-lg-5">
+                            @Html.DisplayFor(Function(m) m.Influencer.Email)
+                        </p>
+                    </div>
                 </div>
             </div>
-
             <!-- Right Column -->
-            <div class="col-2">
                 <div class="col-2" style="background-color:#FFCCBC;">
                     <fieldset id="fldKontakt">
                         <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
@@ -110,7 +155,6 @@ End Code
                         </div>
                     </fieldset>
                 </div>
-            </div>
         </div>
     </div>
 
@@ -119,9 +163,10 @@ End Code
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 
-    <!-- Bootstrap bundle -->
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
 </body>
 </html>

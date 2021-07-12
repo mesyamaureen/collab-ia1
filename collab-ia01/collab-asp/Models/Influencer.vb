@@ -12,8 +12,29 @@ Public Class Influencer
     Private mjAnzeigen As List(Of Jobanzeige)
     Private mstrBenutzername As String
     Private mintBrancheID As Integer
+    Private mintInfluencerID As Integer
+    Private mstrPasswort As String
+    Private mstrEmail As String
 
     'Properties
+    Public Property Email As String
+        Get
+            Return mstrEmail
+        End Get
+        Set(value As String)
+            mstrEmail = value
+        End Set
+    End Property
+
+    Public Property InfluencerID As Integer
+        Get
+            Return mintInfluencerID
+        End Get
+        Set(value As Integer)
+            mintInfluencerID = value
+        End Set
+    End Property
+
     Public Property BrancheID As Integer
         Get
             Return mintBrancheID
@@ -76,15 +97,19 @@ Public Class Influencer
         mbrBranche = Nothing
         mstrBenutzername = Nothing
         mintBrancheID = Nothing
+        mintInfluencerID = Nothing
+        mstrEmail = String.Empty
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche, pstrBenutzername As String, pintBrancheID As Integer)
+    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche, pstrBenutzername As String, pintBrancheID As Integer, pintInfluencerID As Integer, pstrEmail As String)
         mstrVorname = pstrVorname
         mstrName = pstrName
         mbrBranche = pbrBranche
         mstrBenutzername = pstrBenutzername
         mintBrancheID = pintBrancheID
+        mintInfluencerID = pintInfluencerID
+        mstrEmail = pstrEmail
     End Sub
 
     Sub New(pinflEntity As InfluencerEntity)
@@ -92,6 +117,25 @@ Public Class Influencer
         mstrName = pinflEntity.InName
         mstrBenutzername = pinflEntity.InBenutzername
         mintBrancheID = pinflEntity.InBrIdFk
-        'mbrBranche = pinflEntity.InBrIdFk
+        mintInfluencerID = pinflEntity.InIdPk
+        mstrEmail = pinflEntity.InEMail
     End Sub
+
+    Public Function gibAlsInfluencerEntity() As InfluencerEntity
+        Dim infE As InfluencerEntity
+        infE = New InfluencerEntity
+
+        infE.InIdPk = mintInfluencerID
+        infE.InBenutzername = mstrBenutzername
+        infE.InPasswort = Passwort
+        infE.InName = mstrName
+        infE.InVorname = mstrVorname
+        infE.InEMail = Email
+
+        If mbrBranche IsNot Nothing Then
+            infE.InBrIdFk = mbrBranche.BrancheID
+        End If
+
+        Return infE
+    End Function
 End Class
