@@ -11,8 +11,48 @@ Public Class Unternehmen
     Private mbrBranche As Branche
     Private muntID As Integer
     Private mbrID As Integer
+    Private mstrBenutzername As String
+    Private mstrPasswort As String
+    Private mstrBeschreibung As String
+    Private mstrEmail As String
 
     'Properties
+    Public Property Benutzername As String
+        Get
+            Return mstrBenutzername
+        End Get
+        Set(value As String)
+            mstrBenutzername = value
+        End Set
+    End Property
+
+    Public Property Passwort As String
+        Get
+            Return mstrPasswort
+        End Get
+        Set(value As String)
+            mstrPasswort = value
+        End Set
+    End Property
+
+    Public Property Beschreibung As String
+        Get
+            Return mstrBeschreibung
+        End Get
+        Set(value As String)
+            mstrBeschreibung = value
+        End Set
+    End Property
+
+    Public Property Email As String
+        Get
+            Return mstrEmail
+        End Get
+        Set(value As String)
+            mstrEmail = value
+        End Set
+    End Property
+
     Public Property BrancheID As Integer
         Get
             Return mbrID
@@ -65,20 +105,47 @@ Public Class Unternehmen
         mstrFirmenname = String.Empty
         mbrBranche = Nothing
         mbrID = Nothing
+        mstrBenutzername = String.Empty
+        mstrPasswort = String.Empty
+        mstrBeschreibung = String.Empty
+        mstrEmail = String.Empty
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(puntID As Integer, pstrFirmenname As String, pbrBranche As Branche, pbrID As Integer)
+    Sub New(puntID As Integer, pstrFirmenname As String, pbrBranche As Branche, pbrID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrBeschreibung As String, pstrEmail As String)
         muntID = puntID
         mstrFirmenname = pstrFirmenname
         mbrBranche = pbrBranche
         mbrID = pbrID
+        mstrBenutzername = pstrBenutzername
+        mstrPasswort = pstrPasswort
+        mstrBeschreibung = pstrBeschreibung
+        mstrEmail = pstrEmail
     End Sub
 
     Sub New(puntEntity As UnternehmerEntity)
         mstrFirmenname = puntEntity.UName
         muntID = puntEntity.UIdPk
         mbrID = puntEntity.UBrIdFk
-        'mbrBranche = puntEntity.UBrIdFk
+        mstrBenutzername = puntEntity.UBenutzername
+        mstrPasswort = puntEntity.UPasswort
+        mstrEmail = puntEntity.UEMail
     End Sub
+
+    Public Function gibAlsUnternehmenEntity() As UnternehmerEntity
+        Dim untE As UnternehmerEntity
+        untE = New UnternehmerEntity
+
+        untE.UBenutzername = mstrBenutzername
+        untE.UEMail = mstrEmail
+        untE.UIdPk = muntID
+        untE.UName = mstrFirmenname
+        untE.UPasswort = mstrPasswort
+
+        If mbrBranche IsNot Nothing Then
+            untE.UBrIdFk = mbrBranche.BrancheID
+        End If
+
+        Return untE
+    End Function
 End Class

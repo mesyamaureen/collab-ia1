@@ -137,7 +137,7 @@ End Code
                                     <td>@unt.Firmenname</td>
                                     <td>@unt.BrancheID</td>
                                     <td>
-                                        @Html.ActionLink("Profil einsehen", "Unternehmer", Nothing, New With {.ID = unt.BenutzerID}, New With {.class = "btn btn-info", .role = "button"})
+                                        @Html.ActionLink("Profil einsehen", "Unternehmen", "UnternehmerEinzeln", New With {.ID = unt.UnternehmerID}, New With {.class = "btn btn-info", .role = "button"})
                                     </td>
                                 </tr>
                             Next
