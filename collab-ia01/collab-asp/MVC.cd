@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Bearbeiten">
+    <Position X="1.705" Y="2.976" Height="0.35" Width="1.011" />
+  </Comment>
+  <Comment CommentText="Hinzufuegen">
+    <Position X="1.701" Y="3.487" Height="0.35" Width="1.011" />
+  </Comment>
+  <Comment CommentText="Loeschen">
+    <Position X="1.71" Y="3.985" Height="0.35" Width="1.011" />
+  </Comment>
+  <Comment CommentText="meineJobanzeigen">
+    <Position X="1.698" Y="2.438" Height="0.35" Width="1.239" />
+  </Comment>
+  <Comment CommentText="VIEW">
+    <Position X="1.684" Y="1.312" Height="0.35" Width="1.239" />
+  </Comment>
+  <Comment CommentText="CONTROLLER">
+    <Position X="3.628" Y="1.307" Height="0.35" Width="1.903" />
+  </Comment>
+  <Comment CommentText="MODEL">
+    <Position X="7.111" Y="1.311" Height="0.35" Width="7.761" />
+  </Comment>
+  <Class Name="collab_asp.Jobanzeige">
+    <Position X="9.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IQgCAAgBACAAEACCAAAAgAEAAAAAAAEAAIIAAIAQAAA=</HashCode>
+      <FileName>Models\Jobanzeige.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Branche" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="collab_asp.Branche">
+    <Position X="12.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAIFAAAgAAAA=</HashCode>
+      <FileName>Models\Branche.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="collab_asp.JobanzeigenListe">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAACAA=</HashCode>
+      <FileName>Models\JobanzeigenListe.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Jobanzeige" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="collab_asp.Controllers.JobanzeigeController">
+    <Position X="3.75" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ARAAAAAAAAAQAAIAAgAgAAQAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Controllers\JobanzeigeController.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mjobanzeigeListe" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="mlstBranche" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="collab_asp.JobanzeigeViewModel">
+    <Position X="13" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAgIAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\JobanzeigeViewModel.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Jobanzeige" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ListeBranche" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

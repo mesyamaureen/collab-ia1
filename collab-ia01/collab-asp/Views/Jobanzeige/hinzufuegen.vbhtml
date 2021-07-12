@@ -98,7 +98,6 @@ End Code
                         </div>
 
                         @<div class="form-group">
-                            @*@Html.LabelFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly", .hidden = "true"})*@
                             @Html.HiddenFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.UnternehmerID)
                         </div>
@@ -118,13 +117,17 @@ End Code
 
                         @<div class="form-group">
                             <!-- Branche der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel, New With {.class = "control-label"})
-                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
+                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel,
+                                    New With {.class = "control-label"})
+                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID,
+                                           New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"),
+                                           New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
                         @<div class="mb-lg-5">
                             <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->
-                            @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing, New With {.class = "btn btn-default", .role = "button"})
+                            @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing,
+                                      New With {.class = "btn btn-default", .role = "button"})
                             <input type="submit" class="btn btn-success" value="Erstellen" />
                         </div>
                     End Using

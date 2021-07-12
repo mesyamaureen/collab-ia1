@@ -13,8 +13,7 @@ Public Class Jobanzeige
     Private muntId As Integer
     Private untBrancheId As Integer
     Private minfId As Integer
-
-    Private mbytVersion As Byte() ' Neues Attribut vom Typ String  um UNICODE zu speichern
+    Private mbytVersion As Byte()
 
     'Parameterloser Konstruktor
     Sub New()
@@ -25,7 +24,6 @@ Public Class Jobanzeige
         muntId = Nothing
         'mbytVersion = Nothing
     End Sub
-
     'Konstruktor mit Parameter
     Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche, puntId As Integer)
         mintJobID = pintJobID
@@ -35,13 +33,13 @@ Public Class Jobanzeige
         muntId = puntId
         'mbytVersion = pbytVersion
     End Sub
-
+    'Kosntruktor für Entity-Klasse
     Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
         mintJobID = pJobanzeigeEntity.JaIdPk
         mstrTitel = pJobanzeigeEntity.JaTitel
         mstrBeschreibung = pJobanzeigeEntity.JaBeschreibung
         muntId = pJobanzeigeEntity.JaUIdFk
-        'mbytVersion = pJobanzeigeEntity.JaVersion
+
 
         If IsNothing(pJobanzeigeEntity.JaVersion) Then
             mbytVersion = Nothing
@@ -137,8 +135,6 @@ Public Class Jobanzeige
         If mbrBranche IsNot Nothing Then
             jobE.JaBrIdFk = mbrBranche.BrancheID
         End If
-
-        'JOB VERSION FEHLT
 
         Return jobE
     End Function

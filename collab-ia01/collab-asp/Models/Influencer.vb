@@ -17,7 +17,7 @@ Public Class Influencer
             Return mstrVorname
         End Get
         Set(value As String)
-
+            mstrVorname = value
         End Set
     End Property
 
@@ -26,7 +26,7 @@ Public Class Influencer
             Return mstrName
         End Get
         Set(value As String)
-
+            mstrName = value
         End Set
     End Property
 
@@ -35,6 +35,7 @@ Public Class Influencer
             Return mbrBranche
         End Get
         Set(value As Branche)
+            mbrBranche = value
         End Set
     End Property
 
@@ -43,6 +44,7 @@ Public Class Influencer
             Return mjAnzeige
         End Get
         Set(value As Jobanzeige)
+            mjAnzeige = value
         End Set
     End Property
 

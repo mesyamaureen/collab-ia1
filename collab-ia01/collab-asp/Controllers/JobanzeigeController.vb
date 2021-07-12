@@ -4,10 +4,11 @@ Namespace Controllers
     Public Class JobanzeigeController
         Inherits Controller
         Public Shared mlstBranche As List(Of Branche)
-
+        Public Shared mjobanzeigeListe As JobanzeigenListe
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
 
         Private db As collabDBEntities = New collabDBEntities '= New collabEntities
+
 
         'laden alle zugehörigen Jobanzeigen
         'GET: /Jobanzeige/meineJobanzeigen
@@ -148,7 +149,8 @@ Namespace Controllers
             vmJob = New JobanzeigeViewModel
             vmJob.Jobanzeige = job
             vmJob.ListeBranche = lstBranche
-            Return View(vmJob) 'Neue Jobanzeige und Liste aller Branche als ViewModel an die View übergeben
+            Return View(vmJob) 'Neue Jobanzeige und Liste aller 
+            'branche als ViewModel an die View übergeben
         End Function
 
         'POST: /Jobanzeige/Hinzufuegen
@@ -158,7 +160,6 @@ Namespace Controllers
             Dim jobEntity As JobanzeigeEntity
             Dim branche As Branche
             Dim lstBranche As List(Of Branche)
-            Dim lstJobanzeige As List(Of Jobanzeige)
 
             If Not ModelState.IsValid Then
                 lstBranche = New List(Of Branche) 'Alle Branche aus Datenbank laden
