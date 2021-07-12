@@ -1,4 +1,4 @@
-﻿@ModelType collab_asp.JobanzeigenListe
+﻿@ModelType collab_asp.JobanzeigeViewModel
 
 @Code
     Layout = Nothing
@@ -14,18 +14,18 @@ End Code
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <title>Alle Jobanzeigen</title>
+    <title>Unternehmer</title>
 </head>
 <body>
     <!-- Header -->
     <div>
-        <div id="header" style="background-color: #ECECEC;">
+        <div style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
             <div>
-                <ul class="nav justify-content-end">
+                <ul class="nav justify-content-end align-items-end">
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
@@ -54,9 +54,9 @@ End Code
         </div>
     </div>
 
+    <!-- Contents -->
+    <!-- Left Column -->
     <div class="container-fluid" style="background-color:#FFCCBC;">
-        <!-- Content fängt hier an -->
-        <!-- left Column -->
         <div class="row">
             <div class="col-2">
                 <ul class="nav flex-column">
@@ -70,83 +70,70 @@ End Code
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Impressum", "Impressum")
-                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>
 
-            <!-- middle Column -->
-            <!--<div id="primaryContentContainer">-->
+            <!-- Middle Column -->
             <div class="col-md-8" style="background-color:#ECECEC;">
-                <!-- passt ihr bitte nur diesen Teil an -->
                 <div class="container-fluid">
                     <div class="jumbotron">
                         <div class="text-center">
-                            <h1>Jobanzeigen</h1><br />
-                            <p>Finden Sie hier alle Jobanzeigen von Unternehmen!</p>
+                            <h1>Mehr über die Jobanzeige</h1>
+                            <p class="mt-lg-5 mb-lg-5">Passt der Job für mich?</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 align-content-stretch">
-                            <h3>
-                                Branche:
-                            </h3> <!-- als Dropdown -->
-                            <select name="lstBranche"
-                                    multiple="multiple" size="5" id="InputLeiste"
-                                    class="w-100 mb-lg-5">
-                                <option value="1">Anime</option>
-                                <option value="2">Autos & Fahrzeuge</option>
-                                <option value="3">Beauty & Fashion</option>
-                                <option value="4">Bildung</option>
-                                <option value="5">DIY</option>
-                                <option value="6">Ernährung</option>
-                                <option value="7">Lifestyle</option>
-                                <option value="8">Gesundheit</option>
-                                <option value="9">Menschen & Blogs</option>
-                                <option value="10">Reisen & Events</option>
-                                <option value="11">Kunst & Design</option>
-                                <option value="12">Finanzen</option>
-                                <option value="13">Sonstiges</option>
-                            </select>
+                <div class="mt-lg-2">
+                    <div>
+                        <h4 class="text-lg-start mb-lg-3">
+                            @Html.DisplayFor(Function(m) m.Jobanzeige.Titel)
+                        </h4>
+                    </div>
+
+                    <div>
+                        <h4 class="text-center mb-lg-3">
+                            Beschreibung
+                        </h4>
+                        <p class="text-lg-start mb-lg-5">
+                            @Html.DisplayFor(Function(m) m.Jobanzeige.Beschreibung)
+                        </p>
+                    </div>
+
+                    <div class="w-100">
+                        <h4><i>Bauen Sie Kontakt mit dem Unternehmen ab!</i></h4>
+                        <div>
+                            <form method="get" action="MeineJobanzeigen.html">
+                                <!-- Neu erstellte Bewerbung-->
+                                <!-- Enable: nur von einem angemeldeten Benutzer. Sonst disabled -->
+                                <p>
+                                    Betreff:
+                                    <input type="text" name="txtBetreff" id="InputLeiste" placeholder="Ihr Betreff" />
+                                </p>
+                                <p>
+                                    Nachricht:
+                                    <textarea id="nachricht" name="nachricht" placeholder="Ihre Nachricht..." style="width: 100%; height: 100%;"></textarea>
+                                </p>
+
+                                <div class="right" style="margin: 15px 0 40px 0;">
+                                    <input type="submit" name="btnAbschicken" value="Abschicken" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                                </div>
+                            </form>
                         </div>
                     </div>
+
+
                 </div>
-
-                <div id="primaryContentBlock">
-                    <div class="panel-body">
-                        <table class="table table-striped table-bordered" id="Tabelle">
-                            <tr class="header">
-                                <th>Nr</th>
-                                <th>Jobtitel</th>
-                                <th></th>
-                            </tr>
-
-                            @For Each job In Model.Jobanzeige 'hier Model.alle öffentlichen Properties
-                                @<tr>
-                                    <td>@job.JobID</td>
-                                    <td>@job.Titel</td>
-                                    <td>
-                                        @Html.ActionLink("Bewerben", "Bewerben", "Jobanzeige", New With {.ID = job.JobID}, New With {.class = "btn btn-info", .role = "button"})
-                                    </td>
-                                </tr>
-                            Next
-                        </table>
-                    </div>
-                </div>
-
             </div>
-
-            <!-- right Column-->
+            <!-- Right Column -->
             <div class="col-2" style="background-color:#FFCCBC;">
                 <fieldset id="fldKontakt">
                     <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
@@ -176,7 +163,6 @@ End Code
     <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
-
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

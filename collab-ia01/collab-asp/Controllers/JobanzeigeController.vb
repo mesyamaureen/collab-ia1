@@ -238,5 +238,70 @@ Namespace Controllers
 
             Return RedirectToAction("meineJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
+
+        Function Bewerben(ID As Integer) As ActionResult
+            'Deklaration
+            Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity
+            Dim branche As Branche
+            Dim brEntity As BrancheEntity
+            Dim vmJob As JobanzeigeViewModel
+
+            'Datenbankzugriff über Entity Framework
+            jobEntity = db.tblJobanzeigen.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
+            brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+
+            If jobEntity Is Nothing Then
+                Return New HttpNotFoundResult("Jobanzeige mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
+            End If
+            'Gefundenen Datensatz aus der Datenbank loslösen
+            db.Entry(jobEntity).State = EntityState.Detached
+            'Umwandeln in ein Objekt der Model-Klasse
+            job = New Jobanzeige(jobEntity)
+
+            'Prüfen, ob Branche vorhanden
+            If brEntity IsNot Nothing Then
+                job.Branche = New Branche(brEntity)
+            End If
+
+            brEntity = db.tblBranchen.Find(jobEntity.JaBrIdFk)
+
+            If brEntity Is Nothing Then
+                Return New HttpNotFoundResult("Branche mit der ID " & jobEntity.JaBrIdFk & " wurde nicht gefunden") 'wenn keine Branche gefunden, laden
+            End If
+            db.Entry(brEntity).State = EntityState.Detached
+            branche = New Branche(brEntity)
+
+            job.Branche = branche
+
+            'Vorbereitung des View-Models
+            vmJob = New JobanzeigeViewModel
+            vmJob.Jobanzeige = job
+
+            Return View(vmJob)
+        End Function
+
+        <HttpPost>
+        Function Bewerben(pvmJobanzeige) As ActionResult
+            Dim job As Jobanzeige
+            Dim jobEntity As JobanzeigeEntity
+
+            'Jobanzeige aus dem ViewModel holen und in JobanzeigeEntity umwandeln
+            job = pvmJobanzeige.Jobanzeige
+            jobEntity = job.gibAlsJobanzeigeEntity
+            'Speichern vorbereiten
+            db.tblJobanzeigen.Attach(jobEntity) 'Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
+            db.Entry(jobEntity).State = EntityState.Modified 'als Geändert markieren
+
+            'Vorsichtig Änderungen speichern
+            Try
+                db.SaveChanges()
+            Catch ex As Exception
+                'Im Fehlerfall wird der Fehler im ViewModel vermerkt
+                ModelState.AddModelError(String.Empty, "Öffnen war nicht erfolgreich.")
+            End Try
+
+            Return RedirectToAction("AlleJobanzeigen", "AlleJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
+        End Function
     End Class
 End Namespace

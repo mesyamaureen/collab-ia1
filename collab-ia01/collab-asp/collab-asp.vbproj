@@ -344,6 +344,7 @@
     <Content Include="Views\AlleInfluencer\Influencersuchen.vbhtml" />
     <Content Include="Views\InfluencerEinzeln\Influencer.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\Unternehmen.vbhtml" />
+    <Content Include="Views\Jobanzeige\Bewerben.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
