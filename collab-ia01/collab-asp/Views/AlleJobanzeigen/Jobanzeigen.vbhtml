@@ -103,7 +103,7 @@ End Code
                             </h3> <!-- als Dropdown -->
                             <select name="lstBranche"
                                     multiple="multiple" size="5" id="InputLeiste"
-                                    class="w-100">
+                                    class="w-100 mb-lg-5">
                                 <option value="1">Anime</option>
                                 <option value="2">Autos & Fahrzeuge</option>
                                 <option value="3">Beauty & Fashion</option>

@@ -13,39 +13,39 @@ End Code
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>Unternehmensuchen</title>
 </head>
 <body>
     <!-- Header -->
     <div>
-        <div id="header" style="background-color: #ECECEC;">
+        <div style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
             <h1 style="font-style: italic;">Collaborate with the right influencer</h1>
             <div>
-                <ul class="nav justify-content-evenly align-items-end">
+                <ul class="nav justify-content-end">
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                    <li class="nav-item" style="margin-left: 25px;">
+                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -88,9 +88,9 @@ End Code
                 <!-- passt ihr bitte nur diesen Teil an -->
                 <div class="container-fluid">
                     <div class="jumbotron">
-                        <div class="parallax">
-                            <h1 class="center">Unternehmen suchen</h1>
-                            <p class="center">Welches Unternehmen passt zu mir?</p>
+                        <div class="text-center">
+                            <h1>Unternehmen suchen</h1><br />
+                            <p>Welches Unternehmen passt zu mir?</p>
                         </div>
                     </div>
                 </div>
@@ -99,12 +99,12 @@ End Code
                 <div class="container">
                     <div class="row">
                         <div class="col-12 align-content-stretch">
-                            <h2>
+                            <h3>
                                 Branche:
-                            </h2> <!-- als Dropdown -->
+                            </h3> <!-- als Dropdown -->
                             <select name="lstBranche"
                                     multiple="multiple" size="5" id="InputLeiste"
-                                    class="w-100">
+                                    class="w-100 mb-lg-5">
                                 <option value="1">Anime</option>
                                 <option value="2">Autos & Fahrzeuge</option>
                                 <option value="3">Beauty & Fashion</option>
