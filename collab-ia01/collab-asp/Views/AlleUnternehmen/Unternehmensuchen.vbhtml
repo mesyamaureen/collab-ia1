@@ -90,7 +90,7 @@ End Code
                     <div class="jumbotron">
                         <div class="parallax">
                             <h1 class="center">Unternehmen suchen</h1>
-                            <h2 class="center">Welches Unternehmen passt zu mir?</h2>
+                            <p class="center">Welches Unternehmen passt zu mir?</p>
                         </div>
                     </div>
                 </div>

@@ -29,23 +29,23 @@ End Code
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -88,9 +88,9 @@ End Code
                 <!-- passt ihr bitte nur diesen Teil an -->
                 <div class="container-fluid">
                     <div class="jumbotron">
-                        <div class="parallax">
-                            <h1 class="center">Jobanzeigen</h1><br />
-                            <h2 class="center">Finden Sie hier alle Jobanzeigen von Unternehmen!</h2>
+                        <div class="text-center">
+                            <h1>Jobanzeigen</h1><br />
+                            <p>Finden Sie hier alle Jobanzeigen von Unternehmen!</p>
                         </div>
                     </div>
                 </div>
@@ -98,9 +98,9 @@ End Code
                 <div class="container">
                     <div class="row">
                         <div class="col-12 align-content-stretch">
-                            <h2>
+                            <h3>
                                 Branche:
-                            </h2> <!-- als Dropdown -->
+                            </h3> <!-- als Dropdown -->
                             <select name="lstBranche"
                                     multiple="multiple" size="5" id="InputLeiste"
                                     class="w-100">
@@ -173,7 +173,7 @@ End Code
     </div>
 
     <!-- FOOTER -->
-    <div id="footer" class="text-center">
+    <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 

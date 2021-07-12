@@ -18,7 +18,7 @@ End Code
 </head>
 <body>
     <div>
-        <div id="header" style="background-color: #ECECEC;">
+        <div style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
@@ -28,7 +28,7 @@ End Code
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index")
                     </li>
-                    <li class="nav-item" style="margin-left: 25px;">
+                    <li class="nav-item" style="margin-left: 25px;"> 
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
@@ -171,7 +171,7 @@ End Code
 
     </div>
     <!-- FOOTER -->
-    <div class="text-center">
+    <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 

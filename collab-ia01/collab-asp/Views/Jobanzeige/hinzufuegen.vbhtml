@@ -19,7 +19,7 @@ End Code
 <body>
     <!-- Header -->
     <div>
-        <div id="header" style="background-color: #ECECEC;">
+        <div style="background-color: #ECECEC;">
             <a title="zur Startseite" href="Startseite.html">
                 <img src="../Bilder/COLLAB-BILD.png" width="300" alt="Collab-Logo" />
             </a>
@@ -29,23 +29,23 @@ End Code
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -122,7 +122,7 @@ End Code
                             @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
                         </div>
-                        @<div>
+                        @<div class="mb-lg-5">
                             <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->
                             @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing, New With {.class = "btn btn-default", .role = "button"})
                             <input type="submit" class="btn btn-success" value="Erstellen" />
@@ -158,7 +158,7 @@ End Code
     </div>
 
     <!-- FOOTER -->
-    <div class="text-center">
+    <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 

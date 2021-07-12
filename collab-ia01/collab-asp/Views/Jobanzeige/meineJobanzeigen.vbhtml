@@ -29,23 +29,23 @@ End Code
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -88,14 +88,14 @@ End Code
                 <!-- passt ihr bitte nur diesen Teil an -->
                 <div class="container-fluid">
                     <div class="jumbotron">
-                        <div class="parallax">
-                            <h1 class="center">Meine Jobanzeigen</h1>
-                            <h2 class="center">Verwalten Sie Ihre Jobanzeigen</h2>
+                        <div class="text-center">
+                            <h1>Meine Jobanzeigen</h1>
+                            <p>Verwalten Sie Ihre Jobanzeigen</p>
                         </div>
                     </div>
 
-                    <div id="primaryContentBlock">
-                        <div class="panel-body">
+                    <div>
+                        <div class="panel-body mb-lg-3">
                             <table class="table table-striped table-bordered" id="Tabelle">
                                 <tr class="header">
                                     <th>Nr</th>
@@ -116,64 +116,13 @@ End Code
                                 Next
                             </table>
                         </div>
-                        <div class="text-center">
+                        <div class="text-center mb-lg-5">
                             @Html.ActionLink("Hinzufügen", "Hinzufuegen", Nothing, New With {.class = "btn btn-primary", .role = "button"})
                         </div>
                     </div>
                 </div>
             </div>
-
-            @*<tr>
-                        <td>1</td>
-                        <td>#LidlStudio - Lidl sucht Influencer!</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>#LidlMitte - Zeig uns deine Shopping-Liste</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><a href="#" id="button-bearb" Class="button">Bearbeiten</a></td> <!--<button id="button-bearb" Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button>-->
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Nachhaltig mit Lidl</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>#LidlVegan - Für die Erde und meine Gesundheit</td>
-                        <td><input type = "button" Class="button" value="Löschen" onclick="javascript: confirm('Möchten Sie wirklich löschen?');" /><button Class="button" onclick="location.href='http://localhost:50935/Html/Bewerbung.html';">Bearbeiten</button></td>
-                    </tr>
-                </table>
-
-                <div Class="center">
-                    <!-- CSS, aber wie navigiert man zur nächsten Seite weiter? (warte bis VL: Javascript) Stand: 28.04.2021 -->
-                    <Button Class="button">Hinzufügen</button>
-                </div>
-
-                <div Class="bg-modal">
-                    <div Class="modal-content">
-                        <div Class="close">x</div>
-                        <h2> Bearbeiten</h2>
-                        <form action = "" >
-                            <input type="text" placeholder="Titel"/>
-                                        <input type = "text" placeholder="Beschreibung" />
-                            <a href = "" Class="button">Speichern</a>
-                        </form>
-                    </div>
-                </div>
-
-                <Script>
-                                        document.getElementById('button-bearb').addEventListener('click', function() {
-                        document.querySelector('.bg-modal').style.display = 'flex';
-                    });
-
-                    document.querySelector('.close').addEventListener('click', function () {
-                        document.querySelector('.bg-modal').style.display = 'none';
-                    });
-                </script>
-            </div>
-        </div>*@
-            <!--</div>-->
+          
             <!-- right Column-->
             <div class="col-2" style="background-color:#FFCCBC;">
                 <fieldset id="fldKontakt">
@@ -197,7 +146,7 @@ End Code
         </div>
     </div>
     <!-- FOOTER -->
-    <div id="footer" class="text-center">
+    <div id="footer" class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 

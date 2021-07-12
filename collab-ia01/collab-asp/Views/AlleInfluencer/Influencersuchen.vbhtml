@@ -85,7 +85,7 @@ End Code
             <!-- passt ihr bitte nur diesen Teil an -->
             <div class="parallax">
                 <h1 class="center">Influencer suchen</h1>
-                <h1 class="center">Welcher Influencer passt zu mir?</h1>
+                <p class="center">Welcher Influencer passt zu mir?</p>
             </div>
 
             <div id="primaryContentBlock">

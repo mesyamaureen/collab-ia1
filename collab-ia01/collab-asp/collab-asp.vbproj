@@ -221,6 +221,7 @@
     <Compile Include="Controllers\HomeController.vb" />
     <Compile Include="Models\Unternehmen.vb" />
     <Compile Include="ViewModel\JobanzeigeViewModel.vb" />
+    <Compile Include="ViewModel\UnternehmerViewModel.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

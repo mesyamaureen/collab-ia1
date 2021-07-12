@@ -29,23 +29,23 @@ End Code
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                         @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                         @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                         @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen")
                         @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren")
                         @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
@@ -95,7 +95,7 @@ End Code
 
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Benutzername, New With {.class = "control-label"})
-                            @Html.TextBoxFor(Function(m) m.Benutzername, New With {.class = "form-control"})
+                            @Html.TextBoxFor(Function(m) m.Benutzername, New With {.class = "form-control password"})
                             @Html.ValidationMessageFor(Function(m) m.Benutzername)
                         </div>
                         @<div class="form-group">
@@ -140,7 +140,7 @@ End Code
         </div>
     </div>
     <!-- FOOTER -->
-    <div id="footer" class="text-center">
+    <div class="text-center mt-lg-5">
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 
