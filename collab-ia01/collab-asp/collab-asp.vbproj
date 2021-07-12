@@ -324,13 +324,11 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\UnternehmerEinzeln\UnternehmenBearbeiten.vbhtml" />
     <Content Include="Views\AlleInfluencer\Neu.vbhtml" />
     <Content Include="Views\AlleInfluencer\Index.vbhtml" />
     <Content Include="Views\AlleInfluencer\Oeffnen.vbhtml" />
     <Content Include="Views\AlleInfluencer\Loeschen.vbhtml" />
     <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
-    <Content Include="Views\UnternehmerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\Collab\Index.vbhtml" />
     <Content Include="Views\Collab\InfluencerSuchen.vbhtml" />
     <Content Include="Views\Collab\UnternehmenSuchen.vbhtml" />
@@ -345,7 +343,6 @@
     <Content Include="Views\InfluencerEinzeln\MeinProfilInfluencer.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\MeinProfilUnternehmer.vbhtml" />
     <Content Include="Views\AlleUnternehmen\Unternehmensuchen.vbhtml" />
-    <Content Include="Views\AlleUnternehmen\Unternehmer.vbhtml" />
     <Content Include="Views\AlleInfluencer\Influencersuchen.vbhtml" />
   </ItemGroup>
   <ItemGroup>
