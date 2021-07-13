@@ -18,6 +18,7 @@ Partial Public Class UnternehmerEntity
     Public Property UPasswort As String
     Public Property UEMail As String
     Public Property UVersion As Byte()
+    Public Property UBeschreibung As String
 
     Public Overridable Property tblBranchen As BrancheEntity
     Public Overridable Property tblJobanzeigen As ICollection(Of JobanzeigeEntity) = New HashSet(Of JobanzeigeEntity)

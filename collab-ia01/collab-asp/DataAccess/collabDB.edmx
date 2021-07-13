@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="collabModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="collabModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblBranchen">
           <Key>
             <PropertyRef Name="BrIdPk" />
@@ -20,6 +20,7 @@
           <Property Name="InIdPk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InVorname" Type="varchar" MaxLength="50" />
           <Property Name="InName" Type="varchar" MaxLength="50" />
+          <Property Name="InBeschreibung" Type="varchar(max)" />
           <Property Name="InBrIdFk" Type="int" />
           <Property Name="InBenutzername" Type="varchar" MaxLength="50" />
           <Property Name="InPasswort" Type="varchar" MaxLength="50" />
@@ -44,6 +45,7 @@
           </Key>
           <Property Name="UIdPk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UName" Type="varchar" MaxLength="50" />
+          <Property Name="UBeschreibung" Type="varchar(max)" />
           <Property Name="UBrIdFk" Type="int" />
           <Property Name="UBenutzername" Type="varchar" MaxLength="50" />
           <Property Name="UPasswort" Type="varchar" MaxLength="50" />
@@ -136,8 +138,7 @@
             <End Role="tblUnternehmer" EntitySet="tblUnternehmer" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="collabModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -166,6 +167,7 @@
           <Property Name="InVersion" Type="Binary" MaxLength="50" FixedLength="true" />
           <NavigationProperty Name="tblBranchen" Relationship="Self.FK_tblInfluencer_tblBranchen" FromRole="tblInfluencer" ToRole="tblBranchen" />
           <NavigationProperty Name="tblJobanzeigen" Relationship="Self.FK_tblJobanzeigen_tblInfluencer" FromRole="tblInfluencer" ToRole="tblJobanzeigen" />
+          <Property Name="InBeschreibung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="JobanzeigeEntity">
           <Key>
@@ -195,6 +197,7 @@
           <Property Name="UVersion" Type="Binary" MaxLength="50" FixedLength="true" />
           <NavigationProperty Name="tblBranchen" Relationship="Self.FK_tblUnternehmer_tblBranchen" FromRole="tblUnternehmer" ToRole="tblBranchen" />
           <NavigationProperty Name="tblJobanzeigen" Relationship="Self.FK_tblJobanzeigen_tblUnternehmer" FromRole="tblUnternehmer" ToRole="tblJobanzeigen" />
+          <Property Name="UBeschreibung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_tblInfluencer_tblBranchen">
           <End Role="tblBranchen" Type="collabModel1.BrancheEntity" Multiplicity="0..1" />
@@ -300,6 +303,7 @@
           <EntitySetMapping Name="tblInfluencer">
             <EntityTypeMapping TypeName="collabModel1.InfluencerEntity">
               <MappingFragment StoreEntitySet="tblInfluencer">
+                <ScalarProperty Name="InBeschreibung" ColumnName="InBeschreibung" />
                 <ScalarProperty Name="InIdPk" ColumnName="InIdPk" />
                 <ScalarProperty Name="InVorname" ColumnName="InVorname" />
                 <ScalarProperty Name="InName" ColumnName="InName" />
@@ -327,6 +331,7 @@
           <EntitySetMapping Name="tblUnternehmer">
             <EntityTypeMapping TypeName="collabModel1.UnternehmerEntity">
               <MappingFragment StoreEntitySet="tblUnternehmer">
+                <ScalarProperty Name="UBeschreibung" ColumnName="UBeschreibung" />
                 <ScalarProperty Name="UIdPk" ColumnName="UIdPk" />
                 <ScalarProperty Name="UName" ColumnName="UName" />
                 <ScalarProperty Name="UBrIdFk" ColumnName="UBrIdFk" />

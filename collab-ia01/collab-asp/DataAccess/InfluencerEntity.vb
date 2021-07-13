@@ -19,6 +19,7 @@ Partial Public Class InfluencerEntity
     Public Property InPasswort As String
     Public Property InEMail As String
     Public Property InVersion As Byte()
+    Public Property InBeschreibung As String
 
     Public Overridable Property tblBranchen As BrancheEntity
     Public Overridable Property tblJobanzeigen As ICollection(Of JobanzeigeEntity) = New HashSet(Of JobanzeigeEntity)
