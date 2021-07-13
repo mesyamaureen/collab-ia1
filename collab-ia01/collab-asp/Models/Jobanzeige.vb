@@ -22,7 +22,6 @@ Public Class Jobanzeige
         mstrBeschreibung = String.Empty
         mbrBranche = Nothing
         muntId = Nothing
-        'mbytVersion = Nothing
     End Sub
     'Konstruktor mit Parameter
     Sub New(pintJobID As Integer, pstrTitel As String, pstrBeschreibung As String, pbrBranche As Branche, puntId As Integer)
@@ -31,7 +30,6 @@ Public Class Jobanzeige
         mstrBeschreibung = pstrBeschreibung
         mbrBranche = pbrBranche
         muntId = puntId
-        'mbytVersion = pbytVersion
     End Sub
     'Kosntruktor für Entity-Klasse
     Public Sub New(pJobanzeigeEntity As JobanzeigeEntity)
