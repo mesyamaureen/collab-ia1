@@ -13,12 +13,11 @@ Namespace Controllers
             Dim infEntity As InfluencerEntity
             Dim branche As Branche
             Dim brEntity As BrancheEntity
-            'Dim lstBranche As List(Of Branche)
             Dim vmInf As InfluencerViewModel
 
             'Datenbankzugriff über Entity Framework
-            infEntity = db.tblInfluencer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = infEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            infEntity = db.tblInfluencer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblInfluencer nachschlagen
+            brEntity = infEntity.tblBranchen 'Vom Datensatz aus tblInfluencer in tblBranche navigieren
 
             If infEntity Is Nothing Then
                 Return New HttpNotFoundResult("Influencer mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Influencer gefunden, laden
@@ -43,19 +42,11 @@ Namespace Controllers
 
             inf.Branche = branche
 
-            'Alle Branche aus Datenbank laden
-            'lstBranche = New List(Of Branche)
-            'For Each brEntity In db.tblBranchen.ToList
-            '    branche = New Branche(brEntity)
-            '    lstBranche.Add(branche)
-            'Next
-
             'Vorbereitung des View-Models
             vmInf = New InfluencerViewModel
             vmInf.Influencer = inf
-            'vmInf.ListeBranche = lstBranche
 
-            Return View(vmInf) 'ViewModel mit Jobanzeige und allen Branchen an die View zur Bearbeitung geben
+            Return View(vmInf) 'ViewModel mit Influencern und allen Branchen an die View zur Bearbeitung geben
         End Function
 
         'POST: /InfluencerEinzeln/Influencer
@@ -63,21 +54,8 @@ Namespace Controllers
         Function Influencer(pvmInf As InfluencerViewModel) As ActionResult
             Dim inf As Influencer
             Dim infEntity As InfluencerEntity
-            'Dim branche As Branche
-            'Dim lstBranche As List(Of Branche)
 
-            'If Not (ModelState.IsValid) Then
-            '    lstBranche = New List(Of Branche) 'alle Branche aus Datenbank laden
-            '    For Each brEntity In db.tblBranchen.ToList
-            '        branche = New Branche(brEntity)
-            '        lstBranche.Add(branche)
-            '    Next
-
-            '    'Wenn nicht, dann zurück an die View
-            '    Return View(pvmJobanzeige)
-            'End If
-
-            'Jobanzeige aus dem ViewModel holen und in JobanzeigeEntity umwandeln
+            'Influencer aus dem ViewModel holen und in Influencer umwandeln
             inf = pvmInf.Influencer
             infEntity = inf.gibAlsInfluencerEntity
             'Speichern vorbereiten
@@ -92,7 +70,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Öffnen war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("Influencersuchen", "AlleInfluencer") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("Influencersuchen", "AlleInfluencer") 'Zurück zur Übersicht über alle Influencer
         End Function
 
         'Nach Login
@@ -110,11 +88,11 @@ Namespace Controllers
             Dim vmInf As InfluencerViewModel
 
             'Datenbankzugriff über Entity Framework
-            infEntity = db.tblInfluencer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = infEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            infEntity = db.tblInfluencer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblInfluencer nachschlagen
+            brEntity = infEntity.tblBranchen 'Vom Datensatz aus tblInfluencer in tblBranche navigieren
 
             If infEntity Is Nothing Then
-                Return New HttpNotFoundResult("Aufgabe mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
+                Return New HttpNotFoundResult("Influencer mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Influencer gefunden, laden
             End If
             'Gefundenen Datensatz aus der Datenbank loslösen
             db.Entry(infEntity).State = EntityState.Detached
@@ -136,7 +114,7 @@ Namespace Controllers
             vmInf.Influencer = inf
             vmInf.ListeBranche = lstBranche
 
-            Return View(vmInf) 'ViewModel mit Jobanzeige und allen Branchen an die View zur Bearbeitung geben
+            Return View(vmInf) 'ViewModel mit Influencer und allen Branchen an die View zur Bearbeitung geben
         End Function
 
         'POST: InfluencerEinzeln/MeinProfilInfluencer
@@ -158,7 +136,7 @@ Namespace Controllers
                 Return View(pvmInf)
             End If
 
-            'Jobanzeige aus dem ViewModel holen und in JobanzeigeEntity umwandeln
+            'Influencer aus dem ViewModel holen und in InfluencerEntity umwandeln
             inf = pvmInf.Influencer
             infEntity = inf.gibAlsInfluencerEntity
             'Speichern vorbereiten
@@ -173,12 +151,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Bearbeiten war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("MeinProfilInfluencer") 'Zurück zur Übersicht über alle Jobanzeigen
-        End Function
-
-        ' GET: InfluencerEinzeln/Edit/5
-        Function InfluencerBearbeiten(pInId As Integer) As ActionResult
-            Return View()
+            Return RedirectToAction("MeinProfilInfluencer") 'Zurück zur Übersicht über das Profil
         End Function
     End Class
 End Namespace

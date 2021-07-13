@@ -14,9 +14,9 @@ Namespace Controllers
             Dim lstBranche As List(Of Branche)
             Dim vmBen As BenutzerViewModel
 
-            ben = New Benutzer 'Neue leere Jobanzeige erzeugen
+            ben = New Benutzer 'Neue leere Benutzer erzeugen
 
-            'Alle Kategorien aus Datenbank laden
+            'Alle BRanche aus Datenbank laden
             lstBranche = New List(Of Branche)
             For Each brancheEntity In db.tblBranchen.ToList
                 branche = New Branche(brancheEntity)
@@ -26,7 +26,7 @@ Namespace Controllers
             vmBen = New BenutzerViewModel
             vmBen.Benutzer = ben
             vmBen.ListeBranche = lstBranche
-            Return View(vmBen) 'Neue Jobanzeige und Liste aller 
+            Return View(vmBen) 'Neuer Benutzer und Liste aller 
             'branche als ViewModel an die View übergeben
         End Function
 
@@ -52,7 +52,7 @@ Namespace Controllers
                 Return View(pvmBenutzer)
             End If
 
-            'Jobanzeige aus dem ViewModel holen und in Jobanzeige entity umwandeln
+            'Benutzer aus dem ViewModel holen und in BenutzerEntity umwandeln
             ben = pvmBenutzer.Benutzer
 
             ' Verzweigung, ob Unternehmen oder Influencer
@@ -105,7 +105,7 @@ Namespace Controllers
                 'Im Fehlerfall wird der Fehler im ViewModel vermerkt
                 ModelState.AddModelError(String.Empty, "Registrierung war nicht erfolgreich.")
             End Try
-            Return RedirectToAction("Einloggen", "AlleProfile") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("Einloggen", "AlleProfile") 'Zu Einloggen-Seite
         End Function
 
     End Class

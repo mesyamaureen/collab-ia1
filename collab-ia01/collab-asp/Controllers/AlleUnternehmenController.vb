@@ -19,7 +19,7 @@ Namespace Controllers
             ' Leere Liste initislisieren
             lstUnternehmer = New UnternehmenListe()
 
-            ' Alle Aufgaben aus der Datenbank holen
+            ' Alle Unternehmen aus der Datenbank holen
             For Each unEntity In db.tblUnternehmer.ToList
                 ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
                 unt = New Unternehmen(unEntity)
@@ -31,23 +31,5 @@ Namespace Controllers
             ' Gesamte list anzeigen
             Return View(lstUnternehmer)
         End Function
-
-        Function Unternehmer(pUnId As Integer) As ActionResult
-
-            Return View()
-
-        End Function
-
-        Function LoeschenUnternehmen(pUintId As Integer) As ActionResult
-            Return View()
-        End Function
-
-        Function NeuUnternehmer() As ActionResult
-            Return View()
-
-        End Function
-
-
-
     End Class
 End Namespace

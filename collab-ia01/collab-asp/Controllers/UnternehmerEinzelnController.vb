@@ -12,15 +12,14 @@ Namespace Controllers
             Dim untEntity As UnternehmerEntity
             Dim branche As Branche
             Dim brEntity As BrancheEntity
-            'Dim lstBranche As List(Of Branche)
             Dim vmUnt As UnternehmerViewModel
 
             'Datenbankzugriff über Entity Framework
-            untEntity = db.tblUnternehmer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = untEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            untEntity = db.tblUnternehmer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblUnternehmer nachschlagen
+            brEntity = untEntity.tblBranchen 'Vom Datensatz aus tblUnternehmer in tblBranche navigieren
 
             If untEntity Is Nothing Then
-                Return New HttpNotFoundResult("Influencer mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Influencer gefunden, laden
+                Return New HttpNotFoundResult("Unternehmer mit der ID " & ID & " wurde nicht gefunden") 'wenn kein Unternehmer gefunden, laden
             End If
             'Gefundenen Datensatz aus der Datenbank loslösen
             db.Entry(untEntity).State = EntityState.Detached
@@ -45,9 +44,8 @@ Namespace Controllers
             'Vorbereitung des View-Models
             vmUnt = New UnternehmerViewModel
             vmUnt.Unternehmen = unt
-            'vmInf.ListeBranche = lstBranche
 
-            Return View(vmUnt) 'ViewModel mit Jobanzeige und allen Branchen an die View zur Bearbeitung geben
+            Return View(vmUnt) 'ViewModel mit Unternehmer und allen Branchen an die View zur Bearbeitung geben
         End Function
 
         <HttpPost>
@@ -70,7 +68,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Öffnen war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("Unternehmensuchen", "AlleUnternehmen") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("Unternehmensuchen", "AlleUnternehmen") 'Zurück zur Übersicht über alle Unternehmen
         End Function
 
         ' GET: UnternehmerEinzeln
@@ -87,11 +85,11 @@ Namespace Controllers
             Dim vmUnt As UnternehmerViewModel
 
             'Datenbankzugriff über Entity Framework
-            untEntity = db.tblUnternehmer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = untEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            untEntity = db.tblUnternehmer.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblUnternehmer nachschlagen
+            brEntity = untEntity.tblBranchen 'Vom Datensatz aus tblUntenrehmer in tblBranche navigieren
 
             If untEntity Is Nothing Then
-                Return New HttpNotFoundResult("Aufgabe mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
+                Return New HttpNotFoundResult("Unternehmer mit der ID " & ID & " wurde nicht gefunden") 'wenn kein Unternehmer gefunden, laden
             End If
             'Gefundenen Datensatz aus der Datenbank loslösen
             db.Entry(untEntity).State = EntityState.Detached
@@ -113,7 +111,7 @@ Namespace Controllers
             vmUnt.Unternehmen = unt
             vmUnt.ListeBranche = lstBranche
 
-            Return View(vmUnt) 'ViewModel mit Jobanzeige und allen Branchen an die View zur Bearbeitung geben
+            Return View(vmUnt) 'ViewModel mit Unternehmer und allen Branchen an die View zur Bearbeitung geben
         End Function
 
         'POST: UnternehmerEinzeln/MeinProfilUnternehmer
@@ -150,14 +148,7 @@ Namespace Controllers
                 ModelState.AddModelError(String.Empty, "Bearbeiten war nicht erfolgreich.")
             End Try
 
-            Return RedirectToAction("MeinProfilUnternehmer") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("MeinProfilUnternehmer") 'Zurück zum Mein Profil des Unternehmens
         End Function
-
-        ' GET: UnternehmerEinzeln/Edit/5
-        Function UnternehmenBearbeiten(pUintId As Integer) As ActionResult
-            Return View()
-        End Function
-
-
     End Class
 End Namespace

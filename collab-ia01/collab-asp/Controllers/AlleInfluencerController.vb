@@ -17,7 +17,7 @@ Namespace Controllers
             ' Leere Liste initislisieren
             lstInfluencer = New InfluencerListe()
 
-            ' Alle Aufgaben aus der Datenbank holen
+            ' Alle Influencer aus der Datenbank holen
             For Each infEntity In db.tblInfluencer.ToList
                 ' Objekt der Entity-Klasse in Objekt der Model-Klasse umwandeln
                 infl = New Influencer(infEntity)
@@ -29,20 +29,5 @@ Namespace Controllers
             ' Gesamte list anzeigen
             Return View(lstInfluencer)
         End Function
-
-        Function Influencer(pInId As Integer) As ActionResult
-            Return View()
-        End Function
-
-        Function Loeschen(pInintId As Integer) As ActionResult
-            Return View()
-        End Function
-
-        Function Neu() As ActionResult
-            Return View()
-
-        End Function
-
-
     End Class
 End Namespace

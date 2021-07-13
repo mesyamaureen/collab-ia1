@@ -37,7 +37,7 @@ Namespace Controllers
                         System.Web.HttpContext.Current.Session("BenutzerID") = benInfluencer.InIdPk.ToString()
                         System.Web.HttpContext.Current.Session("Benutzername") = benInfluencer.InBenutzername.ToString()
                         System.Web.HttpContext.Current.Session("Benutzertyp") = "Influencer"
-                        Return RedirectToAction("MeinProfilInfluencer", "InfluencerEinzeln") '("UserDashBoard")
+                        Return RedirectToAction("MeinProfilInfluencer", "InfluencerEinzeln")
                     Else
                         Dim unt As UnternehmerEntity
                         Dim benUnt As UnternehmerEntity
@@ -52,25 +52,12 @@ Namespace Controllers
                             System.Web.HttpContext.Current.Session("BenutzerID") = benUnt.UIdPk.ToString()
                             System.Web.HttpContext.Current.Session("Benutzername") = benUnt.UBenutzername.ToString()
                             System.Web.HttpContext.Current.Session("Benutzertyp") = "Unternehmer"
-                            Return RedirectToAction("MeinProfilUnternehmer", "UnternehmerEinzeln") '("UserDashBoard")
+                            Return RedirectToAction("MeinProfilUnternehmer", "UnternehmerEinzeln")
                         End If
                     End If
                 End Using
             End If
             Return View(pben)
-        End Function
-
-        Function UserDashBoard() As ActionResult
-            'Dim benInfluencer As InfluencerEntity
-            If System.Web.HttpContext.Current.Session("BenutzerID") IsNot Nothing Then
-                If System.Web.HttpContext.Current.Session("Benutzertyp") = "Influencer" Then 'And benInfluencer.InIdPk = Int(System.Web.HttpContext.Current.Session("BenutzerID")) Then
-                    Return RedirectToAction("MeinProfilInfluencer", "InfluencerEinzeln") 'return view influencer
-                Else
-                    Return RedirectToAction("MeinProfilUnternehmer", "UnternehmerEinzeln") 'return view Unternehmer
-                End If
-            Else
-                Return RedirectToAction("Einloggen")
-            End If
         End Function
     End Class
 End Namespace

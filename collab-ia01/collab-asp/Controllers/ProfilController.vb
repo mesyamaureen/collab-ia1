@@ -4,8 +4,6 @@ Namespace Controllers
     Public Class ProfilController
         Inherits Controller
 
-
-
         ' GET: Profil
         Function Index() As ActionResult
             Return View()

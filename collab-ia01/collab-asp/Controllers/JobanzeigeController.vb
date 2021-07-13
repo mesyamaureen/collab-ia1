@@ -51,7 +51,7 @@ Namespace Controllers
 
             'Datenbankzugriff über Entity Framework
             jobEntity = db.tblJobanzeigen.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblBranche navigieren
 
             If jobEntity Is Nothing Then
                 Return New HttpNotFoundResult("Aufgabe mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
@@ -126,7 +126,7 @@ Namespace Controllers
 
             job = New Jobanzeige 'Neue leere Jobanzeige erzeugen
 
-            'Alle Kategorien aus Datenbank laden
+            'Alle Branche aus Datenbank laden
             lstBranche = New List(Of Branche)
             For Each brancheEntity In db.tblBranchen.ToList
                 branche = New Branche(brancheEntity)
@@ -181,18 +181,6 @@ Namespace Controllers
 
         'GET: /Jobanzeige/Loeschen
         Function Loeschen(ID As Integer) As ActionResult
-            'Dim job As Jobanzeige
-            'Dim jobEntity As JobanzeigeEntity = db.tblJobanzeigen.Find(ID)
-
-            'If IsNothing(jobEntity) Then
-            '    Return RedirectToAction("Index")
-            'End If
-
-            'db.Entry(jobEntity).State = EntityState.Detached
-
-            'job = New Jobanzeige(jobEntity)
-            'Return View(job)
-
             Dim job As Jobanzeige
             Dim jobEntity As JobanzeigeEntity
             jobEntity = db.tblJobanzeigen.Find(ID) 'Jobanzeige in Datenbank finden
@@ -237,7 +225,7 @@ Namespace Controllers
 
             'Datenbankzugriff über Entity Framework
             jobEntity = db.tblJobanzeigen.Find(ID) 'Datensatz mit diesem Primärschlüssel in tblJobanzeige nachschlagen
-            brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblKategorien navigieren
+            brEntity = jobEntity.tblBranchen 'Vom Datensatz aus tblJobanzeige in tblBranche navigieren
 
             If jobEntity Is Nothing Then
                 Return New HttpNotFoundResult("Jobanzeige mit der ID " & ID & " wurde nicht gefunden") 'wenn keine Jobanzeige gefunden, laden
