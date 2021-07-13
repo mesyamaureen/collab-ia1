@@ -165,6 +165,7 @@
     <Compile Include="Controllers\ProfilController.vb" />
     <Compile Include="Controllers\JobanzeigeController.vb" />
     <Compile Include="Controllers\AlleProfileController.vb" />
+    <Compile Include="Controllers\RegistrierenController.vb" />
     <Compile Include="Controllers\UnternehmerEinzelnController.vb" />
     <Compile Include="DataAccess\BrancheEntity.vb">
       <DependentUpon>collabDB.tt</DependentUpon>
@@ -222,6 +223,7 @@
     <Compile Include="Models\Unternehmen.vb" />
     <Compile Include="ViewModel\InfluencerViewModel.vb" />
     <Compile Include="ViewModel\JobanzeigeViewModel.vb" />
+    <Compile Include="ViewModel\BenutzerViewModel.vb" />
     <Compile Include="ViewModel\UnternehmerViewModel.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -345,6 +347,7 @@
     <Content Include="Views\InfluencerEinzeln\Influencer.vbhtml" />
     <Content Include="Views\UnternehmerEinzeln\Unternehmen.vbhtml" />
     <Content Include="Views\Jobanzeige\Bewerben.vbhtml" />
+    <Content Include="Views\Registrieren\Registrieren.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
@@ -373,8 +376,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Branche\" />
-    <Folder Include="Views\Influencer\" />
-    <Folder Include="Views\Unternehmer\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

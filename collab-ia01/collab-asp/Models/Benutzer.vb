@@ -9,8 +9,18 @@ Public Class Benutzer
     Private mstrPasswort As String
     Private mstrEmail As String
     Private mstrBeschreibung As String
+    Private mbenTyp As Type
 
     'Properties
+    Public Property BenutzerTyp As Type
+        Get
+            Return mbenTyp
+        End Get
+        Set(value As Type)
+            mbenTyp = value
+        End Set
+    End Property
+
     Public Property BenutzerID As Integer
         Get
             Return mintBenutzerID
@@ -61,15 +71,32 @@ Public Class Benutzer
         mstrPasswort = String.Empty
         mstrEmail = String.Empty
         mstrBeschreibung = String.Empty
+        mbenTyp = Nothing
     End Sub
 
     'Konstruktor mit Parameter
-    Sub New(pintBenutzerID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String)
+    Sub New(pintBenutzerID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String, pbenTyp As Type)
         mintBenutzerID = pintBenutzerID
         mstrBenutzername = pstrBenutzername
         mstrPasswort = pstrPasswort
         mstrEmail = pstrEmail
         mstrBeschreibung = pstrBeschreibung
+        mbenTyp = pbenTyp
+    End Sub
+
+    Sub New(pinfEntity As InfluencerEntity)
+        mintBenutzerID = pinfEntity.InIdPk
+        mstrBenutzername = pinfEntity.InBenutzername
+        mstrPasswort = pinfEntity.InPasswort
+        mstrEmail = pinfEntity.InEMail
+        'mstrBeschreibung
+    End Sub
+
+    Sub New(puntEntity As UnternehmerEntity)
+        mintBenutzerID = puntEntity.UIdPk
+        mstrBenutzername = puntEntity.UBenutzername
+        mstrPasswort = puntEntity.UPasswort
+        mstrEmail = puntEntity.UEMail
     End Sub
 
 End Class

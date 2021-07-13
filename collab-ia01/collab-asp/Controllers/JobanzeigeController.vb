@@ -303,5 +303,6 @@ Namespace Controllers
 
             Return RedirectToAction("AlleJobanzeigen", "AlleJobanzeigen") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
+
     End Class
 End Namespace
