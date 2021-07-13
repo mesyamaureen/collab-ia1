@@ -9,6 +9,7 @@ Public Class Benutzer
     Private mstrPasswort As String
     Private mstrEmail As String
     Private mbrBranche As Branche
+    Private mstrBeschreibung As String
 
     'Properties
     Public Property Branche As Branche
@@ -70,17 +71,15 @@ Public Class Benutzer
         mstrPasswort = String.Empty
         mstrEmail = String.Empty
         mstrBeschreibung = String.Empty
-        mbenTyp = Nothing
     End Sub
 
     'Konstruktor mit Parameter
-    Sub New(pintBenutzerID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String, pbenTyp As Type)
+    Sub New(pintBenutzerID As Integer, pstrBenutzername As String, pstrPasswort As String, pstrEmail As String, pstrBeschreibung As String)
         mintBenutzerID = pintBenutzerID
         mstrBenutzername = pstrBenutzername
         mstrPasswort = pstrPasswort
         mstrEmail = pstrEmail
         mstrBeschreibung = pstrBeschreibung
-        mbenTyp = pbenTyp
     End Sub
 
     Sub New(pinfEntity As InfluencerEntity)
@@ -88,7 +87,7 @@ Public Class Benutzer
         mstrBenutzername = pinfEntity.InBenutzername
         mstrPasswort = pinfEntity.InPasswort
         mstrEmail = pinfEntity.InEMail
-        'mstrBeschreibung
+        mstrBeschreibung = pinfEntity.InBeschreibung
     End Sub
 
     Sub New(puntEntity As UnternehmerEntity)
@@ -96,6 +95,7 @@ Public Class Benutzer
         mstrBenutzername = puntEntity.UBenutzername
         mstrPasswort = puntEntity.UPasswort
         mstrEmail = puntEntity.UEMail
+        mstrBeschreibung = puntEntity.UBeschreibung
     End Sub
 
 End Class

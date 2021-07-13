@@ -21,7 +21,7 @@
   <Class Name="collab_asp.Benutzer">
     <Position X="1.75" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAAAAAAAAAAgAAAAAAAAAkACAACQAgCgAA=</HashCode>
+      <HashCode>AAACAAAAACAAAACAAAAAgAAAAAAAAAkACAACQAgCgAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
   </Class>
@@ -29,8 +29,8 @@
     <Position X="4.25" Y="0.5" Width="1.75" />
     <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.5" Y="4.872" />
-        <Point X="3.875" Y="4.872" />
+        <Point X="3.5" Y="4.917" />
+        <Point X="3.875" Y="4.917" />
         <Point X="3.875" Y="2.862" />
         <Point X="4.25" Y="2.862" />
       </Path>
