@@ -59,7 +59,7 @@ End Code
     <div class="container-fluid" style="background-color:#FFCCBC;">
         <div class="row">
             <div class="col-2">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column position-fixed float-start">
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>

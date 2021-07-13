@@ -54,7 +54,7 @@ End Code
         <!-- left Column -->
         <div id="secondaryContentContainer">
             <div id="secondaryContent">
-                <ul style="font-size: 16px;">
+                <ul class="nav flex-column position-fixed float-start">
                     <li id="current">
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>

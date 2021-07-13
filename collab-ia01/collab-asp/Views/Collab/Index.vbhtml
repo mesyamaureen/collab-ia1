@@ -58,7 +58,7 @@ End Code
         <!-- left Column -->
         <div class="row">
             <div class="col-2">
-                <ul class="nav flex-column">
+                <ul class="nav flex-column position-fixed float-start">
                     <li class="nav-item">
                         @Html.ActionLink("Startseite", "Index")
                     </li>
@@ -85,7 +85,7 @@ End Code
             <!-- middle Column -->
             <div class="col-md-8" style="background-color:#ECECEC;">
                 <div class="text-center" style="margin-bottom: 40px;">
-                    <div class="justify-content-evenly">
+                    <div class="w-100">
                         <img src="../Bilder/Startseite.jpg" id="image" height="400" alt="https://unsplash.com/photos/yyMJNPgQ-X8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink" />
                     </div>
                     <div class="text-center" style="margin: 20px 0 30px 0;">
