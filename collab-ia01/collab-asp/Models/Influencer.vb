@@ -18,6 +18,15 @@ Public Class Influencer
     Private mstrBeschreibung As String
 
     'Properties
+    Public Property Passwort As String
+        Get
+            Return mstrPasswort
+        End Get
+        Set(value As String)
+            mstrPasswort = value
+        End Set
+    End Property
+
     Public Property Beschreibung As String
         Get
             Return mstrBeschreibung
@@ -111,10 +120,11 @@ Public Class Influencer
         mintInfluencerID = Nothing
         mstrEmail = String.Empty
         mstrBeschreibung = String.Empty
+        mstrPasswort = String.Empty
     End Sub
 
     'Konstruktor mit Parametern
-    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche, pstrBenutzername As String, pintBrancheID As Integer, pintInfluencerID As Integer, pstrEmail As String, pstrBeschreibung As String)
+    Sub New(pstrVorname As String, pstrName As String, pbrBranche As Branche, pstrBenutzername As String, pintBrancheID As Integer, pintInfluencerID As Integer, pstrEmail As String, pstrBeschreibung As String, pstrPasswort As String)
         mstrVorname = pstrVorname
         mstrName = pstrName
         mbrBranche = pbrBranche
@@ -123,6 +133,7 @@ Public Class Influencer
         mintInfluencerID = pintInfluencerID
         mstrEmail = pstrEmail
         mstrBeschreibung = pstrBeschreibung
+        mstrPasswort = pstrPasswort
     End Sub
 
     Sub New(pinflEntity As InfluencerEntity)
@@ -133,6 +144,7 @@ Public Class Influencer
         mintInfluencerID = pinflEntity.InIdPk
         mstrEmail = pinflEntity.InEMail
         mstrBeschreibung = pinflEntity.InBeschreibung
+        mstrPasswort = pinflEntity.InPasswort
     End Sub
 
     Public Function gibAlsInfluencerEntity() As InfluencerEntity

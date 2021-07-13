@@ -94,9 +94,9 @@ End Code
                     <div class="w-100">
                         @Using Html.BeginForm
                             @<div class="form-group">
-                                @Html.LabelFor(Function(m) m.Unternehmen.BenutzerID)
-                                @Html.TextBoxFor(Function(m) m.Unternehmen.BenutzerID, New With {.readonly = "readonly", .class = "form-control-plaintext"})
-                                @Html.ValidationMessageFor(Function(m) m.Unternehmen.BenutzerID)
+                                @Html.Label("ID")
+                                @Html.TextBoxFor(Function(m) m.Unternehmen.UnternehmerID, New With {.readonly = "readonly", .class = "form-control-plaintext"})
+                                @Html.ValidationMessageFor(Function(m) m.Unternehmen.UnternehmerID)
                             </div>
 
                             @<div class="form-group">
@@ -145,14 +145,14 @@ End Code
                                 </div>
                             </div>
 
-                            @*@<div class="form-group">
-                        @Html.LabelFor(Function(m) m.Unternehmen.Branche.BrancheTitel, New With {.class = "control-label"})
-                        @Html.DropDownListFor(Function(m) m.Unternehmen.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
-                        @Html.ValidationMessageFor(Function(m) m.Unternehmen.Branche.BrancheTitel)
-                    </div>*@
+                            @<div class="form-group">
+                                @Html.LabelFor(Function(m) m.Unternehmen.Branche.BrancheTitel, New With {.class = "control-label"})
+                                @Html.DropDownListFor(Function(m) m.Unternehmen.Branche.BrancheID, New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"), New With {.class = "form-control"})
+                                @Html.ValidationMessageFor(Function(m) m.Unternehmen.Branche.BrancheTitel)
+                            </div>
 
                             @<div class="mb-lg-5 mt-lg-4">
-                                @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing, New With {.class = "btn btn-default", .role = "button"})
+                                @Html.ActionLink("Abbrechen", "meinProfilUnternehmer", "UnternehmerEinzeln", New With {.class = "btn btn-default", .role = "button"})
                                 <input type="submit" class="btn btn-primary" value="Speichern" />
                             </div>
                         End Using

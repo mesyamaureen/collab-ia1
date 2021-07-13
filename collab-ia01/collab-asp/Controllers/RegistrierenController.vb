@@ -12,8 +12,6 @@ Namespace Controllers
             Dim ben As Benutzer
             Dim branche As Branche
             Dim lstBranche As List(Of Branche)
-            Dim lstInf As List(Of Influencer)
-            Dim lstUnt As List(Of Unternehmen)
             Dim vmBen As BenutzerViewModel
 
             ben = New Benutzer 'Neue leere Jobanzeige erzeugen
@@ -25,26 +23,11 @@ Namespace Controllers
                 lstBranche.Add(branche)
             Next
 
-            'lstInf = New List(Of Influencer)
-            'For Each infEntity In db.tblInfluencer.ToList
-            '    ben = New Benutzer(infEntity)
-            '    lstInf.Add(ben)
-            'Next
-
-            'lstUnt = New List(Of Unternehmen)
-            'For Each untEntity In db.tblUnternehmer.ToList
-            '    ben = New Benutzer(untEntity)
-            '    lstUnt.Add(ben)
-            'Next
-
-            'ViewModel vorbereiten
             vmBen = New BenutzerViewModel
             vmBen.Benutzer = ben
             vmBen.ListeBranche = lstBranche
             Return View(vmBen) 'Neue Jobanzeige und Liste aller 
             'branche als ViewModel an die View übergeben
-            'Return View()
-            'Return View()
         End Function
 
         'POST: /Registrieren/
@@ -57,8 +40,6 @@ Namespace Controllers
             Dim untEntity As UnternehmerEntity
             Dim branche As Branche
             Dim lstBranche As List(Of Branche)
-            Dim lstInf As List(Of Influencer)
-            Dim lstUnt As List(Of Unternehmen)
 
             If Not ModelState.IsValid Then
                 lstBranche = New List(Of Branche) 'Alle Branche aus Datenbank laden
@@ -73,14 +54,49 @@ Namespace Controllers
 
             'Jobanzeige aus dem ViewModel holen und in Jobanzeige entity umwandeln
             ben = pvmBenutzer.Benutzer
-            'job.UnternehmerID = Web.HttpContext.Current.Session("BenutzerID")
-            infEntity = inf.gibAlsInfluencerEntity
-            untEntity = unt.gibAlsUnternehmenEntity
-            'speichern vorbereiten
-            db.tblInfluencer.Attach(infEntity) 'Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
-            db.Entry(infEntity).State = EntityState.Added 'als Hinzugefügt markieren
-            db.tblUnternehmer.Attach(untEntity)
-            db.Entry(untEntity).State = EntityState.Added
+
+            ' Verzweigung, ob Unternehmen oder Influencer
+            If pvmBenutzer.Unternehmen.Firmenname Is Nothing Then
+                inf = pvmBenutzer.Influencer
+                inf.Benutzername = ben.Benutzername
+                inf.Beschreibung = ben.Beschreibung
+                inf.Email = ben.Email
+                inf.Branche = ben.Branche
+                For Each brancheEntity In db.tblBranchen.ToList
+                    If brancheEntity.BrTitel.Equals(inf.Branche.BrancheTitel) Then
+                        inf.BrancheID = brancheEntity.BrIdPk
+                        inf.Branche.BrancheID = brancheEntity.BrIdPk
+                        Exit For
+                    End If
+                Next
+                inf.Passwort = ben.Passwort
+
+                infEntity = inf.gibAlsInfluencerEntity
+
+                'speichern vorbereiten
+                db.tblInfluencer.Attach(infEntity) 'Objekt der Entity-Klasse wieder mit Datenbank bekannt machen
+                db.Entry(infEntity).State = EntityState.Added 'als Hinzugefügt markieren
+
+            Else
+                unt = pvmBenutzer.Unternehmen
+                unt.Benutzername = ben.Benutzername
+                unt.Beschreibung = ben.Beschreibung
+                unt.Email = ben.Email
+                unt.Branche = ben.Branche
+                For Each brancheEntity In db.tblBranchen.ToList
+                    If brancheEntity.BrTitel.Equals(unt.Branche.BrancheTitel) Then
+                        unt.BrancheID = brancheEntity.BrIdPk
+                        unt.Branche.BrancheID = brancheEntity.BrIdPk
+                        Exit For
+                    End If
+                Next
+                unt.Passwort = ben.Passwort
+
+                untEntity = unt.gibAlsUnternehmenEntity
+
+                db.tblUnternehmer.Attach(untEntity)
+                db.Entry(untEntity).State = EntityState.Added
+            End If
 
             'Vorsichtig Änderungen speichern
             Try
@@ -89,7 +105,7 @@ Namespace Controllers
                 'Im Fehlerfall wird der Fehler im ViewModel vermerkt
                 ModelState.AddModelError(String.Empty, "Registrierung war nicht erfolgreich.")
             End Try
-            Return RedirectToAction("Index", "Collab") 'Zurück zur Übersicht über alle Jobanzeigen
+            Return RedirectToAction("Einloggen", "AlleProfile") 'Zurück zur Übersicht über alle Jobanzeigen
         End Function
 
     End Class

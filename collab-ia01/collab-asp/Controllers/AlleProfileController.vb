@@ -20,19 +20,24 @@ Namespace Controllers
         Function Einloggen(pben As Benutzer) As ActionResult
             If ModelState.IsValid Then
                 Using db As collabDBEntities = New collabDBEntities
-                    Dim infl As InfluencerEntity
+                    'Dim infl As InfluencerEntity
                     Dim benInfluencer As InfluencerEntity
-                    For Each infl In db.tblInfluencer.ToList
-                        If (infl.InBenutzername.Equals(pben.Benutzername) And infl.InPasswort.Equals(pben.Passwort)) Then
-                            benInfluencer = infl
-                        End If
-                    Next
+                    Try
+                        For Each infl In db.tblInfluencer.ToList
+                            If (infl.InBenutzername.Equals(pben.Benutzername) And infl.InPasswort.Equals(pben.Passwort)) Then
+                                benInfluencer = infl
+                            End If
+                        Next
+                    Catch ex As Exception
+                        benInfluencer = Nothing
+                    End Try
+
 
                     If benInfluencer IsNot Nothing Then
                         System.Web.HttpContext.Current.Session("BenutzerID") = benInfluencer.InIdPk.ToString()
                         System.Web.HttpContext.Current.Session("Benutzername") = benInfluencer.InBenutzername.ToString()
                         System.Web.HttpContext.Current.Session("Benutzertyp") = "Influencer"
-                        Return RedirectToAction("UserDashBoard")
+                        Return RedirectToAction("MeinProfilInfluencer", "InfluencerEinzeln") '("UserDashBoard")
                     Else
                         Dim unt As UnternehmerEntity
                         Dim benUnt As UnternehmerEntity
@@ -47,7 +52,7 @@ Namespace Controllers
                             System.Web.HttpContext.Current.Session("BenutzerID") = benUnt.UIdPk.ToString()
                             System.Web.HttpContext.Current.Session("Benutzername") = benUnt.UBenutzername.ToString()
                             System.Web.HttpContext.Current.Session("Benutzertyp") = "Unternehmer"
-                            Return RedirectToAction("UserDashBoard")
+                            Return RedirectToAction("MeinProfilUnternehmer", "UnternehmerEinzeln") '("UserDashBoard")
                         End If
                     End If
                 End Using
@@ -56,8 +61,9 @@ Namespace Controllers
         End Function
 
         Function UserDashBoard() As ActionResult
+            'Dim benInfluencer As InfluencerEntity
             If System.Web.HttpContext.Current.Session("BenutzerID") IsNot Nothing Then
-                If System.Web.HttpContext.Current.Session("Benutzertyp") = "Influencer" Then
+                If System.Web.HttpContext.Current.Session("Benutzertyp") = "Influencer" Then 'And benInfluencer.InIdPk = Int(System.Web.HttpContext.Current.Session("BenutzerID")) Then
                     Return RedirectToAction("MeinProfilInfluencer", "InfluencerEinzeln") 'return view influencer
                 Else
                     Return RedirectToAction("MeinProfilUnternehmer", "UnternehmerEinzeln") 'return view Unternehmer

@@ -122,8 +122,8 @@ End Code
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Benutzer.Branche.BrancheTitel, New With {.class = "control-label"})
                             @Html.DropDownListFor(Function(m) m.Benutzer.Branche.BrancheTitel,
-                                                        New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"),
-                                                        New With {.class = "form-control"})
+                                          New SelectList(Model.ListeBranche, "BrancheTitel", "BrancheTitel"),
+                                          New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) m.Benutzer.Branche.BrancheTitel)
                         </div>
 
