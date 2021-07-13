@@ -132,6 +132,7 @@ Public Class Influencer
         mintBrancheID = pinflEntity.InBrIdFk
         mintInfluencerID = pinflEntity.InIdPk
         mstrEmail = pinflEntity.InEMail
+        mstrBeschreibung = pinflEntity.InBeschreibung
     End Sub
 
     Public Function gibAlsInfluencerEntity() As InfluencerEntity
@@ -143,7 +144,8 @@ Public Class Influencer
         infE.InPasswort = Passwort
         infE.InName = mstrName
         infE.InVorname = mstrVorname
-        infE.InEMail = Email
+        infE.InEMail = mstrEmail
+        infE.InBeschreibung = mstrBeschreibung
 
         If mbrBranche IsNot Nothing Then
             infE.InBrIdFk = mbrBranche.BrancheID

@@ -328,11 +328,7 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
-    <Content Include="Views\InfluencerEinzeln\Bearbeiten.vbhtml" />
     <Content Include="Views\Collab\Index.vbhtml" />
-    <Content Include="Views\Collab\InfluencerSuchen.vbhtml" />
-    <Content Include="Views\Collab\UnternehmenSuchen.vbhtml" />
-    <Content Include="Views\Collab\Registrieren.vbhtml" />
     <Content Include="Views\Collab\Impressum.vbhtml" />
     <Content Include="Views\Jobanzeige\meineJobanzeigen.vbhtml" />
     <Content Include="Views\Jobanzeige\Hinzufuegen.vbhtml" />

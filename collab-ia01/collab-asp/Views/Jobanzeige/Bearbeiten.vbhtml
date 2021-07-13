@@ -44,7 +44,7 @@ End Code
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Registrieren", "Registrieren")
+                        @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
                     </li>
                 </ul>
             </div>

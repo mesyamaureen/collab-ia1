@@ -42,7 +42,7 @@ End Code
                     @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                 </li>
                 <li>
-                    @Html.ActionLink("Registrieren", "Registrieren")
+                    @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
                     @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                 </li>
             </ul>

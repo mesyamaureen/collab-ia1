@@ -130,6 +130,7 @@ Public Class Unternehmen
         mstrBenutzername = puntEntity.UBenutzername
         mstrPasswort = puntEntity.UPasswort
         mstrEmail = puntEntity.UEMail
+        mstrBeschreibung = puntEntity.UBeschreibung
     End Sub
 
     Public Function gibAlsUnternehmenEntity() As UnternehmerEntity
@@ -141,6 +142,7 @@ Public Class Unternehmen
         untE.UIdPk = muntID
         untE.UName = mstrFirmenname
         untE.UPasswort = mstrPasswort
+        untE.UBeschreibung = mstrBeschreibung
 
         If mbrBranche IsNot Nothing Then
             untE.UBrIdFk = mbrBranche.BrancheID
