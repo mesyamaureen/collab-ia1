@@ -1,8 +1,28 @@
 ﻿Public Class BenutzerViewModel
     Private mBenutzer As Benutzer
+    Private mInfluencer As Influencer
+    Private mUnternehmen As Unternehmen
     Private mlstBranche As List(Of Branche)
     Private mlstInfluencer As List(Of Influencer)
     Private mlstUnternehmen As List(Of Unternehmen)
+
+    Public Property Influencer As Influencer
+        Get
+            Return mInfluencer
+        End Get
+        Set(value As Influencer)
+            mInfluencer = value
+        End Set
+    End Property
+
+    Public Property Unternehmen As Unternehmen
+        Get
+            Return mUnternehmen
+        End Get
+        Set(value As Unternehmen)
+            mUnternehmen = value
+        End Set
+    End Property
 
     Public Property Benutzer As Benutzer
         Get

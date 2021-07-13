@@ -86,82 +86,97 @@ End Code
             <!-- middle Column -->
             <div class="col-md-8" style="background-color:#ECECEC;">
                 <div class="text-center">
-                    <h1>Neue Jobanzeige hinzufügen</h1>
-                    <p>Hier können Sie eine neue Jobanzeige hinzufuegen.</p>
+                    <h1>Registrieren</h1>
+                    <p>Erstellen Sie ein Konto!</p>
                 </div>
 
-                @*<div class="w-100">
+                @*@If (Html.RadioButton(Function(m) m.GetType)) Then
+                End If*@
+
+                <div class="w-100">
                     @Using Html.BeginForm()
                         @<div class="form-group">
-                            @Html.Label("Ich bin:")
-                            @Html.RadioButton("Influencer", "Influencer")
-                            @Html.RadioButton("Unternehmer", "Unternehmer")
+                            @Html.LabelFor(Function(m) m.Influencer.Vorname, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Influencer.Vorname, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Influencer.Vorname)
                         </div>
 
                         @<div class="form-group">
-                            @Html.HiddenFor(Function(m) m.Jobanzeige.UnternehmerID, New With {.readonly = "readonly"})
-                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.UnternehmerID)
+                            @Html.LabelFor(Function(m) m.Influencer.Name, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Influencer.Name, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Influencer.Name)
                         </div>
 
                         @<div class="form-group">
-                            <!-- Titel der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "control-label"})
-                            @Html.TextBoxFor(Function(m) Model.Jobanzeige.Titel, New With {.class = "form-control"})
-                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Titel)
-                        </div>
-                        @<div class="form-group">
-                            <!-- Beschreibung der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Beschreibung, New With {.class = "control-label"})
-                            @Html.TextAreaFor(Function(m) Model.Jobanzeige.Beschreibung, New With {.class = "form-control"})
-                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Beschreibung)
+                            @Html.LabelFor(Function(m) m.Unternehmen.Firmenname, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Unternehmen.Firmenname, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Unternehmen.Firmenname)
                         </div>
 
                         @<div class="form-group">
-                            <!-- Branche der Jobanzeige -->
-                            @Html.LabelFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel,
-                      New With {.class = "control-label"})
-                            @Html.DropDownListFor(Function(m) Model.Jobanzeige.Branche.BrancheID,
-                             New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"),
-                             New With {.class = "form-control"})
-                            @Html.ValidationMessageFor(Function(m) Model.Jobanzeige.Branche.BrancheTitel)
+                            @Html.LabelFor(Function(m) m.Benutzer.Beschreibung, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Benutzer.Beschreibung, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Beschreibung)
                         </div>
+
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) m.Benutzer.Branche.BrancheTitel, New With {.class = "control-label"})
+                            @Html.DropDownListFor(Function(m) m.Benutzer.Branche.BrancheTitel,
+                                                        New SelectList(Model.ListeBranche, "BrancheID", "BrancheTitel"),
+                                                        New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Branche.BrancheTitel)
+                        </div>
+
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) m.Benutzer.Email, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Benutzer.Email, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Email)
+                        </div>
+
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) m.Benutzer.Benutzername, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Benutzer.Benutzername, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Benutzername)
+                        </div>
+
+                        @<div class="form-group">
+                            @Html.LabelFor(Function(m) m.Benutzer.Passwort, New With {.class = "control-label"})
+                            @Html.TextAreaFor(Function(m) m.Benutzer.Passwort, New With {.class = "form-control"})
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Passwort) <!-- Wie zuweise ich von Attribut des Benutzers zu jeweiliger Unterklasse -->
+                        </div>
+
                         @<div class="mb-lg-5">
                             <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->
-                            @Html.ActionLink("Abbrechen", "meineJobanzeigen", Nothing,
-                        New With {.class = "btn btn-default", .role = "button"})
-                            <input type="submit" class="btn btn-success" value="Erstellen" />
+                            @Html.ActionLink("Abbrechen", "Index", "Collab", New With {.class = "btn btn-default", .role = "button"})
+                            <input type="submit" class="btn btn-success" value="Speichern" />
                         </div>
                     End Using
-                </div>*@
 
-                <!-- Benutzertype -->
-                <div>
-                    
                 </div>
 
             </div>
 
 
             <!-- right Column-->
-            <div class="col-2" style="background-color:#FFCCBC;">
-                <fieldset id="fldKontakt">
+            <div Class="col-2" style="background-color:#FFCCBC;">
+                <fieldset id = "fldKontakt" >
                     <legend style="font-weight:600;">Brauchen Sie Hilfe?</legend>
-                    <p>Tel.: 030 38 99 00</p>
-                    <div class="email">
-                        <p>E-Mail:</p>
-                        <a href="mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
+        <p> Tel.: 030 38 99 00</p>
+                    <div Class="email">
+                        <p> E-Mail:</p>
+                        <a href = "mailto:collab@info.de" style="font-size: small;">collab@info.de</a>
                     </div>
                 </fieldset>
-                <fieldset id="fldSocMed" style="margin-top:5em;">
-                    <legend style="font-weight:600;"> Folgen Sie uns auch auf:</legend>
-                    <div id="socmed">
-                        <!-- Add icon library -->
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <fieldset id = "fldSocMed" style="margin-top:5em;">
+                    <legend style = "font-weight:600;" > Folgen Sie uns auch auf:</legend>
+                    <div id = "socmed" >
+            <!-- Add icon library -->
+            <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
                         <!-- Add font awesome icons -->
-                        <a href="https://www.facebook.com/" Class="fa fa-facebook"></a>
-                        <a href="https://www.instagram.com/" Class="fa fa-instagram"></a>
-                        <a href="https://www.youtube.com/" Class="fa fa-youtube"></a>
+                        <a href = "https://www.facebook.com/" Class="fa fa-facebook"></a>
+                        <a href = "https://www.instagram.com/" Class="fa fa-instagram"></a>
+                        <a href = "https://www.youtube.com/" Class="fa fa-youtube"></a>
                     </div>
                 </fieldset>
             </div>
@@ -169,13 +184,12 @@ End Code
     </div>
 
     <!-- FOOTER -->
-    <div class="text-center mt-lg-5">
-        <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
+    <div Class="text-center mt-lg-5">
+        <p> Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-</body>
+    <Script src = "https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <Script src = "https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <Script src = "https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 </body>
 </html>

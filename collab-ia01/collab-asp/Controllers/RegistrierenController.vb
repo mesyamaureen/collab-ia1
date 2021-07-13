@@ -25,17 +25,17 @@ Namespace Controllers
                 lstBranche.Add(branche)
             Next
 
-            lstInf = New List(Of Influencer)
-            For Each infEntity In db.tblInfluencer.ToList
-                ben = New Benutzer(infEntity)
-                lstInf.Add(ben)
-            Next
+            'lstInf = New List(Of Influencer)
+            'For Each infEntity In db.tblInfluencer.ToList
+            '    ben = New Benutzer(infEntity)
+            '    lstInf.Add(ben)
+            'Next
 
-            lstUnt = New List(Of Unternehmen)
-            For Each untEntity In db.tblUnternehmer.ToList
-                ben = New Benutzer(untEntity)
-                lstUnt.Add(ben)
-            Next
+            'lstUnt = New List(Of Unternehmen)
+            'For Each untEntity In db.tblUnternehmer.ToList
+            '    ben = New Benutzer(untEntity)
+            '    lstUnt.Add(ben)
+            'Next
 
             'ViewModel vorbereiten
             vmBen = New BenutzerViewModel
@@ -43,7 +43,7 @@ Namespace Controllers
             vmBen.ListeBranche = lstBranche
             Return View(vmBen) 'Neue Jobanzeige und Liste aller 
             'branche als ViewModel an die View übergeben
-            Return View()
+            'Return View()
             'Return View()
         End Function
 
@@ -57,6 +57,8 @@ Namespace Controllers
             Dim untEntity As UnternehmerEntity
             Dim branche As Branche
             Dim lstBranche As List(Of Branche)
+            Dim lstInf As List(Of Influencer)
+            Dim lstUnt As List(Of Unternehmen)
 
             If Not ModelState.IsValid Then
                 lstBranche = New List(Of Branche) 'Alle Branche aus Datenbank laden

@@ -10,8 +10,18 @@ Public Class Benutzer
     Private mstrEmail As String
     Private mstrBeschreibung As String
     Private mbenTyp As Type
+    Private mbrBranche As Branche
 
     'Properties
+    Public Property Branche As Branche
+        Get
+            Return mbrBranche
+        End Get
+        Set(value As Branche)
+            mbrBranche = value
+        End Set
+    End Property
+
     Public Property BenutzerTyp As Type
         Get
             Return mbenTyp
