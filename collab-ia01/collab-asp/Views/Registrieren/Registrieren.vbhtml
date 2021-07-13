@@ -30,10 +30,10 @@ End Code
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                        @Html.ActionLink("Unternehmen suchen", "Unternehmensuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
@@ -42,7 +42,7 @@ End Code
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
+                        @Html.ActionLink("Registrieren", "Registrieren")
                     </li>
                 </ul>
             </div>
@@ -59,13 +59,13 @@ End Code
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                        @Html.ActionLink("Unternehmen suchen", "Unternehmensuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
@@ -89,18 +89,27 @@ End Code
                     @Using Html.BeginForm()
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Influencer.Vorname, New With {.class = "control-label"})
+                                <p style="font-size: 12px; color:red;">
+                                    @Html.Label("Bitte nur einfüllen, wenn Sie Influencer sind")
+                                </p>
                             @Html.TextAreaFor(Function(m) m.Influencer.Vorname, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) m.Influencer.Vorname)
                         </div>
 
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Influencer.Name, New With {.class = "control-label"})
+                            <p style="font-size: 12px; color:red;">
+                                @Html.Label("Bitte nur einfüllen, wenn Sie Influencer sind")
+                            </p>
                             @Html.TextAreaFor(Function(m) m.Influencer.Name, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) m.Influencer.Name)
                         </div>
 
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Unternehmen.Firmenname, New With {.class = "control-label"})
+                            <p style="font-size: 12px; color:red;">
+                                @Html.Label("Bitte nur einfüllen, wenn Sie Unternehmer sind")
+                            </p>
                             @Html.TextAreaFor(Function(m) m.Unternehmen.Firmenname, New With {.class = "form-control"})
                             @Html.ValidationMessageFor(Function(m) m.Unternehmen.Firmenname)
                         </div>

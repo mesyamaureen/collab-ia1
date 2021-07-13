@@ -30,7 +30,7 @@ End Code
                         @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen")
+                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
@@ -66,7 +66,7 @@ End Code
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")

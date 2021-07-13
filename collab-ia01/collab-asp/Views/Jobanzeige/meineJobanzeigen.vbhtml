@@ -30,10 +30,10 @@ End Code
                         @Html.ActionLink("Startseite", "Index")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                        @Html.ActionLink("Unternehmen suchen", "Unternehmensuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
@@ -59,13 +59,13 @@ End Code
                         @Html.ActionLink("Startseite", "Index")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
+                        @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
+                        @Html.ActionLink("Unternehmen suchen", "Unternehmensuchen", "AlleUnternehmen")
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Jobanzeigen", "AlleJobanzeigen", "AlleJobanzeigen")
+                        @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
