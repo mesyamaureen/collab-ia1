@@ -21,29 +21,29 @@
   <Class Name="collab_asp.Benutzer">
     <Position X="1.75" Y="4" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAACAAAAAgAAAAAAAAAgACAACQAgCgAA=</HashCode>
+      <HashCode>AAACAAAAACAAAAAAAAAAgAAAAAAAAAkACAACQAgCgAA=</HashCode>
       <FileName>Models\Benutzer.vb</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="collab_asp.Influencer">
-    <Position X="4.25" Y="2.5" Width="1.75" />
+    <Position X="4.25" Y="0.5" Width="1.75" />
     <InheritanceLine Type="collab_asp.Benutzer" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="3.5" Y="5.007" />
-        <Point X="3.875" Y="5.007" />
-        <Point X="3.875" Y="4.862" />
-        <Point X="4.25" Y="4.862" />
+        <Point X="3.5" Y="4.872" />
+        <Point X="3.875" Y="4.872" />
+        <Point X="3.875" Y="2.862" />
+        <Point X="4.25" Y="2.862" />
       </Path>
     </InheritanceLine>
     <AssociationLine Name="Branche" Type="collab_asp.Branche" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="6" Y="3.206" />
-        <Point X="10.761" Y="3.206" />
+        <Point X="6" Y="1.206" />
+        <Point X="10.761" Y="1.206" />
         <Point X="10.761" Y="4.5" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>ABACAAAAABAAAAAAIAAAAAQAAAAAAAkAAABAQQgAAAA=</HashCode>
+      <HashCode>ABACACAAADAAAACAIAAAgAUAAAAAAAkAAABAQQgCgAI=</HashCode>
       <FileName>Models\Influencer.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -63,7 +63,7 @@
   <Class Name="collab_asp.Unternehmen">
     <Position X="4.25" Y="6.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AQADAAAAAAAAAAgAIAAAAAgAAAAAAAEAAAAAAogAAAA=</HashCode>
+      <HashCode>AQADAAAAACAAAAiAIAAAgAgAABAAAAkAAAAAQogCgAA=</HashCode>
       <FileName>Models\Unternehmen.vb</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

@@ -8,8 +8,6 @@ Public Class Benutzer
     Private mstrBenutzername As String
     Private mstrPasswort As String
     Private mstrEmail As String
-    Private mstrBeschreibung As String
-    Private mbenTyp As Type
     Private mbrBranche As Branche
 
     'Properties
@@ -19,15 +17,6 @@ Public Class Benutzer
         End Get
         Set(value As Branche)
             mbrBranche = value
-        End Set
-    End Property
-
-    Public Property BenutzerTyp As Type
-        Get
-            Return mbenTyp
-        End Get
-        Set(value As Type)
-            mbenTyp = value
         End Set
     End Property
 
