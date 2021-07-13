@@ -127,7 +127,6 @@ End Code
                 </div>
             </div>
 
-            <!--</div>-->
             <!-- right Column-->
             <div class="col-2" style="background-color:#FFCCBC;">
                 <fieldset id="fldKontakt">
@@ -159,6 +158,7 @@ End Code
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
             crossorigin="anonymous"></script>

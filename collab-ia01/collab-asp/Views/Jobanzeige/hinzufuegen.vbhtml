@@ -31,23 +31,18 @@ End Code
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
-                        @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
-                        @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
-                        @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
-                        @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
-                        @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
                 </ul>
             </div>
@@ -165,6 +160,7 @@ End Code
         <p>Copyright © SS2021 Hochtritt, Jeynie, Scherf, BHT Berlin</p>
     </div>
 
+    <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

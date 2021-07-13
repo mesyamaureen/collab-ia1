@@ -31,23 +31,18 @@ End Code
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
-                        @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
-                        @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen", "AlleJobanzeigen")
-                        @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
-                        @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
-                        @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
                 </ul>
             </div>
@@ -89,9 +84,6 @@ End Code
                     <h1>Registrieren</h1>
                     <p>Erstellen Sie ein Konto!</p>
                 </div>
-
-                @*@If (Html.RadioButton(Function(m) m.GetType)) Then
-                End If*@
 
                 <div class="w-100">
                     @Using Html.BeginForm()
@@ -142,11 +134,10 @@ End Code
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Benutzer.Passwort, New With {.class = "control-label"})
                             @Html.TextAreaFor(Function(m) m.Benutzer.Passwort, New With {.class = "form-control"})
-                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Passwort) <!-- Wie zuweise ich von Attribut des Benutzers zu jeweiliger Unterklasse -->
+                            @Html.ValidationMessageFor(Function(m) m.Benutzer.Passwort)
                         </div>
 
                         @<div class="mb-lg-5">
-                            <!-- Link zum Abbrechen, d.h. zur Navigation zur Index-Seite und Schaltfläche zum Absenden des Formulars -->
                             @Html.ActionLink("Abbrechen", "Index", "Collab", New With {.class = "btn btn-default", .role = "button"})
                             <input type="submit" class="btn btn-success" value="Speichern" />
                         </div>

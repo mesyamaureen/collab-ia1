@@ -31,23 +31,18 @@ End Code
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
-                        @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
-                        @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen")
-                        @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
-                        @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
-                        @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
                 </ul>
             </div>
@@ -112,8 +107,6 @@ End Code
                         <h4><i>Bauen Sie Kontakt mit dem Unternehmen ab!</i></h4>
                         <div>
                             <form method="get" action="MeineJobanzeigen.html">
-                                <!-- Neu erstellte Bewerbung-->
-                                <!-- Enable: nur von einem angemeldeten Benutzer. Sonst disabled -->
                                 <p>
                                     Betreff:
                                     <input type="text" name="txtBetreff" id="InputLeiste" placeholder="Ihr Betreff" />
@@ -124,7 +117,7 @@ End Code
                                 </p>
 
                                 <div class="right" style="margin: 15px 0 40px 0;">
-                                    <input type="submit" name="btnAbschicken" value="Abschicken" class="button" /> <!--Navigationsmöglichkeit noch keine. Stand: 06.05.2021-->
+                                    <input type="submit" name="btnAbschicken" value="Abschicken" class="button" />
                                 </div>
                             </form>
                         </div>

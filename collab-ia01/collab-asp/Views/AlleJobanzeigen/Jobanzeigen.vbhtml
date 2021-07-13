@@ -31,23 +31,18 @@ End Code
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "InfluencerSuchen", "AlleInfluencer")
-                        @*<a href="Influencer suchen.html" accesskey="2" title="Influencer suchen" style="color: black">Influencer suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Unternehmen suchen", "UnternehmenSuchen", "AlleUnternehmen")
-                        @*<a href="Unternehmen suchen.html" accesskey="3" title="Unternehmen suchen" style="color: black">Unternehmen suchen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Jobanzeigen", "Jobanzeigen")
-                        @*<a href="Jobanzeigen.html" accesskey="4" title="Jobanzeigen" style="color: black">Jobanzeigen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Einloggen", "Einloggen", "AlleProfile")
-                        @*<a href="Einloggen.html" accesskey="5" title="Einloggen" style="color: black">Einloggen</a>*@
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Registrieren", "Registrieren", "Registrieren")
-                        @*<a href="Registrieren.html" accesskey="6" title="Registrieren" style="color: black">Registrieren</a>*@
                     </li>
                 </ul>
             </div>
@@ -77,15 +72,12 @@ End Code
                     </li>
                     <li class="nav-item">
                         @Html.ActionLink("Impressum", "Impressum")
-                        @*<a href="Impressum.html" style="color: black">Impressum</a>*@
                     </li>
                 </ul>
             </div>
 
             <!-- middle Column -->
-            <!--<div id="primaryContentContainer">-->
             <div class="col-md-8" style="background-color:#ECECEC;">
-                <!-- passt ihr bitte nur diesen Teil an -->
                 <div class="container-fluid">
                     <div class="jumbotron">
                         <div class="text-center">
