@@ -118,7 +118,6 @@ End Code
                         </h4>
                         <p class="text-center mb-lg-5">
                             @Html.DisplayFor(Function(m) m.Influencer.Beschreibung)
-                            adfadfadf
                         </p>
                     </div>
 

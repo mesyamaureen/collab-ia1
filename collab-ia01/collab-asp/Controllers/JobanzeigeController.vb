@@ -119,18 +119,6 @@ Namespace Controllers
 
         'GET: /Jobanzeige/Hinzufuegen
         Function Hinzufuegen() As ActionResult
-            'Dim jobEntity As JobanzeigeEntity
-
-            'jobEntity = pjob.gibAlsJobanzeigeEntity()
-
-            'If ModelState.IsValid Then
-            '    db.tblJobanzeigen.Attach(jobEntity)
-            '    db.Entry(jobEntity).State = EntityState.Added
-            '    db.SaveChanges()
-            '    Return RedirectToAction("Index")
-            'End If
-            'Return View(pjob)
-
             Dim job As Jobanzeige
             Dim branche As Branche
             Dim lstBranche As List(Of Branche)
