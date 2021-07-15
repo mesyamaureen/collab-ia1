@@ -142,7 +142,7 @@ End Code
 
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Benutzer.Passwort, New With {.class = "control-label"})
-                            @Html.TextAreaFor(Function(m) m.Benutzer.Passwort, New With {.class = "form-control"})
+                            @Html.TextAreaFor(Function(m) m.Benutzer.Passwort, New With {.class = "form-control", .type = "password"})
                             @Html.ValidationMessageFor(Function(m) m.Benutzer.Passwort)
                         </div>
 

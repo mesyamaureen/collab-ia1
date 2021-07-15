@@ -27,7 +27,7 @@ End Code
             <div>
                 <ul class="nav justify-content-end">
                     <li class="nav-item">
-                        @Html.ActionLink("Startseite", "Index")
+                        @Html.ActionLink("Startseite", "Index", "Collab")
                     </li>
                     <li class="nav-item" style="margin-left: 25px;">
                         @Html.ActionLink("Influencer suchen", "Influencersuchen", "AlleInfluencer")

@@ -94,7 +94,7 @@ End Code
                         </div>
                         @<div class="form-group">
                             @Html.LabelFor(Function(m) m.Passwort, New With {.class = "control-label"})
-                            @Html.TextBoxFor(Function(m) m.Passwort, New With {.class = "form-control"})
+                            @Html.TextBoxFor(Function(m) m.Passwort, New With {.class = "form-control", .type = "password"})
                             @Html.ValidationMessageFor(Function(m) m.Passwort)
                         </div>
 

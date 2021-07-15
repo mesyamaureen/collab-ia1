@@ -124,7 +124,7 @@ End Code
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         @Html.LabelFor(Function(m) m.Influencer.Passwort, New With {.class = "control-label"})
-                                        @Html.TextBoxFor(Function(m) m.Influencer.Passwort, New With {.class = "form-control"})
+                                        @Html.TextBoxFor(Function(m) m.Influencer.Passwort, New With {.class = "form-control", .type = "password"})
                                         @Html.ValidationMessageFor(Function(m) m.Influencer.Passwort)
                                     </div>
                                 </div>

@@ -122,7 +122,7 @@ End Code
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         @Html.LabelFor(Function(m) m.Unternehmen.Passwort, New With {.class = "control-label"})
-                                        @Html.TextBoxFor(Function(m) m.Unternehmen.Passwort, New With {.class = "form-control"})
+                                        @Html.TextBoxFor(Function(m) m.Unternehmen.Passwort, New With {.class = "form-control", .type = "password"})
                                         @Html.ValidationMessageFor(Function(m) m.Unternehmen.Passwort)
                                     </div>
                                 </div>
@@ -145,7 +145,7 @@ End Code
                             </div>
 
                             @<div class="mb-lg-5 mt-lg-4">
-                                @Html.ActionLink("Abbrechen", "meinProfilUnternehmer", "UnternehmerEinzeln", New With {.class = "btn btn-default", .role = "button"})
+                                @Html.ActionLink("Abbrechen", "MeinProfilUnternehmer", "UnternehmerEinzeln", New With {.class = "btn btn-default", .role = "button"})
                                 <input type="submit" class="btn btn-primary" value="Speichern" />
                             </div>
                         End Using
