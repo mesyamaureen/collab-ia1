@@ -30,7 +30,7 @@ End Code
                     </div>
 
                     <div class="modal-body">
-                        <p>Möchten Sie die Aufgabe "@Html.Encode(Model.Titel)" wirklich löschen?</p>
+                        <p>Möchten Sie die Jobanzeige "@Html.Encode(Model.Titel)" wirklich löschen?</p>
                     </div>
 
                     <div class="modal-footer">

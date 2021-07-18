@@ -6,6 +6,7 @@ Namespace Controllers
 
         Private db As collabDBEntities = New collabDBEntities
         Private Const CONCURRENCY_EXCEPTION As String = "DBUpdateConcurrencyException"
+        Public Shared mJobanzeigenListe As JobanzeigenListe
 
         'anzeigen Liste aller Jobanzeige
         Function Jobanzeigen() As ActionResult

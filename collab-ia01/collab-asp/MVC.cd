@@ -21,6 +21,9 @@
   <Comment CommentText="MODEL">
     <Position X="7.111" Y="1.311" Height="0.35" Width="7.761" />
   </Comment>
+  <Comment CommentText="AlleJobanzeigen">
+    <Position X="1.732" Y="6.631" Height="0.35" Width="1.412" />
+  </Comment>
   <Class Name="collab_asp.Jobanzeige">
     <Position X="9.75" Y="2.5" Width="2" />
     <TypeIdentifier>
@@ -49,7 +52,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="collab_asp.Controllers.JobanzeigeController">
-    <Position X="3.75" Y="2.25" Width="1.75" />
+    <Position X="4" Y="9.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>ARAAAAAAAAAQAAIAAgAgAAQAAAAAAAAAAAAAAAAgAEA=</HashCode>
       <FileName>Controllers\JobanzeigeController.vb</FileName>
@@ -73,6 +76,30 @@
     <ShowAsCollectionAssociation>
       <Property Name="ListeBranche" />
     </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="collab_asp.Controllers.AlleJobanzeigenController">
+    <Position X="6.25" Y="9.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAIAAAAAAAgAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AlleJobanzeigenController.vb</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="mJobanzeigenListe" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="collab_asp.Controllers.BrancheController">
+    <Position X="8.75" Y="9.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BrancheController.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="collab_asp.Controllers.CollabController">
+    <Position X="2" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CollabController.vb</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
