@@ -1,66 +1,21 @@
 #DIESES PROJEKT HAT SICH BEENDET, WEIL ALLE ANFORDERUNGEN BEREITS ERFÜLLT SIND.
 
 # collab
-Das zu entwickelnde System dient als Plattform für die Vermittlung von Influencern zu den passenden Unternehmen.
+Das zu entwickelnde System dient als Plattform für die Vermittlung von Influencern zu den passenden Unternehmen. Dabei bietet es den verschiedenen Anspruchs-/Zielgruppen eine optimale Auswahl aus einem bestehenden Pool von Influencern/Unternehmen, die sie als Repräsentant zur Vermarktung ihrer Produkte nutzen können. Über erstellte Jobanzeigen von Unternehmen, können sich die Influencer bewerben.
 
-## How to setup git repo in local computer:
-### Prepare repository folder
-1) Erstell einen Ordner auf deinem Rechner unter `name_infoanwendung01`(z.B. meins auf dem Desktop unter 'mesya_infoanwendung01')
-2) Doppelklick auf dem Ordner
-### Configure Email and Username for Github
-3) Rechtsklick irgendwo innerhalb des Ordners
-4) Klick `Git Bash Here`
-5) The Command Line Interface (CLI) sollte angezeigt werden (Drauf sollte MINGW64 geschrieben werden) 
-6) Tip direkt nach dem $ Zeichen `git config --global user.email "`*deine E-Mail für Github*`"` und ENTER 
-7) Eine neue Zeile sollte angezeigt werden
-8) Tip direkt nach dem $ Zeichen auf der neuen Zeile `git config --global user.name "`*dein username*`"` und ENTER 
-### Configuring SSH Key for Github account
-9) Jetzt fügen wir einen Public SSH Schlüssel zu deinem Github Konto hinzu
-10) Tip direkt nach dem $ Zeichen auf der neuen Zeile `ssh-keygen` und ENTER 
-11) Sollte gefragt werden, die zu speichernde Dateien einzugeben, tip bitte nichts ein und einfach ENTER
-12) Sollte gefragt werden, Passwort einzugeben, tip bitte nichts ein und einfach ENTER
-13) Der Schlüssel wird erzeugt. Mach nur weiter, wenn eine neue Zeile (wo $ Zeichen zu sehen ist) verfügbar ist.
-14) Um den SSH Schlüssel von deinem Laptop mit deinem Github Konto zu verbinden, musst du zuerst den Inhalt der `.pub` Datei kopieren.
-15) To do so, tip GENAUSO `cat ~/.ssh/id_rsa.pub` auf der neuen Zeile
-16) Die Rückmeldung sollte mit `ssh-rsa` anfangen. Das ist deinen public SSH Key.
-17) Kopierst alle von `ssh-rsa` bis Ende des Random Schlüssels (vor dem Leerzeichen und dem Name deines Laptops)
-18) Geh zurück zu der Github Webseite und geh zu der Einstellung (oben rechts) deines Github Kontos
-19) Klick auf `SSH and GPG Keys` (linke Seite)
-20) Klick auf `New SSH Key`
-21) Tip irgendwelchen Namen für den Titel (z.B. "Mesya's WindowsLaptop")
-22) Dann fügst du den SSH Schlüssel innerhalb des Key Box ein und klick auf `Add SSH Key` ganz unten
-23) Sollte alles gut gelaufen ist, wird ein neuer SSH Schlüssel auf deinem Github Konto gespeichert.
-### Cloning the repository to your local computer
-24) Geh zurück zu der Repository Page auf deiner Github Webseite
-25) Klick auf `Clone or Download` Schaltfläche 
-26) Achtung: Es muss `Clone with SSH`sein. Da gibt's einen Umschalter (oben rechts), von HTTPS zu SSH und vice versa zu tauschen.
-27) Klick auf das Kopie Icon 
-28) Geh zurück zu dem CLI auf deinem Laptop
-29) Tip direkt nach dem $ Zeichen auf der neuen Zeile `git clone` ein und füg den Clone Link vom Github ein und ENTER
-30) Das Git Repository sollte erfolgreich geklont werden. Zu überprüfen: Öffne mal den Ordner (Schritt 1) auf dem Windows Explorer. Da sollte es einen neuen Ordner unter dem Namen deines Repository innerhalb des Verzeichnis (Schritt 1) geben.
-### Check whether or not the repository on your computer is up-to-date
-31) Danach müssen wir zu dem `master` des Repository umziehen. Es gibt zwei Wege (Schritt 32 & 33).
-32) The cooler CLI way: Tip auf der neuen Zeile (nach dem $ Zeichen) im Gitbash `cd collab-ia1/` ein und ENTER. Danach solltest du der Wort `(master)`oder `(main)` direkt nach deinem directory line (MINGW64).
-33) The simpler GUI way: double click the folder of the cloned repo in Windows Explorer and redo step 3 and 4
-34) Tip im Gitbash `git status` ein, um deine Dateien zu überprüfen.
-35) Whatever response you get from step 34, it is always a good practice to update your local folder with the one on Github, even though nothing might have changed (Do this before you do anything else) in which you type `git pull` 
+# Ausgangssituation
+Momentan schreiben Unternehmer einzelne Influencer an, die sie nach langer Prüfung für passend erachten. Influencer hingegen können sich bei Unternehmen auf einzelne Kampagnen bewerben.
 
-## How to work with git
-Any Visual Studio file related to this project should be saved inside the repository folder (datenbanksystem01)
-### Cheatsheets
-1) `git status` : To check any changes in the repository folder
-2) `git pull` : To download the actual file or changes in Github
-3) `git add --a` : To add all changes made in the repository folder that will be pushed to Github
-4) `git commit -m "enter any message about the changes made"` : Only do this after number 3! To add valuable information about what was changed
-5) `git push` : To upload all changes and information to Github
+# Problembeschreibung
+Wenn das Influencer Marketing in einer Firma beginnt, ist die Suche nach dem richtigen Influencer oft schwer und aufwändig, da das Unternehmen jeden “einzelnen” Influencer anhand seiner / ihrer Posts auf seine Tauglichkeit und Authentizität überprüfen. Das ist umständlich und ineffektiv.
+Auch auf der Seite der Influencer treten Schwierigkeiten auf. Neue oder junge Influencer mit geringerer Reichweite haben durch die bisherigen Abläufe Schwierigkeiten, Kooperationen an Land zu ziehen, da oft erfahrene Influencer bevorzugt werden.
 
-### Process
-Please note that when you enter a new command, make sure that the CLI has done loading/processing (This can be known when the CLI has given you a new command line (the line where you can type onto after the $ sign))
+# Ziel
+Die Webanwendung soll den Unternehmen ermöglichen, aus einem bestehenden Pool an Influencern nach Kategorien zu filtern und den am besten zu ihnen passenden Influencer herauszusuchen. Dieser kann dann über ein Kontaktformular angeschrieben und zu Vertragsverhandlungen eingeladen werden.
 
-1) Everytime you run the gitbash by right clicking inside the repository folder, enter the command `git status` to update if any changes are made
-2) Then pull the changes by entering the command `git pull`
-3) Then go to the repository folder in Windows Explorer and you should already find the updated file (in this case a Visual Studio Projektmappe *datenbanksystem01*)
-4) After finishing your part, go to the CLI and run `git status`and `git pull` one more time to make sure that your file in Windows Explorer is the latest one. As long as we do our own part, we should never encounter any merge error.
-5) Then enter the command `git add --a`
-6) Then enter the command `git commit -m "enter any message about the changes made"`
-7) Then enter the command `git push`
+# Einsatzkontext
+Die Webanwendung kann von beliebig vielen Benutzern genutzt werden. Unsere Webseite kann sowohl von neuen, als auch erfahrenen Influencern mit diversen Reichweiten und Spezialgebieten genutzt werden. Auch Unternehmen aller Größen und Branchen können die Anwendung nutzen. Die Benutzer können über verschiedene Standorte auf die Anwendung zugreifen. Hierbei steht der schnelle Zugriff über den Webbrowser eines Rechners oder aber auch über einen mobilen Webbrowser im Vordergrund. Alle Nutzer müssen entweder einen PC / Laptop oder ein mobiles Endgerät mit einen Internetzugang besitzen.
+
+# Abgrenzung
+Bereits bestehende Kooperationen werden von der Website nicht abgebildet.
+Im weiteren Ausblick des Projekts könnte man auf der Webseite sowohl die Bezahlung regeln, als auch den Vertrag abschließen. Dies ist allerdings nicht Teil dieses Semesters und wird deswegen außen vor gelassen.
