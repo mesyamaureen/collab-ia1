@@ -1,3 +1,5 @@
+#DIESES PROJEKT HAT SICH BEENDET, WEIL ALLE ANFORDERUNGEN BEREITS ERFÜLLT SIND.
+
 # collab
 Das zu entwickelnde System dient als Plattform für die Vermittlung von Influencern zu den passenden Unternehmen.
 
